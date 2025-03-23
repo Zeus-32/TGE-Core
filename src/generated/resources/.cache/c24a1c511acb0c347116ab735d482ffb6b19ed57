@@ -1,0 +1,27 @@
+// 1.21.1	2025-03-23T16:09:42.201139	Tags for minecraft:item mod id tge_core
+d413fb319e407379d0b9e557b6a09e531dddfcea data/c/tags/item/ingots/brass.json
+b8a951abea9b0cd2201efc0f73ebd92329a5331f data/c/tags/item/ingots/bronze.json
+478643240550a17dbb41f2448175eafda990d203 data/c/tags/item/ingots/cobalt.json
+c6624cbe68a8156d545ad381dc4a4262aaaf7fe6 data/c/tags/item/ingots/cupronickel.json
+bd3c192c7314f22774c7058c27cbc28bd1687478 data/c/tags/item/ingots/electrum.json
+b90fe795a33e83f315c11d1415f7c4921bcfaae0 data/c/tags/item/ingots/enderium.json
+95b77d83d6f3059d404d614418d149c40102058f data/c/tags/item/ingots/invar.json
+52cc78e106daaf3d606ece195f679eff002f03a6 data/c/tags/item/ingots/iridium.json
+1bad9638e661110d775b97884a9ce1d030b53975 data/c/tags/item/ingots/lead.json
+ebd83dbda716d06c2015c53760533fd7d88384f8 data/c/tags/item/ingots/lumium.json
+3e11ecb33e2d295b5e72d785caa03d932a7487e7 data/c/tags/item/ingots/naquadah.json
+3ceb0f1e58a2b9b9200e8b42135c525cb06f9310 data/c/tags/item/ingots/nickel.json
+23864c7d6aaef1b36b31f284d7537971e12a2ec0 data/c/tags/item/ingots/osmium.json
+18aab26e90ace78ff993608bad35cd00bde00c57 data/c/tags/item/ingots/platinum.json
+2b214411c53a4fa20e49dd6354bc14532277c978 data/c/tags/item/ingots/plutonium.json
+a2f72b76e6762c0f456cee9e3fe9c669fb541a9a data/c/tags/item/ingots/polonium.json
+fba611b04170d3c6a8be600fd95761d50f60c724 data/c/tags/item/ingots/red_alloy.json
+5c8595b169a0c48c489b5585d531294e6faef5ee data/c/tags/item/ingots/silver.json
+49f45bf94ff8468690b9bca93c4a918e3765a6b8 data/c/tags/item/ingots/soul_infused.json
+d8df7c038290165749d184c4217b83843561dfed data/c/tags/item/ingots/stainless_steel.json
+00d2f61960fab7e3bc4fde2cd3b8136bc9586487 data/c/tags/item/ingots/steel.json
+a0ce8390f673e7d8a9b615d2a43210ca32a2eb5d data/c/tags/item/ingots/tin.json
+3f41212fa195d2227f22f19d04f2e6199c111deb data/c/tags/item/ingots/titanium.json
+de32f6019f4dafd59f711e82a1cb38bb0b67684a data/c/tags/item/ingots/uranium.json
+85cac8e13061be84ea851c2399fb1f040bdfec77 data/c/tags/item/ingots/wrought_iron.json
+18a31badd1cb96f8830aa36092a557ba93e012fb data/c/tags/item/ingots/zinc.json
