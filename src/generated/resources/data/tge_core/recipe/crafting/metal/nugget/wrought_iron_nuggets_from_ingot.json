@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "tge_core:wrought_iron_ingot"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "tge_core:wrought_iron_nugget"
+  }
+}

@@ -4,7 +4,6 @@ import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.zeus_32.tge_core.TGECore;
-import net.zeus_32.tge_core.common.ModItems;
 
 import java.util.Arrays;
 import java.util.List;
@@ -15,11 +14,14 @@ public class ModItemModelProvider extends ItemModelProvider {
             "brass",
             "bronze",
             "cobalt",
+            "copper",
             "cupronickel",
             "electrum",
             "enderium",
+            "gold",
             "invar",
             "iridium",
+            "iron",
             "lead",
             "lumium",
             "naquadah",
@@ -49,10 +51,12 @@ public class ModItemModelProvider extends ItemModelProvider {
         for (String material : MATERIALS) {
             registerIngotModel(material);
             registerPlateModel(material);
+            registerNuggetModel(material);
         }
     }
 
     private void registerIngotModel(String material) {
+        if (material.equals("copper") || material.equals("gold") || material.equals("iron")) return;
         String itemName = material + "_ingot";
         withExistingParent(itemName, mcLoc("item/generated"))
                 .texture("layer0", modLoc("item/common/item/ingot/" + itemName));
@@ -63,5 +67,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         String itemName = material + "_plate";
         withExistingParent(itemName, mcLoc("item/generated"))
                 .texture("layer0", modLoc("item/common/item/plate/" + itemName));
+    }
+    private void registerNuggetModel(String material) {
+        if (material.equals("plutonium") || material.equals("polonium") || material.equals("uranium") || material.equals("gold") || material.equals("iron")) return;
+        String itemName = material + "_nugget";
+        withExistingParent(itemName, mcLoc("item/generated"))
+                .texture("layer0", modLoc("item/common/item/nugget/" + itemName));
     }
 }

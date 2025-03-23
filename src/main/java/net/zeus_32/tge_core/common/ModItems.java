@@ -36,14 +36,42 @@ public class ModItems {
     public static final DeferredItem<Item> WROUGHT_IRON_INGOT = registerIngot("wrought_iron");
     public static final DeferredItem<Item> ZINC_INGOT = registerIngot("zinc");
 
+    public static final DeferredItem<Item> BRASS_NUGGET = registerNugget("brass");
+    public static final DeferredItem<Item> BRONZE_NUGGET = registerNugget("bronze");
+    public static final DeferredItem<Item> COBALT_NUGGET = registerNugget("cobalt");
+    public static final DeferredItem<Item> COPPER_NUGGET = registerNugget("copper");
+    public static final DeferredItem<Item> CUPRONICKEL_NUGGET = registerNugget("cupronickel");
+    public static final DeferredItem<Item> ELECTRUM_NUGGET = registerNugget("electrum");
+    public static final DeferredItem<Item> ENDERIUM_NUGGET = registerNugget("enderium");
+    public static final DeferredItem<Item> INVAR_NUGGET = registerNugget("invar");
+    public static final DeferredItem<Item> IRIDIUM_NUGGET = registerNugget("iridium");
+    public static final DeferredItem<Item> LEAD_NUGGET = registerNugget("lead");
+    public static final DeferredItem<Item> LUMIUM_NUGGET = registerNugget("lumium");
+    public static final DeferredItem<Item> NAQUADAH_NUGGET = registerNugget("naquadah");
+    public static final DeferredItem<Item> NICKEL_NUGGET = registerNugget("nickel");
+    public static final DeferredItem<Item> OSMIUM_NUGGET = registerNugget("osmium");
+    public static final DeferredItem<Item> PLATINUM_NUGGET = registerNugget("platinum");
+    public static final DeferredItem<Item> RED_ALLOY_NUGGET = registerNugget("red_alloy");
+    public static final DeferredItem<Item> SILVER_NUGGET = registerNugget("silver");
+    public static final DeferredItem<Item> SOUL_INFUSED_NUGGET = registerNugget("soul_infused");
+    public static final DeferredItem<Item> STAINLESS_STEEL_NUGGET = registerNugget("stainless_steel");
+    public static final DeferredItem<Item> STEEL_NUGGET = registerNugget("steel");
+    public static final DeferredItem<Item> TIN_NUGGET = registerNugget("tin");
+    public static final DeferredItem<Item> TITANIUM_NUGGET = registerNugget("titanium");
+    public static final DeferredItem<Item> WROUGHT_IRON_NUGGET = registerNugget("wrought_iron");
+    public static final DeferredItem<Item> ZINC_NUGGET = registerNugget("zinc");
+
     public static final DeferredItem<Item> BRASS_PLATE = registerPlate("brass");
     public static final DeferredItem<Item> BRONZE_PLATE = registerPlate("bronze");
     public static final DeferredItem<Item> COBALT_PLATE = registerPlate("cobalt");
+    public static final DeferredItem<Item> COPPER_PLATE = registerPlate("copper");
     public static final DeferredItem<Item> CUPRONICKEL_PLATE = registerPlate("cupronickel");
     public static final DeferredItem<Item> ELECTRUM_PLATE = registerPlate("electrum");
     public static final DeferredItem<Item> ENDERIUM_PLATE = registerPlate("enderium");
+    public static final DeferredItem<Item> GOLD_PLATE = registerPlate("gold");
     public static final DeferredItem<Item> INVAR_PLATE = registerPlate("invar");
     public static final DeferredItem<Item> IRIDIUM_PLATE = registerPlate("iridium");
+    public static final DeferredItem<Item> IRON_PLATE = registerPlate("iron");
     public static final DeferredItem<Item> LEAD_PLATE = registerPlate("lead");
     public static final DeferredItem<Item> LUMIUM_PLATE = registerPlate("lumium");
     public static final DeferredItem<Item> NAQUADAH_PLATE = registerPlate("naquadah");
@@ -66,6 +94,9 @@ public class ModItems {
     }
     private static DeferredItem<Item> registerPlate(String material) {
         return ITEMS.register(material + "_plate", () -> new Item(new Item.Properties()));
+    }
+    private static DeferredItem<Item> registerNugget(String material) {
+        return ITEMS.register(material + "_nugget", () -> new Item(new Item.Properties()));
     }
 
     public static void register(IEventBus eventBus) {

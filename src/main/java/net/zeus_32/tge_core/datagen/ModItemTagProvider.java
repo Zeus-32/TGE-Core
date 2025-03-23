@@ -55,19 +55,40 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        // Přidání tagů pro každý materiál
         for (String material : MATERIALS) {
-            // Vytvoření tagu ve formátu "c:ingots/<material>"
-            TagKey<Item> tag = createTag("c", "ingots/" + material);
+            TagKey<Item> tag_ingot = createTag("c", "ingots/" + material);
+            TagKey<Item> tag_nugget = createTag("c", "nuggets/" + material);
+            TagKey<Item> tag_plate = createTag("c", "plates/" + material);
 
-            // Přidání ingotu do tagu
             Item ingot = ModItems.ITEMS.getEntries().stream()
                     .filter(entry -> entry.getId().getPath().equals(material + "_ingot"))
                     .findFirst()
                     .orElseThrow(() -> new IllegalStateException("Ingot not found: " + material + "_ingot"))
                     .get();
 
-            tag(tag).add(ingot);
+            if (material.equals("iron") || material.equals("gold") || material.equals("plutonium") || material.equals("polonium") || material.equals("uranium")) {
+                System.out.println("Skipping nugget for material: " + material);
+            } else {
+                Item nugget = ModItems.ITEMS.getEntries().stream()
+                        .filter(entry -> entry.getId().getPath().equals(material + "_nugget"))
+                        .findFirst()
+                        .orElseThrow(() -> new IllegalStateException("Nugget not found: " + material + "_nugget"))
+                        .get();
+                tag(tag_nugget).add(nugget);
+            }
+
+            if (material.equals("plutonium") || material.equals("polonium") || material.equals("uranium")) {
+                System.out.println("Skipping plate for material: " + material);
+            } else {
+                Item plate = ModItems.ITEMS.getEntries().stream()
+                        .filter(entry -> entry.getId().getPath().equals(material + "_plate"))
+                        .findFirst()
+                        .orElseThrow(() -> new IllegalStateException("Plate not found: " + material + "_plate"))
+                        .get();
+                tag(tag_plate).add(plate);
+            }
+
+            tag(tag_ingot).add(ingot);
         }
     }
 
