@@ -1,0 +1,13 @@
+{
+  "values": [
+    "tge_core:aluminium_wrench",
+    "tge_core:bronze_wrench",
+    "tge_core:diamond_wrench",
+    "tge_core:invar_wrench",
+    "tge_core:iron_wrench",
+    "tge_core:stainless_steel_wrench",
+    "tge_core:steel_wrench",
+    "tge_core:titanium_wrench",
+    "tge_core:wrought_iron_wrench"
+  ]
+}

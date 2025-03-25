@@ -10,6 +10,7 @@ import java.util.List;
 
 public class ModItemModelProvider extends ItemModelProvider {
     private static final List<String> MATERIALS = Arrays.asList(
+            "aluminium",
             "brass",
             "bronze",
             "cobalt",
@@ -42,12 +43,14 @@ public class ModItemModelProvider extends ItemModelProvider {
     );
 
     private static final List<String> MANUAL_TOOLS_MATERIALS = Arrays.asList(
+            "aluminium",
             "bronze",
             "diamond",
             "invar",
             "iron",
             "stainless_steel",
             "steel",
+            "titanium",
             "wrought_iron"
     );
 
@@ -58,7 +61,8 @@ public class ModItemModelProvider extends ItemModelProvider {
             "saw",
             "screwdriver",
             "wire_cutters",
-            "wrench"
+            "wrench",
+            "knife"
     );
 
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -75,6 +79,7 @@ public class ModItemModelProvider extends ItemModelProvider {
             registerGearModel(material);
             registerBoltModel(material);
             registerScrewModel(material);
+            registerDustModel(material);
         }
 
         for (String material : MANUAL_TOOLS_MATERIALS) {
@@ -82,6 +87,21 @@ public class ModItemModelProvider extends ItemModelProvider {
                 registerTool(material, type);
             }
         }
+
+        registerNonMetalItems("clay", "dust");
+        registerNonMetalItems("brick", "dust");
+        registerNonMetalItems("flint", "dust");
+        registerNonMetalItems("quartz_sand", "dust");
+        registerNonMetalItems("glass", "dust");
+        registerNonMetalItems("brick", "mold");
+        registerNonMetalItems("wet", "coke_brick");
+        registerNonMetalItems("coke", "brick");
+    }
+
+    private void registerNonMetalItems(String material, String type) {
+        String itemName = material + "_" + type;
+        withExistingParent(itemName, mcLoc("item/generated"))
+                .texture("layer0", modLoc("item/common/item/non_metal/" + itemName));
     }
 
     private void registerIngotModel(String material) {
@@ -126,10 +146,21 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(itemName, mcLoc("item/generated"))
                 .texture("layer0", modLoc("item/common/item/screw/" + itemName));
     }
+    private void registerDustModel(String material) {
+        if (material.equals("plutonium") || material.equals("polonium") || material.equals("uranium")) return;
+        String itemName = material + "_dust";
+        withExistingParent(itemName, mcLoc("item/generated"))
+                .texture("layer0", modLoc("item/common/item/dust/" + itemName));
+    }
 
     private void registerTool(String material, String type) {
-        String itemName = material + "_" + type;
-        withExistingParent(itemName, mcLoc("item/generated"))
-                .texture("layer0", modLoc("item/common/tools/manual_tools/" + material + "/" + itemName));
+        if (type != "knife") {
+            String itemName = material + "_" + type;
+            withExistingParent(itemName, mcLoc("item/generated"))
+                    .texture("layer0", modLoc("item/common/tools/manual_tools/" + material + "/" + itemName));
+        } else {
+            withExistingParent(material + "_knife", mcLoc("item/handheld"))
+                    .texture("layer0", modLoc("item/common/tools/manual_tools/knife/" + material + "_knife"));
+        }
     }
 }

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "tge_core:quartz_sand_dust"
+    },
+    {
+      "item": "tge_core:flint_dust"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "tge_core:glass_dust"
+  }
+}

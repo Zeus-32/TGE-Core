@@ -1,0 +1,13 @@
+{
+  "values": [
+    "tge_core:aluminium_wire_cutters",
+    "tge_core:bronze_wire_cutters",
+    "tge_core:diamond_wire_cutters",
+    "tge_core:invar_wire_cutters",
+    "tge_core:iron_wire_cutters",
+    "tge_core:stainless_steel_wire_cutters",
+    "tge_core:steel_wire_cutters",
+    "tge_core:titanium_wire_cutters",
+    "tge_core:wrought_iron_wire_cutters"
+  ]
+}

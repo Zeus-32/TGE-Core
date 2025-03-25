@@ -1,0 +1,13 @@
+{
+  "values": [
+    "tge_core:aluminium_mortar",
+    "tge_core:bronze_mortar",
+    "tge_core:diamond_mortar",
+    "tge_core:invar_mortar",
+    "tge_core:iron_mortar",
+    "tge_core:stainless_steel_mortar",
+    "tge_core:steel_mortar",
+    "tge_core:titanium_mortar",
+    "tge_core:wrought_iron_mortar"
+  ]
+}

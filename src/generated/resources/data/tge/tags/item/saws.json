@@ -1,0 +1,13 @@
+{
+  "values": [
+    "tge_core:aluminium_saw",
+    "tge_core:bronze_saw",
+    "tge_core:diamond_saw",
+    "tge_core:invar_saw",
+    "tge_core:iron_saw",
+    "tge_core:stainless_steel_saw",
+    "tge_core:steel_saw",
+    "tge_core:titanium_saw",
+    "tge_core:wrought_iron_saw"
+  ]
+}

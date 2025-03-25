@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "F": {
+      "tag": "tge:files"
+    },
+    "H": {
+      "tag": "tge:hammers"
+    },
+    "I": {
+      "item": "tge_core:invar_plate"
+    },
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "IIP",
+    "HF "
+  ],
+  "result": {
+    "count": 1,
+    "id": "tge_core:invar_saw"
+  }
+}

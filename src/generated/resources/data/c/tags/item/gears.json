@@ -1,0 +1,31 @@
+{
+  "values": [
+    "tge_core:aluminium_gear",
+    "tge_core:brass_gear",
+    "tge_core:bronze_gear",
+    "tge_core:cobalt_gear",
+    "tge_core:copper_gear",
+    "tge_core:cupronickel_gear",
+    "tge_core:electrum_gear",
+    "tge_core:enderium_gear",
+    "tge_core:gold_gear",
+    "tge_core:invar_gear",
+    "tge_core:iridium_gear",
+    "tge_core:iron_gear",
+    "tge_core:lead_gear",
+    "tge_core:lumium_gear",
+    "tge_core:naquadah_gear",
+    "tge_core:nickel_gear",
+    "tge_core:osmium_gear",
+    "tge_core:platinum_gear",
+    "tge_core:red_alloy_gear",
+    "tge_core:silver_gear",
+    "tge_core:soul_infused_gear",
+    "tge_core:stainless_steel_gear",
+    "tge_core:steel_gear",
+    "tge_core:tin_gear",
+    "tge_core:titanium_gear",
+    "tge_core:wrought_iron_gear",
+    "tge_core:zinc_gear"
+  ]
+}

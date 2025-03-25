@@ -1,0 +1,31 @@
+{
+  "values": [
+    "tge_core:aluminium_dust",
+    "tge_core:brass_dust",
+    "tge_core:bronze_dust",
+    "tge_core:cobalt_dust",
+    "tge_core:copper_dust",
+    "tge_core:cupronickel_dust",
+    "tge_core:electrum_dust",
+    "tge_core:enderium_dust",
+    "tge_core:gold_dust",
+    "tge_core:invar_dust",
+    "tge_core:iridium_dust",
+    "tge_core:iron_dust",
+    "tge_core:lead_dust",
+    "tge_core:lumium_dust",
+    "tge_core:naquadah_dust",
+    "tge_core:nickel_dust",
+    "tge_core:osmium_dust",
+    "tge_core:platinum_dust",
+    "tge_core:red_alloy_dust",
+    "tge_core:silver_dust",
+    "tge_core:soul_infused_dust",
+    "tge_core:stainless_steel_dust",
+    "tge_core:steel_dust",
+    "tge_core:tin_dust",
+    "tge_core:titanium_dust",
+    "tge_core:wrought_iron_dust",
+    "tge_core:zinc_dust"
+  ]
+}

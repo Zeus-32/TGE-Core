@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "tge_core:crafting/metal/screw/tin_screw"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tin_bolt": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tge_core:tin_bolt"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tin_bolt"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "tge_core:crafting/metal/screw/tin_screw"
+    ]
+  }
+}

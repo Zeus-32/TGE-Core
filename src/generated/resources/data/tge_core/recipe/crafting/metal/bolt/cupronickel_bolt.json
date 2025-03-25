@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "tge_core:cupronickel_rod"
+    },
+    "S": {
+      "tag": "tge:saws"
+    }
+  },
+  "pattern": [
+    "S  ",
+    " R ",
+    "   "
+  ],
+  "result": {
+    "count": 2,
+    "id": "tge_core:cupronickel_bolt"
+  }
+}

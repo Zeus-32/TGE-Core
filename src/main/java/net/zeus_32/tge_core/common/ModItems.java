@@ -1,11 +1,14 @@
 package net.zeus_32.tge_core.common;
 
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.Tiers;
 import net.zeus_32.tge_core.TGECore;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.zeus_32.tge_core.common.tool.*;
+import net.zeus_32.tge_core.common.custom.*;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(TGECore.MODID);
@@ -38,7 +41,7 @@ public class ModItems {
     public static final DeferredItem<Item> WROUGHT_IRON_INGOT = registerIngot("wrought_iron");
     public static final DeferredItem<Item> ZINC_INGOT = registerIngot("zinc");
 
-    public static final DeferredItem<Item> ALUMINIUM_NUGGET = registerIngot("aluminium");
+    public static final DeferredItem<Item> ALUMINIUM_NUGGET = registerNugget("aluminium");
     public static final DeferredItem<Item> BRASS_NUGGET = registerNugget("brass");
     public static final DeferredItem<Item> BRONZE_NUGGET = registerNugget("bronze");
     public static final DeferredItem<Item> COBALT_NUGGET = registerNugget("cobalt");
@@ -64,7 +67,7 @@ public class ModItems {
     public static final DeferredItem<Item> WROUGHT_IRON_NUGGET = registerNugget("wrought_iron");
     public static final DeferredItem<Item> ZINC_NUGGET = registerNugget("zinc");
 
-    public static final DeferredItem<Item> ALUMINIUM_PLATE = registerIngot("aluminium");
+    public static final DeferredItem<Item> ALUMINIUM_PLATE = registerPlate("aluminium");
     public static final DeferredItem<Item> BRASS_PLATE = registerPlate("brass");
     public static final DeferredItem<Item> BRONZE_PLATE = registerPlate("bronze");
     public static final DeferredItem<Item> COBALT_PLATE = registerPlate("cobalt");
@@ -92,7 +95,7 @@ public class ModItems {
     public static final DeferredItem<Item> WROUGHT_IRON_PLATE = registerPlate("wrought_iron");
     public static final DeferredItem<Item> ZINC_PLATE = registerPlate("zinc");
 
-    public static final DeferredItem<Item> ALUMINIUM_ROD = registerIngot("aluminium");
+    public static final DeferredItem<Item> ALUMINIUM_ROD = registerRod("aluminium");
     public static final DeferredItem<Item> BRASS_ROD = registerRod("brass");
     public static final DeferredItem<Item> BRONZE_ROD = registerRod("bronze");
     public static final DeferredItem<Item> COBALT_ROD = registerRod("cobalt");
@@ -120,7 +123,7 @@ public class ModItems {
     public static final DeferredItem<Item> WROUGHT_IRON_ROD = registerRod("wrought_iron");
     public static final DeferredItem<Item> ZINC_ROD = registerRod("zinc");
 
-    public static final DeferredItem<Item> ALUMINIUM_GEAR = registerIngot("aluminium");
+    public static final DeferredItem<Item> ALUMINIUM_GEAR = registerGear("aluminium");
     public static final DeferredItem<Item> BRASS_GEAR = registerGear("brass");
     public static final DeferredItem<Item> BRONZE_GEAR = registerGear("bronze");
     public static final DeferredItem<Item> COBALT_GEAR = registerGear("cobalt");
@@ -148,7 +151,7 @@ public class ModItems {
     public static final DeferredItem<Item> WROUGHT_IRON_GEAR = registerGear("wrought_iron");
     public static final DeferredItem<Item> ZINC_GEAR = registerGear("zinc");
 
-    public static final DeferredItem<Item> ALUMINIUM_BOLT = registerIngot("aluminium");
+    public static final DeferredItem<Item> ALUMINIUM_BOLT = registerBolt("aluminium");
     public static final DeferredItem<Item> BRASS_BOLT = registerBolt("brass");
     public static final DeferredItem<Item> BRONZE_BOLT = registerBolt("bronze");
     public static final DeferredItem<Item> COBALT_BOLT = registerBolt("cobalt");
@@ -176,7 +179,7 @@ public class ModItems {
     public static final DeferredItem<Item> WROUGHT_IRON_BOLT = registerBolt("wrought_iron");
     public static final DeferredItem<Item> ZINC_BOLT = registerBolt("zinc");
 
-    public static final DeferredItem<Item> ALUMINIUM_SCREW = registerIngot("aluminium");
+    public static final DeferredItem<Item> ALUMINIUM_SCREW = registerScrew("aluminium");
     public static final DeferredItem<Item> BRASS_SCREW = registerScrew("brass");
     public static final DeferredItem<Item> BRONZE_SCREW = registerScrew("bronze");
     public static final DeferredItem<Item> COBALT_SCREW = registerScrew("cobalt");
@@ -204,6 +207,34 @@ public class ModItems {
     public static final DeferredItem<Item> WROUGHT_IRON_SCREW = registerScrew("wrought_iron");
     public static final DeferredItem<Item> ZINC_SCREW = registerScrew("zinc");
 
+    public static final DeferredItem<Item> ALUMINIUM_DUST = registerDust("aluminium");
+    public static final DeferredItem<Item> BRASS_DUST = registerDust("brass");
+    public static final DeferredItem<Item> BRONZE_DUST = registerDust("bronze");
+    public static final DeferredItem<Item> COBALT_DUST = registerDust("cobalt");
+    public static final DeferredItem<Item> COPPER_DUST = registerDust("copper");
+    public static final DeferredItem<Item> CUPRONICKEL_DUST = registerDust("cupronickel");
+    public static final DeferredItem<Item> ELECTRUM_DUST = registerDust("electrum");
+    public static final DeferredItem<Item> ENDERIUM_DUST = registerDust("enderium");
+    public static final DeferredItem<Item> GOLD_DUST = registerDust("gold");
+    public static final DeferredItem<Item> INVAR_DUST = registerDust("invar");
+    public static final DeferredItem<Item> IRIDIUM_DUST = registerDust("iridium");
+    public static final DeferredItem<Item> IRON_DUST = registerDust("iron");
+    public static final DeferredItem<Item> LEAD_DUST = registerDust("lead");
+    public static final DeferredItem<Item> LUMIUM_DUST = registerDust("lumium");
+    public static final DeferredItem<Item> NAQUADAH_DUST = registerDust("naquadah");
+    public static final DeferredItem<Item> NICKEL_DUST = registerDust("nickel");
+    public static final DeferredItem<Item> OSMIUM_DUST = registerDust("osmium");
+    public static final DeferredItem<Item> PLATINUM_DUST = registerDust("platinum");
+    public static final DeferredItem<Item> RED_ALLOY_DUST = registerDust("red_alloy");
+    public static final DeferredItem<Item> SILVER_DUST = registerDust("silver");
+    public static final DeferredItem<Item> SOUL_INFUSED_DUST = registerDust("soul_infused");
+    public static final DeferredItem<Item> STAINLESS_STEEL_DUST = registerDust("stainless_steel");
+    public static final DeferredItem<Item> STEEL_DUST = registerDust("steel");
+    public static final DeferredItem<Item> TIN_DUST = registerDust("tin");
+    public static final DeferredItem<Item> TITANIUM_DUST = registerDust("titanium");
+    public static final DeferredItem<Item> WROUGHT_IRON_DUST = registerDust("wrought_iron");
+    public static final DeferredItem<Item> ZINC_DUST = registerDust("zinc");
+
     private static DeferredItem<Item> registerIngot(String material) {
         return ITEMS.register(material + "_ingot", () -> new Item(new Item.Properties()));
     }
@@ -224,6 +255,9 @@ public class ModItems {
     }
     private static DeferredItem<Item> registerScrew(String material) {
         return ITEMS.register(material + "_screw", () -> new Item(new Item.Properties()));
+    }
+    private static DeferredItem<Item> registerDust(String material) {
+        return ITEMS.register(material + "_dust", () -> new Item(new Item.Properties()));
     }
 
     public static final DeferredItem<Item> ALUMINIUM_FILE = ITEMS.register("aluminium_file", () -> new FileItem(new Item.Properties().durability(768)));
@@ -295,6 +329,16 @@ public class ModItems {
     public static final DeferredItem<Item> STEEL_WRENCH = ITEMS.register("steel_wrench", () -> new WrenchItem(new Item.Properties().durability(512)));
     public static final DeferredItem<Item> TITANIUM_WRENCH = ITEMS.register("titanium_wrench", () -> new WrenchItem(new Item.Properties().durability(512)));
     public static final DeferredItem<Item> WROUGHT_IRON_WRENCH = ITEMS.register("wrought_iron_wrench", () -> new WrenchItem(new Item.Properties().durability(384)));
+
+    public static final DeferredItem<Item> ALUMINIUM_KNIFE = ITEMS.register("aluminium_knife", () -> new KnifeItem(new Item.Properties().durability(768)));
+    public static final DeferredItem<Item> BRONZE_KNIFE = ITEMS.register("bronze_knife", () -> new KnifeItem(new Item.Properties().durability(192)));
+    public static final DeferredItem<Item> DIAMOND_KNIFE = ITEMS.register("diamond_knife", () -> new KnifeItem(new Item.Properties().durability(1024)));
+    public static final DeferredItem<Item> INVAR_KNIFE = ITEMS.register("invar_knife", () -> new KnifeItem(new Item.Properties().durability(384)));
+    public static final DeferredItem<Item> IRON_KNIFE = ITEMS.register("iron_knife", () -> new KnifeItem(new Item.Properties().durability(256)));
+    public static final DeferredItem<Item> STAINLESS_STEEL_KNIFE = ITEMS.register("stainless_steel_knife", () -> new KnifeItem(new Item.Properties().durability(1024)));
+    public static final DeferredItem<Item> STEEL_KNIFE = ITEMS.register("steel_knife", () -> new KnifeItem(new Item.Properties().durability(512)));
+    public static final DeferredItem<Item> TITANIUM_KNIFE = ITEMS.register("titanium_knife", () -> new KnifeItem(new Item.Properties().durability(512)));
+    public static final DeferredItem<Item> WROUGHT_IRON_KNIFE = ITEMS.register("wrought_iron_knife", () -> new KnifeItem(new Item.Properties().durability(384)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

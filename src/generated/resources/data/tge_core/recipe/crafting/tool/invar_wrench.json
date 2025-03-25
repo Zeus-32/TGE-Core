@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "H": {
+      "tag": "tge:hammers"
+    },
+    "P": {
+      "item": "tge_core:invar_plate"
+    }
+  },
+  "pattern": [
+    " PH",
+    " PP",
+    "P  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "tge_core:invar_wrench"
+  }
+}

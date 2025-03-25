@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "tge_core:item/common/tools/manual_tools/knife/diamond_knife"
+  }
+}

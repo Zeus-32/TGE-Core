@@ -1,0 +1,31 @@
+{
+  "values": [
+    "tge_core:aluminium_screw",
+    "tge_core:brass_screw",
+    "tge_core:bronze_screw",
+    "tge_core:cobalt_screw",
+    "tge_core:copper_screw",
+    "tge_core:cupronickel_screw",
+    "tge_core:electrum_screw",
+    "tge_core:enderium_screw",
+    "tge_core:gold_screw",
+    "tge_core:invar_screw",
+    "tge_core:iridium_screw",
+    "tge_core:iron_screw",
+    "tge_core:lead_screw",
+    "tge_core:lumium_screw",
+    "tge_core:naquadah_screw",
+    "tge_core:nickel_screw",
+    "tge_core:osmium_screw",
+    "tge_core:platinum_screw",
+    "tge_core:red_alloy_screw",
+    "tge_core:silver_screw",
+    "tge_core:soul_infused_screw",
+    "tge_core:stainless_steel_screw",
+    "tge_core:steel_screw",
+    "tge_core:tin_screw",
+    "tge_core:titanium_screw",
+    "tge_core:wrought_iron_screw",
+    "tge_core:zinc_screw"
+  ]
+}

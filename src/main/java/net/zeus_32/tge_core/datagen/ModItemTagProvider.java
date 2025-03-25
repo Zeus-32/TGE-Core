@@ -7,6 +7,7 @@ import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.zeus_32.tge_core.TGECore;
@@ -19,14 +20,18 @@ import java.util.concurrent.CompletableFuture;
 
 public class ModItemTagProvider extends ItemTagsProvider {
     private static final List<String> MATERIALS = Arrays.asList(
+            "aluminium",
             "brass",
             "bronze",
             "cobalt",
+            "copper",
             "cupronickel",
             "electrum",
             "enderium",
+            "gold",
             "invar",
             "iridium",
+            "iron",
             "lead",
             "lumium",
             "naquadah",
@@ -47,8 +52,6 @@ public class ModItemTagProvider extends ItemTagsProvider {
             "zinc"
     );
 
-    // CREATE TAGS FOR:
-        // FILE, HAMMER, MORTAR, SAW, SCREWDRIVER, WIRE_CUTTERS, WRENCH
     private static final List<String> MANUAL_TOOLS_MATERIALS = Arrays.asList(
             "aluminium",
             "bronze",
@@ -68,8 +71,29 @@ public class ModItemTagProvider extends ItemTagsProvider {
             "saw",
             "screwdriver",
             "wire_cutters",
-            "wrench"
+            "wrench",
+            "knife"
     );
+
+    // Tool tags
+    public static final TagKey<Item> HAMMERS = createTag("tge", "hammers");
+    public static final TagKey<Item> FILES = createTag("tge", "files");
+    public static final TagKey<Item> MORTARS = createTag("tge", "mortars");
+    public static final TagKey<Item> SAWS = createTag("tge", "saws");
+    public static final TagKey<Item> SCREWDRIVERS = createTag("tge", "screwdrivers");
+    public static final TagKey<Item> WIRE_CUTTERS = createTag("tge", "wire_cutters");
+    public static final TagKey<Item> WRENCHES = createTag("tge", "wrenches");
+    public static final TagKey<Item> KNIVES = createTag("tge", "knives");
+
+    // Common category tags
+    private static final TagKey<Item> C_INGOTS = createTag("c", "ingots");
+    private static final TagKey<Item> C_NUGGETS = createTag("c", "nuggets");
+    private static final TagKey<Item> C_PLATES = createTag("c", "plates");
+    private static final TagKey<Item> C_RODS = createTag("c", "rods");
+    private static final TagKey<Item> C_GEARS = createTag("c", "gears");
+    private static final TagKey<Item> C_BOLTS = createTag("c", "bolts");
+    private static final TagKey<Item> C_SCREWS = createTag("c", "screws");
+    private static final TagKey<Item> C_DUSTS = createTag("c", "dusts");
 
     public ModItemTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
                               CompletableFuture<TagLookup<Block>> blockTags, @Nullable ExistingFileHelper existingFileHelper) {
@@ -78,105 +102,72 @@ public class ModItemTagProvider extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        TagKey<Item> tag_hammer = createTag("tge", "hammers");
+        // Add tags for all materials
         for (String material : MATERIALS) {
-            TagKey<Item> tag_ingot = createTag("c", "ingots/" + material);
-            TagKey<Item> tag_nugget = createTag("c", "nuggets/" + material);
-            TagKey<Item> tag_plate = createTag("c", "plates/" + material);
-            TagKey<Item> tag_rod = createTag("c", "rods/" + material);
-            TagKey<Item> tag_gear = createTag("c", "gears/" + material);
-            TagKey<Item> tag_bolt = createTag("c", "bolts/" + material);
-            TagKey<Item> tag_screw = createTag("c", "screws/" + material);
+            // Create material-specific tags
+            TagKey<Item> materialIngotTag = createTag("c", "ingots/" + material);
+            TagKey<Item> materialNuggetTag = createTag("c", "nuggets/" + material);
+            TagKey<Item> materialPlateTag = createTag("c", "plates/" + material);
+            TagKey<Item> materialRodTag = createTag("c", "rods/" + material);
+            TagKey<Item> materialGearTag = createTag("c", "gears/" + material);
+            TagKey<Item> materialBoltTag = createTag("c", "bolts/" + material);
+            TagKey<Item> materialScrewTag = createTag("c", "screws/" + material);
+            TagKey<Item> materialDustTag = createTag("c", "dusts/" + material);
 
-            Item ingot = ModItems.ITEMS.getEntries().stream()
-                    .filter(entry -> entry.getId().getPath().equals(material + "_ingot"))
-                    .findFirst()
-                    .orElseThrow(() -> new IllegalStateException("Ingot not found: " + material + "_ingot"))
-                    .get();
+            // Handle ingots - add to both general and specific tags
+            addItemToBothTags(material + "_ingot", C_INGOTS, materialIngotTag);
 
-            if (material.equals("iron") || material.equals("gold") || material.equals("plutonium") || material.equals("polonium") || material.equals("uranium")) {
-                System.out.println("Skipping nugget for material: " + material);
-            } else {
-                Item nugget = ModItems.ITEMS.getEntries().stream()
-                        .filter(entry -> entry.getId().getPath().equals(material + "_nugget"))
-                        .findFirst()
-                        .orElseThrow(() -> new IllegalStateException("Nugget not found: " + material + "_nugget"))
-                        .get();
-                tag(tag_nugget).add(nugget);
+            // Handle nuggets - skip radioactive materials and vanilla nuggets
+            if (!material.equals("plutonium") && !material.equals("polonium") && !material.equals("uranium")) {
+                addItemToBothTags(material + "_nugget", C_NUGGETS, materialNuggetTag);
             }
 
-            if (material.equals("plutonium") || material.equals("polonium") || material.equals("uranium")) {
-                System.out.println("Skipping plate for material: " + material);
-            } else {
-                Item plate = ModItems.ITEMS.getEntries().stream()
-                        .filter(entry -> entry.getId().getPath().equals(material + "_plate"))
-                        .findFirst()
-                        .orElseThrow(() -> new IllegalStateException("Plate not found: " + material + "_plate"))
-                        .get();
-                tag(tag_plate).add(plate);
+            // Handle other components - skip radioactive materials
+            if (!material.equals("plutonium") && !material.equals("polonium") && !material.equals("uranium")) {
+                addItemToBothTags(material + "_plate", C_PLATES, materialPlateTag);
+                addItemToBothTags(material + "_rod", C_RODS, materialRodTag);
+                addItemToBothTags(material + "_gear", C_GEARS, materialGearTag);
+                addItemToBothTags(material + "_bolt", C_BOLTS, materialBoltTag);
+                addItemToBothTags(material + "_screw", C_SCREWS, materialScrewTag);
+                addItemToBothTags(material + "_dust", C_DUSTS, materialDustTag);
             }
-
-            if (material.equals("plutonium") || material.equals("polonium") || material.equals("uranium")) {
-                System.out.println("Skipping Rod for material: " + material);
-            } else {
-                Item rod = ModItems.ITEMS.getEntries().stream()
-                        .filter(entry -> entry.getId().getPath().equals(material + "_rod"))
-                        .findFirst()
-                        .orElseThrow(() -> new IllegalStateException("Plate not found: " + material + "_rod"))
-                        .get();
-                tag(tag_rod).add(rod);
-            }
-
-            if (material.equals("plutonium") || material.equals("polonium") || material.equals("uranium")) {
-                System.out.println("Skipping plate for material: " + material);
-            } else {
-                Item gear = ModItems.ITEMS.getEntries().stream()
-                        .filter(entry -> entry.getId().getPath().equals(material + "_gear"))
-                        .findFirst()
-                        .orElseThrow(() -> new IllegalStateException("Plate not found: " + material + "_gear"))
-                        .get();
-                tag(tag_gear).add(gear);
-            }
-
-            if (material.equals("plutonium") || material.equals("polonium") || material.equals("uranium")) {
-                System.out.println("Skipping plate for material: " + material);
-            } else {
-                Item bolt = ModItems.ITEMS.getEntries().stream()
-                        .filter(entry -> entry.getId().getPath().equals(material + "_bolt"))
-                        .findFirst()
-                        .orElseThrow(() -> new IllegalStateException("Plate not found: " + material + "_bolt"))
-                        .get();
-                tag(tag_bolt).add(bolt);
-            }
-
-            if (material.equals("plutonium") || material.equals("polonium") || material.equals("uranium")) {
-                System.out.println("Skipping plate for material: " + material);
-            } else {
-                Item screw = ModItems.ITEMS.getEntries().stream()
-                        .filter(entry -> entry.getId().getPath().equals(material + "_screw"))
-                        .findFirst()
-                        .orElseThrow(() -> new IllegalStateException("Plate not found: " + material + "_screw"))
-                        .get();
-                tag(tag_screw).add(screw);
-            }
-
-            tag(tag_ingot).add(ingot);
         }
 
+        // Add vanilla items to common tags
+        tag(C_INGOTS).add(Items.IRON_INGOT, Items.GOLD_INGOT, Items.COPPER_INGOT);
+        tag(C_NUGGETS).add(Items.IRON_NUGGET, Items.GOLD_NUGGET);
 
+        // Add tags for tools
         for (String material : MANUAL_TOOLS_MATERIALS) {
-            for (String type : MANUAL_TOOLS_TYPES) {
-                Item hammer = ModItems.ITEMS.getEntries().stream()
-                        .filter(entry -> entry.getId().getPath().equals(material + "_" + type))
-                        .findFirst()
-                        .orElseThrow(() -> new IllegalStateException("Hammer not found"))
-                        .get();
-                tag(tag_hammer).add(hammer);
-            }
+            addItemToTagIfExists(material + "_hammer", HAMMERS);
+            addItemToTagIfExists(material + "_file", FILES);
+            addItemToTagIfExists(material + "_mortar", MORTARS);
+            addItemToTagIfExists(material + "_saw", SAWS);
+            addItemToTagIfExists(material + "_screwdriver", SCREWDRIVERS);
+            addItemToTagIfExists(material + "_wire_cutters", WIRE_CUTTERS);
+            addItemToTagIfExists(material + "_wrench", WRENCHES);
+            addItemToTagIfExists(material + "_knife", KNIVES);
         }
     }
 
-    private TagKey<Item> createTag(String namespace, String path) {
+    private void addItemToBothTags(String itemName, TagKey<Item> generalTag, TagKey<Item> specificTag) {
+        ModItems.ITEMS.getEntries().stream()
+                .filter(entry -> entry.getId().getPath().equals(itemName))
+                .findFirst()
+                .ifPresent(entry -> {
+                    tag(generalTag).add(entry.get());
+                    tag(specificTag).add(entry.get());
+                });
+    }
+
+    private void addItemToTagIfExists(String itemName, TagKey<Item> tag) {
+        ModItems.ITEMS.getEntries().stream()
+                .filter(entry -> entry.getId().getPath().equals(itemName))
+                .findFirst()
+                .ifPresent(entry -> tag(tag).add(entry.get()));
+    }
+
+    private static TagKey<Item> createTag(String namespace, String path) {
         return TagKey.create(Registries.ITEM, ResourceLocation.fromNamespaceAndPath(namespace, path));
     }
 }

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aluminium_plate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tge_core:aluminium_plate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "tge_core:crafting/tool/aluminium_wrench"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_aluminium_plate"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "tge_core:crafting/tool/aluminium_wrench"
+    ]
+  }
+}

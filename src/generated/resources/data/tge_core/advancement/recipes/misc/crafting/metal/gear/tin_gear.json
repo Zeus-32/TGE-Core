@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "tge_core:crafting/metal/gear/tin_gear"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tin_plate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tge_core:tin_plate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_tin_plate"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "tge_core:crafting/metal/gear/tin_gear"
+    ]
+  }
+}

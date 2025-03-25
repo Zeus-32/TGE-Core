@@ -1,0 +1,13 @@
+{
+  "values": [
+    "tge_core:aluminium_file",
+    "tge_core:bronze_file",
+    "tge_core:diamond_file",
+    "tge_core:invar_file",
+    "tge_core:iron_file",
+    "tge_core:stainless_steel_file",
+    "tge_core:steel_file",
+    "tge_core:titanium_file",
+    "tge_core:wrought_iron_file"
+  ]
+}

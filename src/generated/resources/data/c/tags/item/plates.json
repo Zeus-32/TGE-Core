@@ -1,0 +1,31 @@
+{
+  "values": [
+    "tge_core:aluminium_plate",
+    "tge_core:brass_plate",
+    "tge_core:bronze_plate",
+    "tge_core:cobalt_plate",
+    "tge_core:copper_plate",
+    "tge_core:cupronickel_plate",
+    "tge_core:electrum_plate",
+    "tge_core:enderium_plate",
+    "tge_core:gold_plate",
+    "tge_core:invar_plate",
+    "tge_core:iridium_plate",
+    "tge_core:iron_plate",
+    "tge_core:lead_plate",
+    "tge_core:lumium_plate",
+    "tge_core:naquadah_plate",
+    "tge_core:nickel_plate",
+    "tge_core:osmium_plate",
+    "tge_core:platinum_plate",
+    "tge_core:red_alloy_plate",
+    "tge_core:silver_plate",
+    "tge_core:soul_infused_plate",
+    "tge_core:stainless_steel_plate",
+    "tge_core:steel_plate",
+    "tge_core:tin_plate",
+    "tge_core:titanium_plate",
+    "tge_core:wrought_iron_plate",
+    "tge_core:zinc_plate"
+  ]
+}

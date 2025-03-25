@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "tge_core:steel_screw"
+    },
+    "C": {
+      "tag": "tge:screwdrivers"
+    },
+    "F": {
+      "tag": "tge:files"
+    },
+    "P": {
+      "item": "tge_core:steel_plate"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "PBP",
+    "FPC",
+    "S S"
+  ],
+  "result": {
+    "count": 1,
+    "id": "tge_core:steel_wire_cutters"
+  }
+}

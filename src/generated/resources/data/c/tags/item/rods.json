@@ -1,0 +1,31 @@
+{
+  "values": [
+    "tge_core:aluminium_rod",
+    "tge_core:brass_rod",
+    "tge_core:bronze_rod",
+    "tge_core:cobalt_rod",
+    "tge_core:copper_rod",
+    "tge_core:cupronickel_rod",
+    "tge_core:electrum_rod",
+    "tge_core:enderium_rod",
+    "tge_core:gold_rod",
+    "tge_core:invar_rod",
+    "tge_core:iridium_rod",
+    "tge_core:iron_rod",
+    "tge_core:lead_rod",
+    "tge_core:lumium_rod",
+    "tge_core:naquadah_rod",
+    "tge_core:nickel_rod",
+    "tge_core:osmium_rod",
+    "tge_core:platinum_rod",
+    "tge_core:red_alloy_rod",
+    "tge_core:silver_rod",
+    "tge_core:soul_infused_rod",
+    "tge_core:stainless_steel_rod",
+    "tge_core:steel_rod",
+    "tge_core:tin_rod",
+    "tge_core:titanium_rod",
+    "tge_core:wrought_iron_rod",
+    "tge_core:zinc_rod"
+  ]
+}

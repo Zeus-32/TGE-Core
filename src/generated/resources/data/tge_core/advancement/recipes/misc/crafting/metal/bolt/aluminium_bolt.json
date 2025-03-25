@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aluminium_rod": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tge_core:aluminium_rod"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "tge_core:crafting/metal/bolt/aluminium_bolt"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_aluminium_rod"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "tge_core:crafting/metal/bolt/aluminium_bolt"
+    ]
+  }
+}

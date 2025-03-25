@@ -1,0 +1,13 @@
+{
+  "values": [
+    "tge_core:aluminium_screwdriver",
+    "tge_core:bronze_screwdriver",
+    "tge_core:diamond_screwdriver",
+    "tge_core:invar_screwdriver",
+    "tge_core:iron_screwdriver",
+    "tge_core:stainless_steel_screwdriver",
+    "tge_core:steel_screwdriver",
+    "tge_core:titanium_screwdriver",
+    "tge_core:wrought_iron_screwdriver"
+  ]
+}

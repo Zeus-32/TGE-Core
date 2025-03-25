@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "tge_core:iron_bolt"
+    },
+    "F": {
+      "tag": "tge:files"
+    },
+    "H": {
+      "tag": "tge:hammers"
+    },
+    "R": {
+      "item": "tge_core:iron_rod"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "  B",
+    "FR ",
+    "SH "
+  ],
+  "result": {
+    "count": 1,
+    "id": "tge_core:iron_screwdriver"
+  }
+}

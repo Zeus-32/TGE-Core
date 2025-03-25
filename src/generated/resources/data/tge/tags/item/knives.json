@@ -1,0 +1,13 @@
+{
+  "values": [
+    "tge_core:aluminium_knife",
+    "tge_core:bronze_knife",
+    "tge_core:diamond_knife",
+    "tge_core:invar_knife",
+    "tge_core:iron_knife",
+    "tge_core:stainless_steel_knife",
+    "tge_core:steel_knife",
+    "tge_core:titanium_knife",
+    "tge_core:wrought_iron_knife"
+  ]
+}

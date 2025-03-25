@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.5,
+  "ingredient": {
+    "item": "tge_core:wet_coke_brick"
+  },
+  "result": {
+    "count": 1,
+    "id": "tge_core:coke_brick"
+  }
+}

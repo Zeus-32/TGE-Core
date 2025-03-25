@@ -1,0 +1,31 @@
+{
+  "values": [
+    "tge_core:aluminium_nugget",
+    "tge_core:brass_nugget",
+    "tge_core:bronze_nugget",
+    "tge_core:cobalt_nugget",
+    "tge_core:copper_nugget",
+    "tge_core:cupronickel_nugget",
+    "tge_core:electrum_nugget",
+    "tge_core:enderium_nugget",
+    "tge_core:invar_nugget",
+    "tge_core:iridium_nugget",
+    "tge_core:lead_nugget",
+    "tge_core:lumium_nugget",
+    "tge_core:naquadah_nugget",
+    "tge_core:nickel_nugget",
+    "tge_core:osmium_nugget",
+    "tge_core:platinum_nugget",
+    "tge_core:red_alloy_nugget",
+    "tge_core:silver_nugget",
+    "tge_core:soul_infused_nugget",
+    "tge_core:stainless_steel_nugget",
+    "tge_core:steel_nugget",
+    "tge_core:tin_nugget",
+    "tge_core:titanium_nugget",
+    "tge_core:wrought_iron_nugget",
+    "tge_core:zinc_nugget",
+    "minecraft:iron_nugget",
+    "minecraft:gold_nugget"
+  ]
+}

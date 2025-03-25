@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_hammer": {
+    "has_bronze_ingot": {
       "conditions": {
         "items": [
           {
-            "items": "tge_core:bronze_hammer"
+            "items": "tge_core:bronze_ingot"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_hammer"
+      "has_bronze_ingot"
     ]
   ],
   "rewards": {

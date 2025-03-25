@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "tge_core:crafting/tool/titanium_wire_cutters"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_titanium_plate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tge_core:titanium_plate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_titanium_plate"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "tge_core:crafting/tool/titanium_wire_cutters"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:clay_ball"
+    },
+    "M": {
+      "item": "tge_core:brick_mold"
+    },
+    "S": {
+      "item": "minecraft:sand"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "SMS",
+    "SSS"
+  ],
+  "result": {
+    "count": 6,
+    "id": "tge_core:wet_coke_brick"
+  }
+}

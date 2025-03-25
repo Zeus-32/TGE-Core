@@ -3,6 +3,7 @@ package net.zeus_32.tge_core;
 import net.zeus_32.tge_core.common.ModBlocks;
 import net.zeus_32.tge_core.common.CreativeModeTabs;
 import net.zeus_32.tge_core.common.ModItems;
+import net.zeus_32.tge_core.common.ModNonMetalItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -31,6 +32,8 @@ public class TGECore {
         CreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
+        ModNonMetalItems.register(modEventBus);
+
         ModBlocks.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);

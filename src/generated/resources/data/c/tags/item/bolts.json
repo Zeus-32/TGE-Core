@@ -1,0 +1,31 @@
+{
+  "values": [
+    "tge_core:aluminium_bolt",
+    "tge_core:brass_bolt",
+    "tge_core:bronze_bolt",
+    "tge_core:cobalt_bolt",
+    "tge_core:copper_bolt",
+    "tge_core:cupronickel_bolt",
+    "tge_core:electrum_bolt",
+    "tge_core:enderium_bolt",
+    "tge_core:gold_bolt",
+    "tge_core:invar_bolt",
+    "tge_core:iridium_bolt",
+    "tge_core:iron_bolt",
+    "tge_core:lead_bolt",
+    "tge_core:lumium_bolt",
+    "tge_core:naquadah_bolt",
+    "tge_core:nickel_bolt",
+    "tge_core:osmium_bolt",
+    "tge_core:platinum_bolt",
+    "tge_core:red_alloy_bolt",
+    "tge_core:silver_bolt",
+    "tge_core:soul_infused_bolt",
+    "tge_core:stainless_steel_bolt",
+    "tge_core:steel_bolt",
+    "tge_core:tin_bolt",
+    "tge_core:titanium_bolt",
+    "tge_core:wrought_iron_bolt",
+    "tge_core:zinc_bolt"
+  ]
+}

@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "H": {
-      "item": "tge_core:bronze_hammer"
+      "tag": "tge:hammers"
     },
     "I": {
       "item": "tge_core:bronze_ingot"

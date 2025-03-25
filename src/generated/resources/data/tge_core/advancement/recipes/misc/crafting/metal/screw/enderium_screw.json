@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_enderium_bolt": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tge_core:enderium_bolt"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "tge_core:crafting/metal/screw/enderium_screw"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_enderium_bolt"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "tge_core:crafting/metal/screw/enderium_screw"
+    ]
+  }
+}

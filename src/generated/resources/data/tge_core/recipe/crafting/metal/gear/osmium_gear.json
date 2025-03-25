@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "tag": "tge:files"
+    },
+    "P": {
+      "item": "tge_core:osmium_plate"
+    },
+    "R": {
+      "item": "tge_core:osmium_rod"
+    }
+  },
+  "pattern": [
+    "RPR",
+    "PFP",
+    "RPR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "tge_core:osmium_gear"
+  }
+}

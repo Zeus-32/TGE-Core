@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "tge_core:item/common/tools/manual_tools/bronze/bronze_wrench"
+  }
+}

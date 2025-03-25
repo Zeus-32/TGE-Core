@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "K": {
+      "tag": "tge:knives"
+    },
+    "S": {
+      "tag": "minecraft:wooden_slabs"
+    }
+  },
+  "pattern": [
+    " K ",
+    "SSS",
+    "   "
+  ],
+  "result": {
+    "count": 1,
+    "id": "tge_core:brick_mold"
+  }
+}
