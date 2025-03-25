@@ -9,7 +9,6 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ModItemModelProvider extends ItemModelProvider {
-    // Seznam materiálů
     private static final List<String> MATERIALS = Arrays.asList(
             "brass",
             "bronze",
@@ -42,6 +41,26 @@ public class ModItemModelProvider extends ItemModelProvider {
             "zinc"
     );
 
+    private static final List<String> MANUAL_TOOLS_MATERIALS = Arrays.asList(
+            "bronze",
+            "diamond",
+            "invar",
+            "iron",
+            "stainless_steel",
+            "steel",
+            "wrought_iron"
+    );
+
+    private static final List<String> MANUAL_TOOLS_TYPES = Arrays.asList(
+            "file",
+            "hammer",
+            "mortar",
+            "saw",
+            "screwdriver",
+            "wire_cutters",
+            "wrench"
+    );
+
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, TGECore.MODID, existingFileHelper);
     }
@@ -52,6 +71,16 @@ public class ModItemModelProvider extends ItemModelProvider {
             registerIngotModel(material);
             registerPlateModel(material);
             registerNuggetModel(material);
+            registerRodModel(material);
+            registerGearModel(material);
+            registerBoltModel(material);
+            registerScrewModel(material);
+        }
+
+        for (String material : MANUAL_TOOLS_MATERIALS) {
+            for (String type : MANUAL_TOOLS_TYPES) {
+                registerTool(material, type);
+            }
         }
     }
 
@@ -61,7 +90,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent(itemName, mcLoc("item/generated"))
                 .texture("layer0", modLoc("item/common/item/ingot/" + itemName));
     }
-
     private void registerPlateModel(String material) {
         if (material.equals("plutonium") || material.equals("polonium") || material.equals("uranium")) return;
         String itemName = material + "_plate";
@@ -73,5 +101,35 @@ public class ModItemModelProvider extends ItemModelProvider {
         String itemName = material + "_nugget";
         withExistingParent(itemName, mcLoc("item/generated"))
                 .texture("layer0", modLoc("item/common/item/nugget/" + itemName));
+    }
+    private void registerRodModel(String material) {
+        if (material.equals("plutonium") || material.equals("polonium") || material.equals("uranium")) return;
+        String itemName = material + "_rod";
+        withExistingParent(itemName, mcLoc("item/generated"))
+                .texture("layer0", modLoc("item/common/item/rod/" + itemName));
+    }
+    private void registerGearModel(String material) {
+        if (material.equals("plutonium") || material.equals("polonium") || material.equals("uranium")) return;
+        String itemName = material + "_gear";
+        withExistingParent(itemName, mcLoc("item/generated"))
+                .texture("layer0", modLoc("item/common/item/gear/" + itemName));
+    }
+    private void registerBoltModel(String material) {
+        if (material.equals("plutonium") || material.equals("polonium") || material.equals("uranium")) return;
+        String itemName = material + "_bolt";
+        withExistingParent(itemName, mcLoc("item/generated"))
+                .texture("layer0", modLoc("item/common/item/bolt/" + itemName));
+    }
+    private void registerScrewModel(String material) {
+        if (material.equals("plutonium") || material.equals("polonium") || material.equals("uranium")) return;
+        String itemName = material + "_screw";
+        withExistingParent(itemName, mcLoc("item/generated"))
+                .texture("layer0", modLoc("item/common/item/screw/" + itemName));
+    }
+
+    private void registerTool(String material, String type) {
+        String itemName = material + "_" + type;
+        withExistingParent(itemName, mcLoc("item/generated"))
+                .texture("layer0", modLoc("item/common/tools/manual_tools/" + material + "/" + itemName));
     }
 }

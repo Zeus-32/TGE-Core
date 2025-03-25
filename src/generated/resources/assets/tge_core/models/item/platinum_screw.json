@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "tge_core:item/common/item/screw/platinum_screw"
+  }
+}

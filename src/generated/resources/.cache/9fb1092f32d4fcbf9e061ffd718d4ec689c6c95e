@@ -1,4 +1,4 @@
-// 1.21.1	2025-03-23T17:13:35.3922383	Recipes
+// 1.21.1	2025-03-24T15:25:47.1707559	Recipes
 e503f3e8342ba3eb1ca928f417f3b9e48366434e data/tge_core/advancement/recipes/misc/crafting/metal/ingot/brass_ingot_from_nuggets.json
 87a2b3210fd31221087219f71163beebe8e5443a data/tge_core/advancement/recipes/misc/crafting/metal/ingot/bronze_ingot_from_nuggets.json
 bfe20826e663a94dc708f0fb6fa7a62c61df9bc5 data/tge_core/advancement/recipes/misc/crafting/metal/ingot/cobalt_ingot_from_nuggets.json
@@ -47,6 +47,7 @@ da50d80ebd3ec600b77914238892cb5529e78fe1 data/tge_core/advancement/recipes/misc/
 eb7f27434e5288552c37d48bbd2699878f524476 data/tge_core/advancement/recipes/misc/crafting/metal/nugget/titanium_nuggets_from_ingot.json
 cb70eb0754cee728fa882919a0987d97dcad8b35 data/tge_core/advancement/recipes/misc/crafting/metal/nugget/wrought_iron_nuggets_from_ingot.json
 7270faf472e8433f42acb31562ad9495456cf346 data/tge_core/advancement/recipes/misc/crafting/metal/nugget/zinc_nuggets_from_ingot.json
+6c8631e27bf59d8e4cdc2051d50a3b9398b8b1df data/tge_core/advancement/recipes/misc/crafting/metal/plate/bronze_plate.json
 6ade3efcda74a390228b220566af0d4765737bc8 data/tge_core/recipe/crafting/metal/ingot/brass_ingot_from_nuggets.json
 73195d240f646b8443c0a14b7d264fda9ef5470b data/tge_core/recipe/crafting/metal/ingot/bronze_ingot_from_nuggets.json
 859755b78b60832a00633198cf350e321e25cfde data/tge_core/recipe/crafting/metal/ingot/cobalt_ingot_from_nuggets.json
@@ -95,3 +96,4 @@ bef42a395870feff280fcf1458422cc94af34fad data/tge_core/recipe/crafting/metal/nug
 c3ec9c2791aaab66432415848e023d3538c316aa data/tge_core/recipe/crafting/metal/nugget/titanium_nuggets_from_ingot.json
 cb825159e4178f9d0ed517718bed6c974ab07f98 data/tge_core/recipe/crafting/metal/nugget/wrought_iron_nuggets_from_ingot.json
 b43ca96f3538e61ecaf0e548853b3077f3e658a7 data/tge_core/recipe/crafting/metal/nugget/zinc_nuggets_from_ingot.json
+5672e8bd1e3d8af0c4a427ecb444fae99512b1c2 data/tge_core/recipe/crafting/metal/plate/bronze_plate.json

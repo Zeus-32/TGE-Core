@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "item": "tge_core:bronze_hammer"
+    },
+    "I": {
+      "item": "tge_core:bronze_ingot"
+    }
+  },
+  "pattern": [
+    " H ",
+    " I ",
+    " I "
+  ],
+  "result": {
+    "count": 1,
+    "id": "tge_core:bronze_plate"
+  }
+}
