@@ -96,6 +96,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         registerNonMetalItems("brick", "mold");
         registerNonMetalItems("wet", "coke_brick");
         registerNonMetalItems("coke", "brick");
+        registerNonMetalItems("fire", "brick");
+        registerNonMetalItems("coal", "coke");
     }
 
     private void registerNonMetalItems(String material, String type) {

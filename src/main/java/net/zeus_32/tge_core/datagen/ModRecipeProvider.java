@@ -3,16 +3,15 @@ package net.zeus_32.tge_core.datagen;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.ItemLike;
-import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
-import net.zeus_32.tge_core.common.ModItems;
-import net.zeus_32.tge_core.common.ModNonMetalItems;
+import net.zeus_32.tge_core.item.ModItems;
+import net.zeus_32.tge_core.item.ModNonMetalItems;
+import net.zeus_32.tge_core.recipe.ModRecipes;
 
 import java.util.Arrays;
 import java.util.List;
@@ -110,6 +109,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         registerGlassChain(recipeOutput);
         registerCokeBrickChain(recipeOutput);
+        registerFireBrickChain(recipeOutput);
     }
 
     private Item getItem(String itemName) {
@@ -149,10 +149,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 case "brick_mold": return ModNonMetalItems.BRICK_MOLD.get();
                 case "wet_coke_brick": return ModNonMetalItems.WET_COKE_BRICK.get();
                 case "coke_brick": return ModNonMetalItems.COKE_BRICK.get();
+                case "clay_dust": return ModNonMetalItems.CLAY_DUST.get();
+                case "brick_dust": return ModNonMetalItems.BRICK_DUST.get();
+                case "fire_brick": return ModNonMetalItems.FIRE_BRICK.get();
                 default: throw new IllegalStateException("Item not found: " + itemName);
             }
         }
     }
+
 
     private void registerPlateCrafting(RecipeOutput recipeOutput, String material) {
         Item plate = getItem(material + "_plate");
@@ -436,13 +440,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .save(recipeOutput, "tge_core:campfire_cooking/glass");
     }
 
-
     private void registerCokeBrickChain(RecipeOutput recipeOutput) {
         Item clay = Items.CLAY_BALL;
         Item sand = Items.SAND;
         Item mold = getItem("brick_mold");
         Item wet_coke_brick = getItem("wet_coke_brick");
         Item coke_brick = getItem("coke_brick");
+        Item coke_bricks = getItem("coke_bricks");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mold)
                 .pattern(" K ")
@@ -468,5 +472,89 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(wet_coke_brick), RecipeCategory.MISC, coke_brick, 0.5f, 200)
                 .unlockedBy("has_wet_coke_brick", has(wet_coke_brick))
                 .save(recipeOutput, "tge_core:smelting/coke_brick");
+        SimpleCookingRecipeBuilder.blasting(Ingredient.of(wet_coke_brick), RecipeCategory.MISC, coke_brick, 0.5f, 100)
+                .unlockedBy("has_wet_coke_brick", has(wet_coke_brick))
+                .save(recipeOutput, "tge_core:blasting/coke_brick");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, coke_bricks)
+                .pattern("CC ")
+                .pattern("CC ")
+                .pattern("   ")
+                .define('C', coke_brick)
+                .unlockedBy("has_coke_brick", has(coke_brick))
+                .save(recipeOutput, "tge_core:crafting/non_metal/coke_bricks");
+    }
+
+    private void registerFireBrickChain(RecipeOutput recipeOutput) {
+        Item clay = Items.CLAY_BALL;
+        Item clay_block = Items.CLAY;
+        Item clay_dust = getItem("clay_dust");
+        Item brick = Items.BRICK;
+        Item bricks = Items.BRICKS;
+        Item brick_dust = getItem("brick_dust");
+        Item mold = getItem("brick_mold");
+        Item fire_brick = getItem("fire_brick");
+        Item fire_bricks = getItem("fire_bricks");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, clay_dust, 1)
+                .pattern(" C ")
+                .pattern(" M ")
+                .pattern("   ")
+                .define('C', clay)
+                .define('M', ModItemTagProvider.MORTARS)
+                .unlockedBy("has_clay", has(clay))
+                .save(recipeOutput, "tge_core:crafting/non_metal/clay_dust");
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, clay_dust, 4)
+                .pattern(" C ")
+                .pattern(" M ")
+                .pattern("   ")
+                .define('C', clay_block)
+                .define('M', ModItemTagProvider.MORTARS)
+                .unlockedBy("has_clay", has(clay))
+                .save(recipeOutput, "tge_core:crafting/non_metal/clay_dust_from_block");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, brick_dust)
+                .pattern(" B ")
+                .pattern(" M ")
+                .pattern("   ")
+                .define('B', brick)
+                .define('M', ModItemTagProvider.MORTARS)
+                .unlockedBy("has_brick", has(brick))
+                .save(recipeOutput, "tge_core:crafting/non_metal/brick_dust");
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, brick_dust, 4)
+                .pattern(" B ")
+                .pattern(" M ")
+                .pattern("   ")
+                .define('B', bricks)
+                .define('M', ModItemTagProvider.MORTARS)
+                .unlockedBy("has_bricks", has(bricks))
+                .save(recipeOutput, "tge_core:crafting/non_metal/brick_dust_from_block");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, fire_brick, 2)
+                .pattern(" B ")
+                .pattern(" C ")
+                .pattern(" M ")
+                .define('B', brick_dust)
+                .define('C', clay_dust)
+                .define('M', mold)
+                .unlockedBy("has_brick", has(brick))
+                .save(recipeOutput, "tge_core:crafting/non_metal/fire_brick");
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, fire_brick, 2)
+                .pattern(" C ")
+                .pattern(" B ")
+                .pattern(" M ")
+                .define('B', brick_dust)
+                .define('C', clay_dust)
+                .define('M', mold)
+                .unlockedBy("has_brick", has(brick))
+                .save(recipeOutput, "tge_core:crafting/non_metal/fire_brick_2");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, fire_bricks)
+                .pattern("FF ")
+                .pattern("FF ")
+                .pattern("   ")
+                .define('F', fire_brick)
+                .unlockedBy("has_fire_brick", has(fire_brick))
+                .save(recipeOutput, "tge_core:crafting/non_metal/fire_bricks");
     }
 }

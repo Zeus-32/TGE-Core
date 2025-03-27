@@ -1,5 +1,7 @@
-// 1.21.1	2025-03-25T21:09:59.7992879	Recipes
+// 1.21.1	2025-03-27T20:35:06.5582814	Recipes
+6fff291ac035c2092e3511b9ab68abe8db52ab10 data/tge_core/advancement/recipes/misc/blasting/coke_brick.json
 6a3893fcd3358b9fa7e8822e6bd1f3c06698006c data/tge_core/advancement/recipes/misc/campfire_cooking/glass.json
+1055110123672789cbe6e4ef7cf599200bf1f030 data/tge_core/advancement/recipes/misc/coke_oven_recipe.json
 e3ce23a5192f5807f0d55f98bac338d9db382625 data/tge_core/advancement/recipes/misc/crafting/metal/bolt/aluminium_bolt.json
 194c1074b089bb647111234dfb638546255d31a7 data/tge_core/advancement/recipes/misc/crafting/metal/bolt/brass_bolt.json
 1c140ae48ac6ca56f77d34e961d232bbd072fe3d data/tge_core/advancement/recipes/misc/crafting/metal/bolt/bronze_bolt.json
@@ -185,7 +187,15 @@ ae225bf10b939174ab23da24cdd448ad06ec952c data/tge_core/advancement/recipes/misc/
 bfaf0fd9f5faadffc71f8a271438031fd5302979 data/tge_core/advancement/recipes/misc/crafting/metal/screw/titanium_screw.json
 c2387f646b9e299713ba96915035269f5549072d data/tge_core/advancement/recipes/misc/crafting/metal/screw/wrought_iron_screw.json
 273078e93c5d56d8780033e83719fe6f0db03cde data/tge_core/advancement/recipes/misc/crafting/metal/screw/zinc_screw.json
+99a4de05d4068e17a7da9c02e343eb88edf650ff data/tge_core/advancement/recipes/misc/crafting/non_metal/brick_dust.json
+2ef343e0b9788472ef1de869de9f28ac639778d7 data/tge_core/advancement/recipes/misc/crafting/non_metal/brick_dust_from_block.json
 6ee7828b0fbd97947c5a26fb75f70385651bf534 data/tge_core/advancement/recipes/misc/crafting/non_metal/brick_mold.json
+89591f4cf8019141d072b9940bc171862b750431 data/tge_core/advancement/recipes/misc/crafting/non_metal/clay_dust.json
+8ab642248619dbcf84fde0483ecb790802250b0b data/tge_core/advancement/recipes/misc/crafting/non_metal/clay_dust_from_block.json
+0e9d42b9f9df9bd66f8f2a027be45a8c66ee061c data/tge_core/advancement/recipes/misc/crafting/non_metal/coke_bricks.json
+cd20e9a56465176586e82fd1f1435479c9ae273a data/tge_core/advancement/recipes/misc/crafting/non_metal/fire_brick.json
+4e6be04391e668de5c4f65d7c0f415760657f37b data/tge_core/advancement/recipes/misc/crafting/non_metal/fire_bricks.json
+9cba35a37adb6f108c348dc03e8b4ca35073c254 data/tge_core/advancement/recipes/misc/crafting/non_metal/fire_brick_2.json
 6f954775c5a823313e46f902822cf84e698a579c data/tge_core/advancement/recipes/misc/crafting/non_metal/flint_dust.json
 c2a651fe2413b6e753bf5edc1b9a70145b61c3ce data/tge_core/advancement/recipes/misc/crafting/non_metal/glass_dust.json
 89ac7abbafd09317571d62e5d47b48fc6c2da258 data/tge_core/advancement/recipes/misc/crafting/non_metal/quartz_sand_dust.json
@@ -247,7 +257,9 @@ a65c43362a26635c35ff4a56a3ed0a022674600f data/tge_core/advancement/recipes/tools
 e71021b83db13414cdb6ef3042abce81d2e430d5 data/tge_core/advancement/recipes/tools/crafting/tool/wrought_iron_screwdriver.json
 392cb81c14f245206a529da9282335a0c4b35a82 data/tge_core/advancement/recipes/tools/crafting/tool/wrought_iron_wire_cutters.json
 50c851996036df7000da8d863f6acf66584d9916 data/tge_core/advancement/recipes/tools/crafting/tool/wrought_iron_wrench.json
+3b5511f331de5a40300a8c956da71e79d01293d0 data/tge_core/recipe/blasting/coke_brick.json
 982e33670c6f3ae32ac371f8b383e7622337c0d5 data/tge_core/recipe/campfire_cooking/glass.json
+f7ad2d031d21fea55c52a6b4e8f6e230cd25b1e4 data/tge_core/recipe/coke_oven_recipe.json
 c07969351546aba13f3dc4f18615fecb230b2078 data/tge_core/recipe/crafting/metal/bolt/aluminium_bolt.json
 65ef9ee3eb73b1c893f33081a9cc85ba1ed3b7c8 data/tge_core/recipe/crafting/metal/bolt/brass_bolt.json
 d4c20ca5b09b5002e244f2616c19fe0b14d2e70a data/tge_core/recipe/crafting/metal/bolt/bronze_bolt.json
@@ -433,7 +445,15 @@ ec4523091b4c6500c5685bc27b2f3137cbe63f31 data/tge_core/recipe/crafting/metal/scr
 2b04350329873c6e711af837759fda4d3d8a33f3 data/tge_core/recipe/crafting/metal/screw/titanium_screw.json
 98591f45772700356736e66042f9605194958e8e data/tge_core/recipe/crafting/metal/screw/wrought_iron_screw.json
 c181c736f91fc96a7f4bd49d78277f2241a6b2b8 data/tge_core/recipe/crafting/metal/screw/zinc_screw.json
+f32b5acb2e749ea0cd2bd48fac49a56f091bc160 data/tge_core/recipe/crafting/non_metal/brick_dust.json
+b1c0275f1bb52738c5a63f629d12096c24f4007a data/tge_core/recipe/crafting/non_metal/brick_dust_from_block.json
 d672754119c12a6fd1aba4428104df520f37be40 data/tge_core/recipe/crafting/non_metal/brick_mold.json
+7b39f0fe3620a0371c6298fd13bd934032c5e877 data/tge_core/recipe/crafting/non_metal/clay_dust.json
+262b3cfefbb252fe31dd34c4e4fea59f1b5b7cfa data/tge_core/recipe/crafting/non_metal/clay_dust_from_block.json
+7a92d587499297895f94dc0aab489df5ab89b53a data/tge_core/recipe/crafting/non_metal/coke_bricks.json
+9dad7e92bc418289b5f291d281453ac2b713e8f8 data/tge_core/recipe/crafting/non_metal/fire_brick.json
+972c18f2abe76b3e22f955348044c5dfa3695818 data/tge_core/recipe/crafting/non_metal/fire_bricks.json
+fee4d560de59c3776899789e0efc6b6d149879d9 data/tge_core/recipe/crafting/non_metal/fire_brick_2.json
 49e2044f2ceaac974f823a81d72fbbebe52f3979 data/tge_core/recipe/crafting/non_metal/flint_dust.json
 7ab77d34b5a7a39011b77ae744bc5814990b3470 data/tge_core/recipe/crafting/non_metal/glass_dust.json
 444f529d401a908263505a575a002d3b6fad6649 data/tge_core/recipe/crafting/non_metal/quartz_sand_dust.json

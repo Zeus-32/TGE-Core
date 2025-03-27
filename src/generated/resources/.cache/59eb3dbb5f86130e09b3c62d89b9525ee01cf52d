@@ -1,2 +1,4 @@
-// 1.21.1	2025-03-23T15:10:48.6106095	Loot Tables
+// 1.21.1	2025-03-27T18:45:13.16318	Loot Tables
 b280a733a0c67c4359940da9094d95d8267ce381 data/tge_core/loot_table/blocks/coke_bricks.json
+d1f65de51df823b86cd677705523c1e6fa84f5a1 data/tge_core/loot_table/blocks/coke_oven.json
+b751d3a2e8bcecea1685a5e927be00b97428c350 data/tge_core/loot_table/blocks/fire_bricks.json

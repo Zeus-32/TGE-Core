@@ -1,4 +1,4 @@
-// 1.21.1	2025-03-25T21:09:59.7917442	Item Models: tge_core
+// 1.21.1	2025-03-26T22:12:20.0543006	Item Models: tge_core
 498ffa275e67beefc3f425ac7f87884da707feaa assets/tge_core/models/item/aluminium_bolt.json
 11ac207e9b4ac581c0cbb3ab49dba3e334690861 assets/tge_core/models/item/aluminium_dust.json
 ad38957a7b87a98cace5d838955dd70578a44d45 assets/tge_core/models/item/aluminium_file.json
@@ -90,6 +90,7 @@ cbe05224650b0a8efb9a2f5c633657bff1af8225 assets/tge_core/models/item/enderium_in
 ea16bbdecb74d1533284e4d710a3dede9c166b62 assets/tge_core/models/item/enderium_plate.json
 6018327b4a5d8c29ca3153642694d6abd9130ab5 assets/tge_core/models/item/enderium_rod.json
 6ec63c56b589f981d42a26de3c5a17ad54a0fce8 assets/tge_core/models/item/enderium_screw.json
+87531f18ec92780372c27dfbad435f39ca8d4122 assets/tge_core/models/item/fire_brick.json
 6ae6d40fb34a508caced252a7ee92a6a5e1660a0 assets/tge_core/models/item/flint_dust.json
 852ca342ac59f198005df6f5aba2c727bbea5ea0 assets/tge_core/models/item/glass_dust.json
 715d0f52f79ed7143ceb21d785d5888afedfee65 assets/tge_core/models/item/gold_bolt.json

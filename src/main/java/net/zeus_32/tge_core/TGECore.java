@@ -1,9 +1,17 @@
 package net.zeus_32.tge_core;
 
-import net.zeus_32.tge_core.common.ModBlocks;
-import net.zeus_32.tge_core.common.CreativeModeTabs;
-import net.zeus_32.tge_core.common.ModItems;
-import net.zeus_32.tge_core.common.ModNonMetalItems;
+import net.minecraft.util.profiling.jfr.stats.CpuLoadStat;
+import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
+import net.zeus_32.tge_core.block.ModBlocks;
+import net.zeus_32.tge_core.block.entity.renderer.ModBlockEntities;
+import net.zeus_32.tge_core.item.CreativeModeTabs;
+import net.zeus_32.tge_core.item.ModItems;
+import net.zeus_32.tge_core.item.ModNonMetalItems;
+import net.zeus_32.tge_core.recipe.ModRecipes;
+import net.zeus_32.tge_core.screen.ModMenuTypes;
+import net.zeus_32.tge_core.screen.custom.CokeOvenMenu;
+import net.zeus_32.tge_core.screen.custom.CokeOvenScreen;
+import org.checkerframework.checker.units.qual.C;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -36,6 +44,11 @@ public class TGECore {
 
         ModBlocks.register(modEventBus);
 
+        ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+
+        ModRecipes.register(modEventBus);
+
         NeoForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
@@ -58,6 +71,11 @@ public class TGECore {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+        }
+
+        @SubscribeEvent
+        public static void registerScreens(RegisterMenuScreensEvent event) {
+            event.register(ModMenuTypes.COKE_OVEN_MENU.get(), CokeOvenScreen::new);
         }
     }
 }

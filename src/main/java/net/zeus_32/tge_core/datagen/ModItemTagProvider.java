@@ -11,7 +11,7 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.zeus_32.tge_core.TGECore;
-import net.zeus_32.tge_core.common.ModItems;
+import net.zeus_32.tge_core.item.ModItems;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.Arrays;

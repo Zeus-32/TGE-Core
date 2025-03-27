@@ -5,7 +5,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
-import net.zeus_32.tge_core.common.ModBlocks;
+import net.zeus_32.tge_core.block.ModBlocks;
 
 import java.util.Set;
 
@@ -17,6 +17,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.COKE_BRICKS.get());
+        dropSelf(ModBlocks.FIRE_BRICKS.get());
+        dropSelf(ModBlocks.COKE_OVEN.get());
     }
 
     @Override

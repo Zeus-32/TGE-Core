@@ -330,10 +330,14 @@
 
   "item.tge_core.clay_dust": "Clay Dust",
   "item.tge_core.brick_dust": "Brick Dust",
+  "item.tge_core.fire_brick": "Fire Brick",
+  "block.tge_core.fire_bricks": "Fire Bricks",
 
   "item.tge_core.brick_mold": "Brick Mold",
   "item.tge_core.wet_coke_brick": "Wet Coke Brick",
   "item.tge_core.coke_brick": "Coke Brick",
+  "block.tge_core.coke_bricks": "Coke Bricks",
+  "item.tge_core.coal_coke": "Coal Coke",
 
   "creativetab.tge_core.tge_metals_tab": "The Great Engineer Metals",
   "creativetab.tge_core.tge_non_metals_tab": "The Great Engineer Non Metals",
