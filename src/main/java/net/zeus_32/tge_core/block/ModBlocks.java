@@ -3,13 +3,13 @@ package net.zeus_32.tge_core.block;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.zeus_32.tge_core.TGECore;
-import net.zeus_32.tge_core.block.custom.CokeOven;
 import net.zeus_32.tge_core.item.ModItems;
 
 import java.util.function.Supplier;
@@ -17,11 +17,9 @@ import java.util.function.Supplier;
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(TGECore.MODID);
 
-    public static final DeferredBlock<Block> COKE_BRICKS = registerBlock("coke_bricks", () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
     public static final DeferredBlock<Block> FIRE_BRICKS = registerBlock("fire_bricks", () -> new Block(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.STONE)));
 
-    public static final DeferredBlock<Block> COKE_OVEN = registerBlock("coke_oven", () -> new CokeOven(BlockBehaviour.Properties.of()));
-
+    public static final DeferredBlock<Block> STEEL_MACHINE_CASING = registerBlock("steel_machine_casing", () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
 
     public static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "F": {
-      "tag": "tge:files"
-    },
     "P": {
       "item": "tge_core:wrought_iron_plate"
     },
     "R": {
       "item": "tge_core:wrought_iron_rod"
+    },
+    "W": {
+      "tag": "tge:wrenches"
     }
   },
   "pattern": [
     "RPR",
-    "PFP",
+    "PWP",
     "RPR"
   ],
   "result": {

@@ -62,7 +62,8 @@ public class ModItemModelProvider extends ItemModelProvider {
             "screwdriver",
             "wire_cutters",
             "wrench",
-            "knife"
+            "knife",
+            "mining_hammer"
     );
 
     public ModItemModelProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
@@ -97,7 +98,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         registerNonMetalItems("wet", "coke_brick");
         registerNonMetalItems("coke", "brick");
         registerNonMetalItems("fire", "brick");
-        registerNonMetalItems("coal", "coke");
+        registerNonMetalItems("andesite", "compound");
+        registerNonMetalItems("advanced", "tool_handle");
+        registerNonMetalItems("kinetic", "mechanism");
     }
 
     private void registerNonMetalItems(String material, String type) {
@@ -158,7 +161,7 @@ public class ModItemModelProvider extends ItemModelProvider {
     private void registerTool(String material, String type) {
         if (type != "knife") {
             String itemName = material + "_" + type;
-            withExistingParent(itemName, mcLoc("item/generated"))
+            withExistingParent(itemName, mcLoc("item/handheld"))
                     .texture("layer0", modLoc("item/common/tools/manual_tools/" + material + "/" + itemName));
         } else {
             withExistingParent(material + "_knife", mcLoc("item/handheld"))

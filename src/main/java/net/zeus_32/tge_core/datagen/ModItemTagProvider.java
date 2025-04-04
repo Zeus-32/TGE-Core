@@ -84,6 +84,7 @@ public class ModItemTagProvider extends ItemTagsProvider {
     public static final TagKey<Item> WIRE_CUTTERS = createTag("tge", "wire_cutters");
     public static final TagKey<Item> WRENCHES = createTag("tge", "wrenches");
     public static final TagKey<Item> KNIVES = createTag("tge", "knives");
+    public static final TagKey<Item> MINING_HAMMERS = createTag("tge", "mining_hammers");
 
     // Common category tags
     private static final TagKey<Item> C_INGOTS = createTag("c", "ingots");
@@ -118,19 +119,15 @@ public class ModItemTagProvider extends ItemTagsProvider {
             addItemToBothTags(material + "_ingot", C_INGOTS, materialIngotTag);
 
             // Handle nuggets - skip radioactive materials and vanilla nuggets
-            if (!material.equals("plutonium") && !material.equals("polonium") && !material.equals("uranium")) {
-                addItemToBothTags(material + "_nugget", C_NUGGETS, materialNuggetTag);
-            }
+            addItemToBothTags(material + "_nugget", C_NUGGETS, materialNuggetTag);
 
             // Handle other components - skip radioactive materials
-            if (!material.equals("plutonium") && !material.equals("polonium") && !material.equals("uranium")) {
-                addItemToBothTags(material + "_plate", C_PLATES, materialPlateTag);
-                addItemToBothTags(material + "_rod", C_RODS, materialRodTag);
-                addItemToBothTags(material + "_gear", C_GEARS, materialGearTag);
-                addItemToBothTags(material + "_bolt", C_BOLTS, materialBoltTag);
-                addItemToBothTags(material + "_screw", C_SCREWS, materialScrewTag);
-                addItemToBothTags(material + "_dust", C_DUSTS, materialDustTag);
-            }
+            addItemToBothTags(material + "_plate", C_PLATES, materialPlateTag);
+            addItemToBothTags(material + "_rod", C_RODS, materialRodTag);
+            addItemToBothTags(material + "_gear", C_GEARS, materialGearTag);
+            addItemToBothTags(material + "_bolt", C_BOLTS, materialBoltTag);
+            addItemToBothTags(material + "_screw", C_SCREWS, materialScrewTag);
+            addItemToBothTags(material + "_dust", C_DUSTS, materialDustTag);
         }
 
         // Add vanilla items to common tags
@@ -147,6 +144,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
             addItemToTagIfExists(material + "_wire_cutters", WIRE_CUTTERS);
             addItemToTagIfExists(material + "_wrench", WRENCHES);
             addItemToTagIfExists(material + "_knife", KNIVES);
+            addItemToTagIfExists(material + "_mining_hammer", MINING_HAMMERS);
+            addItemToTagIfExists(material + "_mining_hammer", HAMMERS);
         }
     }
 

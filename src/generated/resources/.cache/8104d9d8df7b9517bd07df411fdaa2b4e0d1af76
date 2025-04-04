@@ -1,2 +1,3 @@
-// 1.21.1	2025-03-26T22:12:20.0602554	Tags for minecraft:block mod id tge_core
-5fcac83684d53c02a045676d0403252ae31538d3 data/minecraft/tags/block/mineable/pickaxe.json
+// 1.21.1	2025-04-04T16:43:00.3144581	Tags for minecraft:block mod id tge_core
+56e8eeca1097b5b2103c799ea13e27c23f319bae data/minecraft/tags/block/mineable/pickaxe.json
+ede828a06c570dbbd63550bf1a937eee7716119c data/minecraft/tags/block/needs_iron_tool.json

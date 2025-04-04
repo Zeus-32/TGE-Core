@@ -17,11 +17,12 @@ public class ModNonMetalItems {
     public static final DeferredItem<Item> BRICK_MOLD = ITEMS.register("brick_mold", () -> new MoldItem(new Item.Properties().durability(1)));
     public static final DeferredItem<Item> WET_COKE_BRICK = ITEMS.register("wet_coke_brick", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> COKE_BRICK = ITEMS.register("coke_brick", () -> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> COAL_COKE = ITEMS.register("coke_coal", () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> CLAY_DUST = ITEMS.register("clay_dust", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> BRICK_DUST = ITEMS.register("brick_dust", () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> FIRE_BRICK = ITEMS.register("fire_brick", () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<Item> KINTETIC_MECHANISM = ITEMS.register("kinetic_mechanism", () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

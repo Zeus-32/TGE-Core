@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "tge_core:block/steel_machine_casing"
+    }
+  }
+}

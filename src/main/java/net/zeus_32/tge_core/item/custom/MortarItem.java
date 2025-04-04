@@ -33,7 +33,7 @@ public class MortarItem extends Item {
         int usesLeft = remainingDurability / 2;
 
         tooltip.add(Component.literal("§7Durability: §b" + remainingDurability));
-        tooltip.add(Component.literal("§7Uses left: §e" + usesLeft));
+        tooltip.add(Component.literal("§7Crafting uses: §e" + usesLeft));
 
         super.appendHoverText(stack, context, tooltip, flag);
     }

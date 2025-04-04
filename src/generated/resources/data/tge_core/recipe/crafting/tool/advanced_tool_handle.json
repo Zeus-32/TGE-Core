@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "item": "minecraft:leather"
+    },
+    "R": {
+      "item": "tge_core:steel_rod"
+    }
+  },
+  "pattern": [
+    " LR",
+    "LRL",
+    "RL "
+  ],
+  "result": {
+    "count": 1,
+    "id": "tge_core:advanced_tool_handle"
+  }
+}

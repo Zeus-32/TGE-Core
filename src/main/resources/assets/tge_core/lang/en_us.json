@@ -1,4 +1,6 @@
 {
+  "item.tge_core.andesite_compound": "Andesite Compound",
+
   "item.tge_core.aluminium_ingot": "Aluminium Ingot",
   "item.tge_core.brass_ingot": "Brass Ingot",
   "item.tge_core.bronze_ingot": "Bronze Ingot",
@@ -324,6 +326,16 @@
   "item.tge_core.titanium_knife": "Titanium Knife",
   "item.tge_core.wrought_iron_knife": "Wrought Iron Knife",
 
+  "item.tge_core.aluminium_mining_hammer": "Aluminium Mining Hammer",
+  "item.tge_core.bronze_mining_hammer": "Bronze Mining Hammer",
+  "item.tge_core.diamond_mining_hammer": "Diamond Mining Hammer",
+  "item.tge_core.invar_mining_hammer": "Invar Mining Hammer",
+  "item.tge_core.iron_mining_hammer": "Iron Mining Hammer",
+  "item.tge_core.stainless_steel_mining_hammer": "Stainless Steel Mining Hammer",
+  "item.tge_core.steel_mining_hammer": "Steel Mining Hammer",
+  "item.tge_core.titanium_mining_hammer": "Titanium Mining Hammer",
+  "item.tge_core.wrought_iron_mining_hammer": "Wrought Iron Mining Hammer",
+
   "item.tge_core.flint_dust": "Flint Dust",
   "item.tge_core.quartz_sand_dust": "Quartz Sand Dust",
   "item.tge_core.glass_dust": "Glass Dust",
@@ -336,10 +348,15 @@
   "item.tge_core.brick_mold": "Brick Mold",
   "item.tge_core.wet_coke_brick": "Wet Coke Brick",
   "item.tge_core.coke_brick": "Coke Brick",
-  "block.tge_core.coke_bricks": "Coke Bricks",
-  "item.tge_core.coal_coke": "Coal Coke",
+  "item.tge_core.coke_coal": "Coke Coal",
+
+  "item.tge_core.advanced_tool_handle": "Advanced Tool Handle",
+
+  "item.tge_core.kinetic_mechanism": "Kinetic Mechanism",
+
+  "block.tge_core.steel_machine_casing": "Steel Machine Casing",
 
   "creativetab.tge_core.tge_metals_tab": "The Great Engineer Metals",
-  "creativetab.tge_core.tge_non_metals_tab": "The Great Engineer Non Metals",
+  "creativetab.tge_core.tge_non_metals_tab": "The Great Engineer Materials",
   "creativetab.tge_core.tge_tools_tab": "The Great Engineer Tools"
 }

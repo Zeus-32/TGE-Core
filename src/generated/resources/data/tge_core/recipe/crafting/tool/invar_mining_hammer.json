@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "H": {
+      "item": "tge_core:advanced_tool_handle"
+    },
+    "I": {
+      "item": "tge_core:invar_ingot"
+    },
+    "P": {
+      "item": "tge_core:invar_plate"
+    }
+  },
+  "pattern": [
+    "PPP",
+    "PIP",
+    " H "
+  ],
+  "result": {
+    "count": 1,
+    "id": "tge_core:invar_mining_hammer"
+  }
+}

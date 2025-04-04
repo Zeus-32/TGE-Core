@@ -1,13 +1,22 @@
 {
   "values": [
     "tge_core:aluminium_hammer",
+    "tge_core:aluminium_mining_hammer",
     "tge_core:bronze_hammer",
+    "tge_core:bronze_mining_hammer",
     "tge_core:diamond_hammer",
+    "tge_core:diamond_mining_hammer",
     "tge_core:invar_hammer",
+    "tge_core:invar_mining_hammer",
     "tge_core:iron_hammer",
+    "tge_core:iron_mining_hammer",
     "tge_core:stainless_steel_hammer",
+    "tge_core:stainless_steel_mining_hammer",
     "tge_core:steel_hammer",
+    "tge_core:steel_mining_hammer",
     "tge_core:titanium_hammer",
-    "tge_core:wrought_iron_hammer"
+    "tge_core:titanium_mining_hammer",
+    "tge_core:wrought_iron_hammer",
+    "tge_core:wrought_iron_mining_hammer"
   ]
 }

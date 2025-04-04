@@ -1,6 +1,9 @@
 package net.zeus_32.tge_core.item;
 
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.Tiers;
 import net.zeus_32.tge_core.TGECore;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -229,6 +232,9 @@ public class ModItems {
     public static final DeferredItem<Item> WROUGHT_IRON_DUST = registerDust("wrought_iron");
     public static final DeferredItem<Item> ZINC_DUST = registerDust("zinc");
 
+
+    public static final DeferredItem<Item> ANDESITE_COMPOUND = ITEMS.register("andesite_compound", () -> new Item(new Item.Properties()));
+
     private static DeferredItem<Item> registerIngot(String material) {
         return ITEMS.register(material + "_ingot", () -> new Item(new Item.Properties()));
     }
@@ -333,6 +339,36 @@ public class ModItems {
     public static final DeferredItem<Item> STEEL_KNIFE = ITEMS.register("steel_knife", () -> new KnifeItem(new Item.Properties().durability(512)));
     public static final DeferredItem<Item> TITANIUM_KNIFE = ITEMS.register("titanium_knife", () -> new KnifeItem(new Item.Properties().durability(512)));
     public static final DeferredItem<Item> WROUGHT_IRON_KNIFE = ITEMS.register("wrought_iron_knife", () -> new KnifeItem(new Item.Properties().durability(384)));
+
+    public static final DeferredItem<Item> ADVANCED_TOOL_HANDLE = ITEMS.register("advanced_tool_handle", () -> new Item(new Item.Properties()));
+
+    public static final DeferredItem<MiningHammerItem> ALUMINIUM_MINING_HAMMER = ITEMS.register("aluminium_mining_hammer",
+            () -> new MiningHammerItem(Tiers.IRON, new Item.Properties().durability(768)
+                    .attributes(PickaxeItem.createAttributes(Tiers.IRON, 1F, -1F))));
+    public static final DeferredItem<MiningHammerItem> BRONZE_MINING_HAMMER = ITEMS.register("bronze_mining_hammer",
+            () -> new MiningHammerItem(Tiers.IRON, new Item.Properties().durability(192)
+                    .attributes(PickaxeItem.createAttributes(Tiers.IRON, 1F, -1F))));
+    public static final DeferredItem<MiningHammerItem> DIAMOND_MINING_HAMMER = ITEMS.register("diamond_mining_hammer",
+            () -> new MiningHammerItem(Tiers.DIAMOND, new Item.Properties().durability(1024)
+                    .attributes(PickaxeItem.createAttributes(Tiers.DIAMOND, 1F, -1F))));
+    public static final DeferredItem<MiningHammerItem> INVAR_MINING_HAMMER = ITEMS.register("invar_mining_hammer",
+            () -> new MiningHammerItem(Tiers.IRON, new Item.Properties().durability(384)
+                    .attributes(PickaxeItem.createAttributes(Tiers.IRON, 1F, -1F))));
+    public static final DeferredItem<MiningHammerItem> IRON_MINING_HAMMER = ITEMS.register("iron_mining_hammer",
+            () -> new MiningHammerItem(Tiers.IRON, new Item.Properties().durability(256)
+                    .attributes(PickaxeItem.createAttributes(Tiers.IRON, 1F, -1F))));
+    public static final DeferredItem<MiningHammerItem> STAINLESS_STEEL_MINING_HAMMER = ITEMS.register("stainless_steel_mining_hammer",
+            () -> new MiningHammerItem(Tiers.NETHERITE, new Item.Properties().durability(1024)
+                    .attributes(PickaxeItem.createAttributes(Tiers.DIAMOND, 1F, -1F))));
+    public static final DeferredItem<MiningHammerItem> STEEL_MINING_HAMMER = ITEMS.register("steel_mining_hammer",
+            () -> new MiningHammerItem(Tiers.IRON, new Item.Properties().durability(512)
+                    .attributes(PickaxeItem.createAttributes(Tiers.IRON, 1F, -1F))));
+    public static final DeferredItem<MiningHammerItem> TITANIUM_MINING_HAMMER = ITEMS.register("titanium_mining_hammer",
+            () -> new MiningHammerItem(Tiers.NETHERITE, new Item.Properties().durability(512)
+                    .attributes(PickaxeItem.createAttributes(Tiers.DIAMOND, 1F, -1F))));
+    public static final DeferredItem<MiningHammerItem> WROUGHT_IRON_MINING_HAMMER = ITEMS.register("wrought_iron_mining_hammer",
+            () -> new MiningHammerItem(Tiers.IRON, new Item.Properties().durability(384)
+                    .attributes(PickaxeItem.createAttributes(Tiers.IRON, 1F, -1F))));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

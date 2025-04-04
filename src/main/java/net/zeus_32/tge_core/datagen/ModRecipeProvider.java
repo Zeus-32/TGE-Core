@@ -1,17 +1,18 @@
 package net.zeus_32.tge_core.datagen;
 
+import com.simibubi.create.AllBlocks;
+import com.simibubi.create.AllItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
+import net.zeus_32.tge_core.block.ModBlocks;
 import net.zeus_32.tge_core.item.ModItems;
 import net.zeus_32.tge_core.item.ModNonMetalItems;
-import net.zeus_32.tge_core.recipe.ModRecipes;
 
 import java.util.Arrays;
 import java.util.List;
@@ -69,7 +70,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             "saw",
             "screwdriver",
             "wire_cutters",
-            "wrench"
+            "wrench",
+            "knife",
+            "mining_hammer"
     );
 
     public ModRecipeProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
@@ -95,8 +98,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 registerScrewCrafting(recipeOutput, material);
             }
         }
-
-        // Special copper nugget handling (optional)
+        // Special copper nugget handling
         registerCopperNuggetsFromIngotRecipe(recipeOutput);
         registerCopperIngotFromNuggetsRecipe(recipeOutput);
 
@@ -107,9 +109,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
             }
         }
 
+        registerShapedRecipes(recipeOutput);
+
         registerGlassChain(recipeOutput);
         registerCokeBrickChain(recipeOutput);
         registerFireBrickChain(recipeOutput);
+
+        registerEditedCreateRecipes(recipeOutput);
     }
 
     private Item getItem(String itemName) {
@@ -152,11 +158,46 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 case "clay_dust": return ModNonMetalItems.CLAY_DUST.get();
                 case "brick_dust": return ModNonMetalItems.BRICK_DUST.get();
                 case "fire_brick": return ModNonMetalItems.FIRE_BRICK.get();
+                case "advanced_tool_handle": return ModItems.ADVANCED_TOOL_HANDLE.get();
                 default: throw new IllegalStateException("Item not found: " + itemName);
             }
         }
     }
 
+    private void registerShapedRecipes(RecipeOutput recipeOutput) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.ADVANCED_TOOL_HANDLE)
+                .pattern(" LR")
+                .pattern("LRL")
+                .pattern("RL ")
+                .define('L', Items.LEATHER)
+                .define('R', ModItems.STEEL_ROD)
+                .unlockedBy("has_steel_ingot", has(ModItems.STEEL_INGOT))
+                .save(recipeOutput, "tge_core:crafting/tool/advanced_tool_handle");
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.STEEL_MACHINE_CASING)
+                .pattern("IPI")
+                .pattern("PCP")
+                .pattern("IPI")
+                .define('I', ModItems.STEEL_INGOT)
+                .define('P', ModItems.STEEL_PLATE)
+                .define('C', AllBlocks.ANDESITE_CASING.get())
+                .unlockedBy("has_steel_ingot", has(ModItems.STEEL_INGOT))
+                .save(recipeOutput, "tge_core:crafting/steel_machine_casing");
+    }
+
+    private void registerEditedCreateRecipes(RecipeOutput recipeOutput) {
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, AllBlocks.MECHANICAL_MIXER)
+                .pattern(" S ")
+                .pattern("MCM")
+                .pattern(" I ")
+                .define('S', AllBlocks.COGWHEEL)
+                .define('C', AllBlocks.ANDESITE_CASING)
+                .define('I', AllItems.WHISK)
+                .define('M', ModNonMetalItems.KINTETIC_MECHANISM.get())
+                .unlockedBy("has_casing", has(AllBlocks.ANDESITE_CASING))
+                .unlockedBy("has_mechanism", has(ModNonMetalItems.KINTETIC_MECHANISM.get()))
+                .save(recipeOutput, "create:crafting/kinetics/mechanical_mixer");
+    }
 
     private void registerPlateCrafting(RecipeOutput recipeOutput, String material) {
         Item plate = getItem(material + "_plate");
@@ -193,11 +234,11 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, gear)
                 .pattern("RPR")
-                .pattern("PFP")
+                .pattern("PWP")
                 .pattern("RPR")
                 .define('R', rod)
                 .define('P', plate)
-                .define('F', ModItemTagProvider.FILES)
+                .define('W', ModItemTagProvider.WRENCHES)
                 .unlockedBy("has_" + material + "_plate", has(plate))
                 .save(recipeOutput, "tge_core:crafting/metal/gear/" + material + "_gear");
     }
@@ -384,22 +425,24 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                         .define('S', Items.STICK)
                         .unlockedBy("has_iron_ingot", has(knifeIngot))
                         .save(recipeOutput, "tge_core:crafting/tool/" + material + "_" + toolType);
+                break;
+
+            case "mining_hammer":
+                Item hammerIngot = getItem(material + "_ingot");
+                Item hammerPlate = getItem(material + "_plate");
+                Item handle = getItem("advanced_tool_handle");
+
+                ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, tool)
+                        .pattern("PPP")
+                        .pattern("PIP")
+                        .pattern(" H ")
+                        .define('P', hammerPlate)
+                        .define('I', hammerIngot)
+                        .define('H', handle)
+                        .unlockedBy("has_" + material + "_ingot", has(hammerIngot))
+                        .save(recipeOutput, "tge_core:crafting/tool/" + material + "_" + toolType);
+                break;
         }
-    }
-
-    private void registerKnife(RecipeOutput recipeOutput) {
-        Item iron = Items.IRON_INGOT;
-        Item stick = Items.STICK;
-        Item iron_knife = getItem("iron_knife");
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, iron_knife)
-                .pattern(" I ")
-                .pattern("S  ")
-                .pattern("   ")
-                .define('I', iron)
-                .define('S', stick)
-                .unlockedBy("has_iron_ingot", has(iron))
-                .save(recipeOutput, "tge_core:crafting/tool/iron_knife");
     }
 
     private void registerGlassChain(RecipeOutput recipeOutput) {
@@ -446,7 +489,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         Item mold = getItem("brick_mold");
         Item wet_coke_brick = getItem("wet_coke_brick");
         Item coke_brick = getItem("coke_brick");
-        Item coke_bricks = getItem("coke_bricks");
 
         ShapedRecipeBuilder.shaped(RecipeCategory.MISC, mold)
                 .pattern(" K ")
@@ -475,14 +517,6 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         SimpleCookingRecipeBuilder.blasting(Ingredient.of(wet_coke_brick), RecipeCategory.MISC, coke_brick, 0.5f, 100)
                 .unlockedBy("has_wet_coke_brick", has(wet_coke_brick))
                 .save(recipeOutput, "tge_core:blasting/coke_brick");
-
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, coke_bricks)
-                .pattern("CC ")
-                .pattern("CC ")
-                .pattern("   ")
-                .define('C', coke_brick)
-                .unlockedBy("has_coke_brick", has(coke_brick))
-                .save(recipeOutput, "tge_core:crafting/non_metal/coke_bricks");
     }
 
     private void registerFireBrickChain(RecipeOutput recipeOutput) {

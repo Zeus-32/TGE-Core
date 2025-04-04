@@ -269,14 +269,18 @@ public class CreativeModeTabs {
                         output.accept(ModNonMetalItems.BRICK_MOLD);
                         output.accept(ModNonMetalItems.WET_COKE_BRICK);
                         output.accept(ModNonMetalItems.COKE_BRICK);
-                        output.accept(ModBlocks.COKE_BRICKS);
-                        output.accept(ModBlocks.COKE_OVEN);
-                        output.accept(ModNonMetalItems.COAL_COKE);
 
                         output.accept(ModNonMetalItems.BRICK_DUST);
                         output.accept(ModNonMetalItems.CLAY_DUST);
                         output.accept(ModNonMetalItems.FIRE_BRICK);
                         output.accept(ModBlocks.FIRE_BRICKS);
+
+                        output.accept(ModItems.ANDESITE_COMPOUND);
+                        output.accept(ModItems.ADVANCED_TOOL_HANDLE);
+
+                        output.accept(ModNonMetalItems.KINTETIC_MECHANISM);
+
+                        output.accept(ModBlocks.STEEL_MACHINE_CASING);
                     }).build());
 
     public static final Supplier<CreativeModeTab> TGE_TOOLS_TAB = CREATIVE_MODE_TAB.register("tge_tools_tab",
@@ -284,6 +288,7 @@ public class CreativeModeTabs {
                     .title(Component.translatable("creativetab.tge_core.tge_tools_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.ALUMINIUM_KNIFE);
+                        output.accept(ModItems.ALUMINIUM_MINING_HAMMER);
                         output.accept(ModItems.ALUMINIUM_FILE);
                         output.accept(ModItems.ALUMINIUM_HAMMER);
                         output.accept(ModItems.ALUMINIUM_MORTAR);
@@ -293,6 +298,7 @@ public class CreativeModeTabs {
                         output.accept(ModItems.ALUMINIUM_WRENCH);
 
                         output.accept(ModItems.BRONZE_KNIFE);
+                        output.accept(ModItems.BRONZE_MINING_HAMMER);
                         output.accept(ModItems.BRONZE_FILE);
                         output.accept(ModItems.BRONZE_HAMMER);
                         output.accept(ModItems.BRONZE_MORTAR);
@@ -302,6 +308,7 @@ public class CreativeModeTabs {
                         output.accept(ModItems.BRONZE_WRENCH);
 
                         output.accept(ModItems.DIAMOND_KNIFE);
+                        output.accept(ModItems.DIAMOND_MINING_HAMMER);
                         output.accept(ModItems.DIAMOND_FILE);
                         output.accept(ModItems.DIAMOND_HAMMER);
                         output.accept(ModItems.DIAMOND_MORTAR);
@@ -311,6 +318,7 @@ public class CreativeModeTabs {
                         output.accept(ModItems.DIAMOND_WRENCH);
 
                         output.accept(ModItems.INVAR_KNIFE);
+                        output.accept(ModItems.INVAR_MINING_HAMMER);
                         output.accept(ModItems.INVAR_FILE);
                         output.accept(ModItems.INVAR_HAMMER);
                         output.accept(ModItems.INVAR_MORTAR);
@@ -320,6 +328,7 @@ public class CreativeModeTabs {
                         output.accept(ModItems.INVAR_WRENCH);
 
                         output.accept(ModItems.IRON_KNIFE);
+                        output.accept(ModItems.IRON_MINING_HAMMER);
                         output.accept(ModItems.IRON_FILE);
                         output.accept(ModItems.IRON_HAMMER);
                         output.accept(ModItems.IRON_MORTAR);
@@ -329,6 +338,7 @@ public class CreativeModeTabs {
                         output.accept(ModItems.IRON_WRENCH);
 
                         output.accept(ModItems.STAINLESS_STEEL_KNIFE);
+                        output.accept(ModItems.STAINLESS_STEEL_MINING_HAMMER);
                         output.accept(ModItems.STAINLESS_STEEL_FILE);
                         output.accept(ModItems.STAINLESS_STEEL_HAMMER);
                         output.accept(ModItems.STAINLESS_STEEL_MORTAR);
@@ -338,6 +348,7 @@ public class CreativeModeTabs {
                         output.accept(ModItems.STAINLESS_STEEL_WRENCH);
 
                         output.accept(ModItems.STEEL_KNIFE);
+                        output.accept(ModItems.STEEL_MINING_HAMMER);
                         output.accept(ModItems.STEEL_FILE);
                         output.accept(ModItems.STEEL_HAMMER);
                         output.accept(ModItems.STEEL_MORTAR);
@@ -347,6 +358,7 @@ public class CreativeModeTabs {
                         output.accept(ModItems.STEEL_WRENCH);
 
                         output.accept(ModItems.TITANIUM_KNIFE);
+                        output.accept(ModItems.TITANIUM_MINING_HAMMER);
                         output.accept(ModItems.TITANIUM_FILE);
                         output.accept(ModItems.TITANIUM_HAMMER);
                         output.accept(ModItems.TITANIUM_MORTAR);
@@ -356,6 +368,7 @@ public class CreativeModeTabs {
                         output.accept(ModItems.TITANIUM_WRENCH);
 
                         output.accept(ModItems.WROUGHT_IRON_KNIFE);
+                        output.accept(ModItems.WROUGHT_IRON_MINING_HAMMER);
                         output.accept(ModItems.WROUGHT_IRON_FILE);
                         output.accept(ModItems.WROUGHT_IRON_HAMMER);
                         output.accept(ModItems.WROUGHT_IRON_MORTAR);

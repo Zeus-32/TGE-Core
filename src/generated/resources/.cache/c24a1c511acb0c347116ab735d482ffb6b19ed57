@@ -1,4 +1,4 @@
-// 1.21.1	2025-03-26T19:01:13.1540354	Tags for minecraft:item mod id tge_core
+// 1.21.1	2025-03-29T11:59:13.7141602	Tags for minecraft:item mod id tge_core
 136e7225fe8a9413a9ec679035184fd9dc803393 data/c/tags/item/bolts.json
 e4b471e508c74c7f661d69bb9e4c50b5be1956fd data/c/tags/item/bolts/aluminium.json
 2ae42a4476947a104be75fbfcd37a154a400851f data/c/tags/item/bolts/brass.json
@@ -219,8 +219,9 @@ eccf01368ffdb11571a12aad33b14476dc70bd80 data/c/tags/item/screws/steel.json
 d7912d0868d6f1d2a50b615c135dfb158ee244a9 data/c/tags/item/screws/wrought_iron.json
 d4608e1d72a8ed015b6be9638c9ab43d6a88df2d data/c/tags/item/screws/zinc.json
 d06c61bda3c85fa1fe6bd8c0fc8df4d0e8b64ecb data/tge/tags/item/files.json
-c9481f66842cc70cbd85449a217ca625165e0a00 data/tge/tags/item/hammers.json
+15901eb5ea3e2b191050269f2fe3aa837ab012a2 data/tge/tags/item/hammers.json
 aa0f69a54763f145c1215936fc930c441f5ca0c9 data/tge/tags/item/knives.json
+a3d1562fa8f6e241f4b8c196ead0bf5b6039c7a4 data/tge/tags/item/mining_hammers.json
 655ebe8d043c057faf9609d7efc88bb90402c4b9 data/tge/tags/item/mortars.json
 bebb4bbc293dd95ce7ba0e3d6f0139002bcc57dd data/tge/tags/item/saws.json
 ba97ff8fd9ac759e1f185b863feb4152fc998a0c data/tge/tags/item/screwdrivers.json

@@ -1,10 +1,7 @@
-// 1.21.1	2025-03-27T18:45:13.1605855	Block States: tge_core
-c2403bb5f6652304a3959f3b73430ce5deb7d081 assets/tge_core/blockstates/coke_bricks.json
-a3f818b0a80f517e61feccea093e5dde71002c13 assets/tge_core/blockstates/coke_oven.json
+// 1.21.1	2025-04-04T16:43:00.3065848	Block States: tge_core
 3ba6768964058d517077e8b3facae0c6f13d5283 assets/tge_core/blockstates/fire_bricks.json
-83081328d6452a3375fb286ce0bde1da7edfd7a6 assets/tge_core/models/block/coke_bricks.json
-e82483236b9a27abd89171ed759458eb9530d0c7 assets/tge_core/models/block/coke_oven.json
+cfd57374647a98fd498262dc3be8687645cd088f assets/tge_core/blockstates/steel_machine_casing.json
 b40d3992f513e92185f1266bfd418027c9586778 assets/tge_core/models/block/fire_bricks.json
-d6a36b0222572bdafdf90d41602e3c996d13b772 assets/tge_core/models/item/coke_bricks.json
-70b69aa9fcb4f1d7e522584fc336d931099d301e assets/tge_core/models/item/coke_oven.json
+f833cf5109521b0c272efd25ad5fea6766aa5505 assets/tge_core/models/block/steel_machine_casing.json
 2f1db77f88cdbd28ce181c2a4a7678531f863a39 assets/tge_core/models/item/fire_bricks.json
+d8f4bb86917609ce1dc9e9f056f32459ca11f76f assets/tge_core/models/item/steel_machine_casing.json

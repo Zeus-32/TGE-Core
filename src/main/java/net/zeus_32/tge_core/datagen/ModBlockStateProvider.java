@@ -15,13 +15,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
-        blockWithItem(ModBlocks.COKE_BRICKS);
         blockWithItem(ModBlocks.FIRE_BRICKS);
-        customBlockWithItem(ModBlocks.COKE_OVEN, "block/machines/coke_oven");
-    }
-
-    private void customBlockWithItem(DeferredBlock<?> deferredBlock, String modelPath) {
-        simpleBlockWithItem(deferredBlock.get(), models().getExistingFile(modLoc(modelPath)));
+        blockWithItem(ModBlocks.STEEL_MACHINE_CASING);
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock) {

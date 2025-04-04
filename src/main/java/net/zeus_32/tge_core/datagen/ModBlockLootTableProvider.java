@@ -16,9 +16,8 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        dropSelf(ModBlocks.COKE_BRICKS.get());
         dropSelf(ModBlocks.FIRE_BRICKS.get());
-        dropSelf(ModBlocks.COKE_OVEN.get());
+        dropSelf(ModBlocks.STEEL_MACHINE_CASING.get());
     }
 
     @Override
