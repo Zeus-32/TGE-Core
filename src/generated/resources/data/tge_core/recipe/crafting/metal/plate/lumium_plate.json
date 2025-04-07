@@ -6,13 +6,13 @@
       "tag": "tge:hammers"
     },
     "I": {
-      "item": "tge_core:lumium_ingot"
+      "tag": "c:ingots/lumium"
     }
   },
   "pattern": [
-    " H ",
-    " I ",
-    " I "
+    "H",
+    "I",
+    "I"
   ],
   "result": {
     "count": 1,

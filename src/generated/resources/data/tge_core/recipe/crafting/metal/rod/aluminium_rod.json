@@ -6,13 +6,12 @@
       "tag": "tge:files"
     },
     "I": {
-      "item": "tge_core:aluminium_ingot"
+      "tag": "c:ingots/aluminium"
     }
   },
   "pattern": [
-    "F  ",
-    " I ",
-    "   "
+    "F ",
+    " I"
   ],
   "result": {
     "count": 2,

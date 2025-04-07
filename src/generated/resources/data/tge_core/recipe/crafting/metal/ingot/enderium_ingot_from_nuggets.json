@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "I": {
-      "item": "tge_core:enderium_nugget"
+      "tag": "c:nuggets/enderium"
     }
   },
   "pattern": [

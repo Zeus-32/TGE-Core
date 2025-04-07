@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "tge_core:lumium_ingot"
+            "items": "#c:ingots/lumium"
           }
         ]
       },

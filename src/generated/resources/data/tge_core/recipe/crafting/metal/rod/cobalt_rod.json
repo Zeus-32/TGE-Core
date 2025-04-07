@@ -6,13 +6,12 @@
       "tag": "tge:files"
     },
     "I": {
-      "item": "tge_core:cobalt_ingot"
+      "tag": "c:ingots/cobalt"
     }
   },
   "pattern": [
-    "F  ",
-    " I ",
-    "   "
+    "F ",
+    " I"
   ],
   "result": {
     "count": 2,

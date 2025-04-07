@@ -6,13 +6,13 @@
       "tag": "tge:hammers"
     },
     "I": {
-      "item": "tge_core:cobalt_ingot"
+      "tag": "c:ingots/cobalt"
     }
   },
   "pattern": [
-    " H ",
-    " I ",
-    " I "
+    "H",
+    "I",
+    "I"
   ],
   "result": {
     "count": 1,

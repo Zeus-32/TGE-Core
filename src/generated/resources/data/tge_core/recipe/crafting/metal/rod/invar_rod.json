@@ -6,13 +6,12 @@
       "tag": "tge:files"
     },
     "I": {
-      "item": "tge_core:invar_ingot"
+      "tag": "c:ingots/invar"
     }
   },
   "pattern": [
-    "F  ",
-    " I ",
-    "   "
+    "F ",
+    " I"
   ],
   "result": {
     "count": 2,

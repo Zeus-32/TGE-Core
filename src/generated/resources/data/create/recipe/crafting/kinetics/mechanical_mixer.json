@@ -5,6 +5,9 @@
     "C": {
       "item": "create:andesite_casing"
     },
+    "H": {
+      "tag": "tge:hammers"
+    },
     "I": {
       "item": "create:whisk"
     },
@@ -13,12 +16,15 @@
     },
     "S": {
       "item": "create:cogwheel"
+    },
+    "W": {
+      "tag": "tge:wrenches"
     }
   },
   "pattern": [
     " S ",
     "MCM",
-    " I "
+    "WIH"
   ],
   "result": {
     "count": 1,

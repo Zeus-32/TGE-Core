@@ -6,13 +6,12 @@
       "tag": "tge:files"
     },
     "I": {
-      "item": "tge_core:zinc_ingot"
+      "tag": "c:ingots/zinc"
     }
   },
   "pattern": [
-    "F  ",
-    " I ",
-    "   "
+    "F ",
+    " I"
   ],
   "result": {
     "count": 2,

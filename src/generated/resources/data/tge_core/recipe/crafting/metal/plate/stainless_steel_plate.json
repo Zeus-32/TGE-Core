@@ -6,13 +6,13 @@
       "tag": "tge:hammers"
     },
     "I": {
-      "item": "tge_core:stainless_steel_ingot"
+      "tag": "c:ingots/stainless_steel"
     }
   },
   "pattern": [
-    " H ",
-    " I ",
-    " I "
+    "H",
+    "I",
+    "I"
   ],
   "result": {
     "count": 1,

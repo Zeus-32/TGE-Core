@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "I": {
-      "item": "tge_core:electrum_nugget"
+      "tag": "c:nuggets/electrum"
     }
   },
   "pattern": [

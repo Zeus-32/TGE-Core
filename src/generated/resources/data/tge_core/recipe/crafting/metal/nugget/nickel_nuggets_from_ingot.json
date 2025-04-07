@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "tge_core:nickel_ingot"
+      "tag": "c:ingots/nickel"
     }
   ],
   "result": {

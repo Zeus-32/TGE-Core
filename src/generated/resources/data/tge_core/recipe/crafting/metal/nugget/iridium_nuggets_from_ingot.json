@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "tge_core:iridium_ingot"
+      "tag": "c:ingots/iridium"
     }
   ],
   "result": {

@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "tge_core:brass_ingot"
+      "tag": "c:ingots/brass"
     }
   ],
   "result": {

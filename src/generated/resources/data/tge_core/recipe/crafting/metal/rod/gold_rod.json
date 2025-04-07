@@ -6,13 +6,12 @@
       "tag": "tge:files"
     },
     "I": {
-      "item": "minecraft:gold_ingot"
+      "tag": "c:ingots/gold"
     }
   },
   "pattern": [
-    "F  ",
-    " I ",
-    "   "
+    "F ",
+    " I"
   ],
   "result": {
     "count": 2,

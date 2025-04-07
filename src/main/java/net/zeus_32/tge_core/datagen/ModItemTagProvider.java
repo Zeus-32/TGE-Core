@@ -5,12 +5,14 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.zeus_32.tge_core.TGECore;
+import net.zeus_32.tge_core.block.ModBlocks;
 import net.zeus_32.tge_core.item.ModItems;
 import org.jetbrains.annotations.Nullable;
 
@@ -38,8 +40,6 @@ public class ModItemTagProvider extends ItemTagsProvider {
             "nickel",
             "osmium",
             "platinum",
-            "plutonium",
-            "polonium",
             "red_alloy",
             "silver",
             "soul_infused",
@@ -47,8 +47,17 @@ public class ModItemTagProvider extends ItemTagsProvider {
             "steel",
             "tin",
             "titanium",
-            "uranium",
             "wrought_iron",
+            "zinc"
+    );
+
+    private static final List<String> RAW_MATERIALS = Arrays.asList(
+            "aluminium",
+            "lead",
+            "nickel",
+            "osmium",
+            "silver",
+            "tin",
             "zinc"
     );
 
@@ -95,6 +104,8 @@ public class ModItemTagProvider extends ItemTagsProvider {
     private static final TagKey<Item> C_BOLTS = createTag("c", "bolts");
     private static final TagKey<Item> C_SCREWS = createTag("c", "screws");
     private static final TagKey<Item> C_DUSTS = createTag("c", "dusts");
+    private static final TagKey<Item> C_RAW_MATERIALS = createTag("c", "raw_materials");
+    private static final TagKey<Item> C_ORE_MATERIALS = createTag("c", "ores");
 
     public ModItemTagProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider,
                               CompletableFuture<TagLookup<Block>> blockTags, @Nullable ExistingFileHelper existingFileHelper) {
@@ -128,6 +139,18 @@ public class ModItemTagProvider extends ItemTagsProvider {
             addItemToBothTags(material + "_bolt", C_BOLTS, materialBoltTag);
             addItemToBothTags(material + "_screw", C_SCREWS, materialScrewTag);
             addItemToBothTags(material + "_dust", C_DUSTS, materialDustTag);
+
+        }
+
+        for (String material : RAW_MATERIALS) {
+            TagKey<Item> materialRawTag = createTag("c", "raw_materials/" + material);
+            addItemToBothTags("raw_" + material, C_RAW_MATERIALS, materialRawTag);
+            TagKey<Item> materialOreTagMaterial = createTag("c", "ores/" + material);
+            addItemToBothTags(material + "_ore", C_ORE_MATERIALS, materialOreTagMaterial);
+            addItemToBothTags("deepslate_" + material + "_ore", C_ORE_MATERIALS, materialOreTagMaterial);
+            TagKey<Item> materialOreTag = createTag("c", "ores");
+            addItemToBothTags(material + "_ore", C_ORE_MATERIALS, materialOreTag);
+            addItemToBothTags("deepslate_" + material + "_ore", C_ORE_MATERIALS, materialOreTag);
         }
 
         // Add vanilla items to common tags
@@ -147,6 +170,15 @@ public class ModItemTagProvider extends ItemTagsProvider {
             addItemToTagIfExists(material + "_mining_hammer", MINING_HAMMERS);
             addItemToTagIfExists(material + "_mining_hammer", HAMMERS);
         }
+
+        this.tag(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.RUBBER_LOG.get().asItem())
+                .add(ModBlocks.RUBBER_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_RUBBER_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_RUBBER_WOOD.get().asItem());
+
+        this.tag(ItemTags.PLANKS)
+                .add(ModBlocks.RUBBER_PLANKS.get().asItem());
     }
 
     private void addItemToBothTags(String itemName, TagKey<Item> generalTag, TagKey<Item> specificTag) {

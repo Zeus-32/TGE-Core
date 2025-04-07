@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "create:andesite_alloy"
+    },
+    "P": {
+      "tag": "c:plates/steel"
+    }
+  },
+  "pattern": [
+    " P ",
+    "PAP",
+    " P "
+  ],
+  "result": {
+    "count": 1,
+    "id": "tge_core:saw_blade"
+  }
+}

@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "tge_core:red_alloy_ingot"
+      "tag": "c:ingots/red_alloy"
     }
   ],
   "result": {

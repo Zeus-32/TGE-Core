@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "tge_core:zinc_ingot"
+      "tag": "c:ingots/zinc"
     }
   ],
   "result": {

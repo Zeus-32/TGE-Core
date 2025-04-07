@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "tge_core:titanium_ingot"
+      "tag": "c:ingots/titanium"
     }
   ],
   "result": {

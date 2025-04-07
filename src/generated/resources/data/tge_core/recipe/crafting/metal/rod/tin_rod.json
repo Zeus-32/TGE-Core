@@ -6,13 +6,12 @@
       "tag": "tge:files"
     },
     "I": {
-      "item": "tge_core:tin_ingot"
+      "tag": "c:ingots/tin"
     }
   },
   "pattern": [
-    "F  ",
-    " I ",
-    "   "
+    "F ",
+    " I"
   ],
   "result": {
     "count": 2,

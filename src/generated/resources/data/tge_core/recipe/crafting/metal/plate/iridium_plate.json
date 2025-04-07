@@ -6,13 +6,13 @@
       "tag": "tge:hammers"
     },
     "I": {
-      "item": "tge_core:iridium_ingot"
+      "tag": "c:ingots/iridium"
     }
   },
   "pattern": [
-    " H ",
-    " I ",
-    " I "
+    "H",
+    "I",
+    "I"
   ],
   "result": {
     "count": 1,

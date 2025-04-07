@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "I": {
-      "item": "tge_core:iridium_nugget"
+      "tag": "c:nuggets/iridium"
     }
   },
   "pattern": [

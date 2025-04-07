@@ -10,9 +10,8 @@
     }
   },
   "pattern": [
-    "HB ",
-    "B  ",
-    "   "
+    "HB",
+    "B "
   ],
   "result": {
     "count": 1,

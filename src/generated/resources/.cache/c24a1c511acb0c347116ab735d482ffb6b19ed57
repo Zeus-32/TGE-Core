@@ -1,4 +1,4 @@
-// 1.21.1	2025-03-29T11:59:13.7141602	Tags for minecraft:item mod id tge_core
+// 1.21.1	2025-04-06T03:08:32.6571698	Tags for minecraft:item mod id tge_core
 136e7225fe8a9413a9ec679035184fd9dc803393 data/c/tags/item/bolts.json
 e4b471e508c74c7f661d69bb9e4c50b5be1956fd data/c/tags/item/bolts/aluminium.json
 2ae42a4476947a104be75fbfcd37a154a400851f data/c/tags/item/bolts/brass.json
@@ -134,6 +134,14 @@ c4b9511dc51d8839199a917ebf77aa3469b74fad data/c/tags/item/nuggets/stainless_stee
 d8829527bcd239e6a81e9333b5dbb4806ce4e83d data/c/tags/item/nuggets/titanium.json
 8e055811e59f25dc29205f03361a5f9fee72b234 data/c/tags/item/nuggets/wrought_iron.json
 196333e8a8a5e4a3ab1f8a44324876e84b40777b data/c/tags/item/nuggets/zinc.json
+f158fee73f34093558110ef373aece80734c698b data/c/tags/item/ores.json
+9efa9ad5a7a5600cde52c8870dc89846daf768e2 data/c/tags/item/ores/aluminium.json
+ac5b67d661e7713481802dff00f079fd5fe26695 data/c/tags/item/ores/lead.json
+30dff2cb83200a4f30ae5b98c3b1d44ddc89249c data/c/tags/item/ores/nickel.json
+0e9e5936b7cd3e882c7be1c6281b988e45aed0fd data/c/tags/item/ores/osmium.json
+d4e8a3de0b5074804d29a1202f3208446dd83f8c data/c/tags/item/ores/silver.json
+74c5a5438f02a756916fb1d3dd70b52337221f90 data/c/tags/item/ores/tin.json
+4878f160886a80bc93842d956ebaa0a5ff1e6e3e data/c/tags/item/ores/zinc.json
 0b9c658fa582d12d7670b05bc73f65b71cc7de63 data/c/tags/item/plates.json
 30cf404be2093f2a748e701af78e8b429f3e7207 data/c/tags/item/plates/aluminium.json
 ba0a2a8cf2cda9121bbbeb09d14a844ddc269496 data/c/tags/item/plates/brass.json
@@ -162,6 +170,14 @@ c6ae17af6fd4d49c6ed71d0a6e67ec460efdfca5 data/c/tags/item/plates/tin.json
 38dcf17f28d465b84a858d56322c8181a6d63fa3 data/c/tags/item/plates/titanium.json
 c45999b9871b7e0becf1ef9416925c1faae03821 data/c/tags/item/plates/wrought_iron.json
 09c8c4048a93ec3ea04d5ae9649eee07a4eb0d0b data/c/tags/item/plates/zinc.json
+7c2263cfd90abf8806eeeb61665d6f8407f9f7f9 data/c/tags/item/raw_materials.json
+8e24b9a5a0f4818fd3811ca18fc8aa6745e00f3b data/c/tags/item/raw_materials/aluminium.json
+87e88e8aee34428a4a90ccbe13984f203c8851ce data/c/tags/item/raw_materials/lead.json
+29ac67cb6442804d06c39bfa2e9de39763695b22 data/c/tags/item/raw_materials/nickel.json
+69d3435e1920dbc0042b1b83f408777d89c0c356 data/c/tags/item/raw_materials/osmium.json
+153647ac058aa1cd8013bb3a29f31de343f6798b data/c/tags/item/raw_materials/silver.json
+2b28a72ddc372ea1e09706c61d0efe98312c292d data/c/tags/item/raw_materials/tin.json
+c1e5388399dcef662f510cdb8c8713e7409d1c10 data/c/tags/item/raw_materials/zinc.json
 d36c4c5865bf3ff0c5ed2e6270c3e9c286531591 data/c/tags/item/rods.json
 a6a2639f4d250d13e58ef46de7dac5874439fcc1 data/c/tags/item/rods/aluminium.json
 11c85447d5ef85352b516dae60577cced2de90be data/c/tags/item/rods/brass.json
@@ -218,6 +234,8 @@ eccf01368ffdb11571a12aad33b14476dc70bd80 data/c/tags/item/screws/steel.json
 70a6c34da2ff4ac7d9bfb24fe2b1f5472fe0441d data/c/tags/item/screws/titanium.json
 d7912d0868d6f1d2a50b615c135dfb158ee244a9 data/c/tags/item/screws/wrought_iron.json
 d4608e1d72a8ed015b6be9638c9ab43d6a88df2d data/c/tags/item/screws/zinc.json
+9731469cc32a5006af6c5eeecdfc8164eea3d31f data/minecraft/tags/item/logs_that_burn.json
+3b5cfc749a69789304a514d6af1535431a4852bd data/minecraft/tags/item/planks.json
 d06c61bda3c85fa1fe6bd8c0fc8df4d0e8b64ecb data/tge/tags/item/files.json
 15901eb5ea3e2b191050269f2fe3aa837ab012a2 data/tge/tags/item/hammers.json
 aa0f69a54763f145c1215936fc930c441f5ca0c9 data/tge/tags/item/knives.json

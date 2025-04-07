@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "I": {
-      "item": "tge_core:copper_nugget"
+      "tag": "c:nuggets/copper"
     }
   },
   "pattern": [

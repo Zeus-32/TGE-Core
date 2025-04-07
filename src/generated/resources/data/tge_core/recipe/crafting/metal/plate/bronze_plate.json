@@ -6,13 +6,13 @@
       "tag": "tge:hammers"
     },
     "I": {
-      "item": "tge_core:bronze_ingot"
+      "tag": "c:ingots/bronze"
     }
   },
   "pattern": [
-    " H ",
-    " I ",
-    " I "
+    "H",
+    "I",
+    "I"
   ],
   "result": {
     "count": 1,

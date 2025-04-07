@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "tge_core:stainless_steel_ingot"
+      "tag": "c:ingots/stainless_steel"
     }
   ],
   "result": {

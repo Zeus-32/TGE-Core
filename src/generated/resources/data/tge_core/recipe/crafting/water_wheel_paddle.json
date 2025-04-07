@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "tag": "tge:saws"
+    },
+    "P": {
+      "tag": "minecraft:wooden_slabs"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "PS ",
+    "PSC",
+    "PS "
+  ],
+  "result": {
+    "count": 1,
+    "id": "tge_core:water_wheel_paddle"
+  }
+}

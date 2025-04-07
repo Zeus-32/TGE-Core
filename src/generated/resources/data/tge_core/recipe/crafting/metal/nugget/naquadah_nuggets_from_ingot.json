@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "tge_core:naquadah_ingot"
+      "tag": "c:ingots/naquadah"
     }
   ],
   "result": {

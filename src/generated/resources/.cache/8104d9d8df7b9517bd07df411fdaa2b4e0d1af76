@@ -1,3 +1,19 @@
-// 1.21.1	2025-04-04T16:43:00.3144581	Tags for minecraft:block mod id tge_core
-56e8eeca1097b5b2103c799ea13e27c23f319bae data/minecraft/tags/block/mineable/pickaxe.json
-ede828a06c570dbbd63550bf1a937eee7716119c data/minecraft/tags/block/needs_iron_tool.json
+// 1.21.1	2025-04-06T03:02:54.7241941	Tags for minecraft:block mod id tge_core
+ece0d26d1b35ba2789798627f784ebc3988f48ce data/create/tags/block/fan_transparent.json
+5ee8a5670b637de7be43b4e610920c1e8886ddc6 data/c/tags/block/ores.json
+9efa9ad5a7a5600cde52c8870dc89846daf768e2 data/c/tags/block/ores/aluminium.json
+ac5b67d661e7713481802dff00f079fd5fe26695 data/c/tags/block/ores/lead.json
+30dff2cb83200a4f30ae5b98c3b1d44ddc89249c data/c/tags/block/ores/nickel.json
+0e9e5936b7cd3e882c7be1c6281b988e45aed0fd data/c/tags/block/ores/osmium.json
+d4e8a3de0b5074804d29a1202f3208446dd83f8c data/c/tags/block/ores/silver.json
+74c5a5438f02a756916fb1d3dd70b52337221f90 data/c/tags/block/ores/tin.json
+4878f160886a80bc93842d956ebaa0a5ff1e6e3e data/c/tags/block/ores/zinc.json
+970960eacd6700f6a548a231a0424df3a0ee6626 data/c/tags/block/ores_in_ground/deepslate.json
+b53cf6330fc94291bb24f379ca14adfeb990d56b data/c/tags/block/ores_in_ground/stone.json
+ece0d26d1b35ba2789798627f784ebc3988f48ce data/minecraft/tags/block/leaves.json
+9731469cc32a5006af6c5eeecdfc8164eea3d31f data/minecraft/tags/block/logs_that_burn.json
+ece0d26d1b35ba2789798627f784ebc3988f48ce data/minecraft/tags/block/mineable/hoe.json
+80b82e4a3fc5644aa2ff4284671868dab5955db1 data/minecraft/tags/block/mineable/pickaxe.json
+48bbad3948bc4d5118ac4c74ae4e5b861221fead data/minecraft/tags/block/needs_iron_tool.json
+ece0d26d1b35ba2789798627f784ebc3988f48ce data/minecraft/tags/block/parrots_spawnable_on.json
+ece0d26d1b35ba2789798627f784ebc3988f48ce data/minecraft/tags/block/sword_efficient.json

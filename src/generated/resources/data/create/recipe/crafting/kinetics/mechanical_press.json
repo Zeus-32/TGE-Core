@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "create:andesite_casing"
+    },
+    "H": {
+      "tag": "tge:hammers"
+    },
+    "I": {
+      "item": "minecraft:iron_block"
+    },
+    "M": {
+      "item": "tge_core:kinetic_mechanism"
+    },
+    "S": {
+      "item": "create:cogwheel"
+    },
+    "W": {
+      "tag": "tge:wrenches"
+    }
+  },
+  "pattern": [
+    " S ",
+    "MCM",
+    "WIH"
+  ],
+  "result": {
+    "count": 1,
+    "id": "create:mechanical_press"
+  }
+}

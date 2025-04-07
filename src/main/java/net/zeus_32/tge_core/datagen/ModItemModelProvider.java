@@ -1,9 +1,14 @@
 package net.zeus_32.tge_core.datagen;
 
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
 import net.zeus_32.tge_core.TGECore;
+import net.zeus_32.tge_core.block.ModBlocks;
 
 import java.util.Arrays;
 import java.util.List;
@@ -28,8 +33,6 @@ public class ModItemModelProvider extends ItemModelProvider {
             "nickel",
             "osmium",
             "platinum",
-            "plutonium",
-            "polonium",
             "red_alloy",
             "silver",
             "soul_infused",
@@ -37,8 +40,17 @@ public class ModItemModelProvider extends ItemModelProvider {
             "steel",
             "tin",
             "titanium",
-            "uranium",
             "wrought_iron",
+            "zinc"
+    );
+
+    private static final List<String> RAW_MATERIALS = Arrays.asList(
+            "aluminium",
+            "lead",
+            "nickel",
+            "osmium",
+            "silver",
+            "tin",
             "zinc"
     );
 
@@ -88,6 +100,9 @@ public class ModItemModelProvider extends ItemModelProvider {
                 registerTool(material, type);
             }
         }
+        for (String material : RAW_MATERIALS) {
+            registerRawModel(material);
+        }
 
         registerNonMetalItems("clay", "dust");
         registerNonMetalItems("brick", "dust");
@@ -101,6 +116,21 @@ public class ModItemModelProvider extends ItemModelProvider {
         registerNonMetalItems("andesite", "compound");
         registerNonMetalItems("advanced", "tool_handle");
         registerNonMetalItems("kinetic", "mechanism");
+        registerNonMetalItems("wooden", "gear");
+        registerNonMetalItems("water_wheel", "paddle");
+        registerNonMetalItems("plant", "goo");
+        registerNonMetalItems("drill", "head");
+        registerNonMetalItems("saw", "blade");
+        registerNonMetalItems("rubber", "sapling");
+        registerNonMetalItems("sticky", "resin");
+
+
+        saplingItem(ModBlocks.RUBBER_SAPLING);
+    }
+    private ItemModelBuilder saplingItem(DeferredBlock<Block> item) {
+        return withExistingParent(item.getId().getPath(),
+                ResourceLocation.parse("item/generated")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(TGECore.MODID, "block/" + item.getId().getPath()));
     }
 
     private void registerNonMetalItems(String material, String type) {
@@ -116,46 +146,45 @@ public class ModItemModelProvider extends ItemModelProvider {
                 .texture("layer0", modLoc("item/common/item/ingot/" + itemName));
     }
     private void registerPlateModel(String material) {
-        if (material.equals("plutonium") || material.equals("polonium") || material.equals("uranium")) return;
         String itemName = material + "_plate";
         withExistingParent(itemName, mcLoc("item/generated"))
                 .texture("layer0", modLoc("item/common/item/plate/" + itemName));
     }
     private void registerNuggetModel(String material) {
-        if (material.equals("plutonium") || material.equals("polonium") || material.equals("uranium") || material.equals("gold") || material.equals("iron")) return;
+        if (material.equals("gold") || material.equals("iron")) return;
         String itemName = material + "_nugget";
         withExistingParent(itemName, mcLoc("item/generated"))
                 .texture("layer0", modLoc("item/common/item/nugget/" + itemName));
     }
     private void registerRodModel(String material) {
-        if (material.equals("plutonium") || material.equals("polonium") || material.equals("uranium")) return;
         String itemName = material + "_rod";
         withExistingParent(itemName, mcLoc("item/generated"))
                 .texture("layer0", modLoc("item/common/item/rod/" + itemName));
     }
     private void registerGearModel(String material) {
-        if (material.equals("plutonium") || material.equals("polonium") || material.equals("uranium")) return;
         String itemName = material + "_gear";
         withExistingParent(itemName, mcLoc("item/generated"))
                 .texture("layer0", modLoc("item/common/item/gear/" + itemName));
     }
     private void registerBoltModel(String material) {
-        if (material.equals("plutonium") || material.equals("polonium") || material.equals("uranium")) return;
         String itemName = material + "_bolt";
         withExistingParent(itemName, mcLoc("item/generated"))
                 .texture("layer0", modLoc("item/common/item/bolt/" + itemName));
     }
     private void registerScrewModel(String material) {
-        if (material.equals("plutonium") || material.equals("polonium") || material.equals("uranium")) return;
         String itemName = material + "_screw";
         withExistingParent(itemName, mcLoc("item/generated"))
                 .texture("layer0", modLoc("item/common/item/screw/" + itemName));
     }
     private void registerDustModel(String material) {
-        if (material.equals("plutonium") || material.equals("polonium") || material.equals("uranium")) return;
         String itemName = material + "_dust";
         withExistingParent(itemName, mcLoc("item/generated"))
                 .texture("layer0", modLoc("item/common/item/dust/" + itemName));
+    }
+    private void registerRawModel(String material) {
+        String itemName = "raw_" + material;
+        withExistingParent(itemName, mcLoc("item/generated"))
+                .texture("layer0", modLoc("item/common/item/raw_materials/" + itemName));
     }
 
     private void registerTool(String material, String type) {

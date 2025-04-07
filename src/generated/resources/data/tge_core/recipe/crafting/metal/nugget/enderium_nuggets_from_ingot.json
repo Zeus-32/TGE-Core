@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "tge_core:enderium_ingot"
+      "tag": "c:ingots/enderium"
     }
   ],
   "result": {

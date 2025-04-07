@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:brick"
+    },
+    "M": {
+      "tag": "tge:mortars"
+    }
+  },
+  "pattern": [
+    "B",
+    "M"
+  ],
+  "result": {
+    "count": 1,
+    "id": "tge_core:brick_dust"
+  }
+}

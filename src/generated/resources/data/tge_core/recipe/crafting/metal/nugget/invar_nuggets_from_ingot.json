@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "tge_core:invar_ingot"
+      "tag": "c:ingots/invar"
     }
   ],
   "result": {

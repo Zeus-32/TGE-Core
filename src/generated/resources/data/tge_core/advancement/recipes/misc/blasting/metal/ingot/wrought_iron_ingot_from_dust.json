@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "tge_core:blasting/metal/ingot/wrought_iron_ingot_from_dust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_wrought_iron_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:dusts/wrought_iron"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_wrought_iron_dust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "tge_core:blasting/metal/ingot/wrought_iron_ingot_from_dust"
+    ]
+  }
+}

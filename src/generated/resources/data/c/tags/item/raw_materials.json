@@ -1,0 +1,11 @@
+{
+  "values": [
+    "tge_core:raw_aluminium",
+    "tge_core:raw_lead",
+    "tge_core:raw_nickel",
+    "tge_core:raw_osmium",
+    "tge_core:raw_silver",
+    "tge_core:raw_tin",
+    "tge_core:raw_zinc"
+  ]
+}

@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "items": "tge_core:tin_ingot"
+            "items": "#c:ingots/tin"
           }
         ]
       },

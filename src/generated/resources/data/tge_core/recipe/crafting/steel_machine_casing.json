@@ -2,19 +2,19 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "C": {
-      "item": "create:andesite_casing"
-    },
     "I": {
-      "item": "tge_core:steel_ingot"
+      "tag": "c:ingots/steel"
     },
     "P": {
-      "item": "tge_core:steel_plate"
+      "tag": "c:plates/steel"
+    },
+    "W": {
+      "tag": "tge:wrenches"
     }
   },
   "pattern": [
     "IPI",
-    "PCP",
+    "PWP",
     "IPI"
   ],
   "result": {

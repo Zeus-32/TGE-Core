@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "create:cogwheel"
+    },
+    {
+      "tag": "c:stripped_logs"
+    },
+    {
+      "tag": "c:stripped_logs"
+    },
+    {
+      "item": "tge_core:andesite_compound"
+    },
+    {
+      "item": "tge_core:andesite_compound"
+    },
+    {
+      "tag": "tge:saws"
+    },
+    {
+      "tag": "tge:hammers"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "tge_core:kinetic_mechanism"
+  }
+}

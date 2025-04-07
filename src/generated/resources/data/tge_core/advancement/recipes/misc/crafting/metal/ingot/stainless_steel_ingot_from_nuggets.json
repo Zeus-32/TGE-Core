@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "tge_core:stainless_steel_nugget"
+            "items": "#c:nuggets/stainless_steel"
           }
         ]
       },

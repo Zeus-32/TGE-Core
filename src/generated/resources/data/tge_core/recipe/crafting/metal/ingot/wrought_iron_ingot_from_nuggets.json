@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "I": {
-      "item": "tge_core:wrought_iron_nugget"
+      "tag": "c:nuggets/wrought_iron"
     }
   },
   "pattern": [

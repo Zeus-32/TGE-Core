@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "tge_core:bronze_ingot"
+      "tag": "c:ingots/bronze"
     }
   ],
   "result": {

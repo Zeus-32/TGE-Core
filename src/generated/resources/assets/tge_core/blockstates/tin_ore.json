@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "tge_core:block/tin_ore"
+    }
+  }
+}

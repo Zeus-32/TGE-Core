@@ -2,12 +2,11 @@ package net.zeus_32.tge_core.item;
 
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.PickaxeItem;
-import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.Tiers;
-import net.zeus_32.tge_core.TGECore;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import net.zeus_32.tge_core.TGECore;
 import net.zeus_32.tge_core.item.custom.*;
 
 public class ModItems {
@@ -259,6 +258,14 @@ public class ModItems {
     private static DeferredItem<Item> registerDust(String material) {
         return ITEMS.register(material + "_dust", () -> new Item(new Item.Properties()));
     }
+
+    public static final DeferredItem<Item> RAW_ALUMINIUM = ITEMS.register("raw_aluminium", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> RAW_LEAD = ITEMS.register("raw_lead", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> RAW_NICKEL = ITEMS.register("raw_nickel", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> RAW_OSMIUM = ITEMS.register("raw_osmium", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> RAW_SILVER = ITEMS.register("raw_silver", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> RAW_TIN = ITEMS.register("raw_tin", () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> RAW_ZINC = ITEMS.register("raw_zinc", () -> new Item(new Item.Properties()));
 
     public static final DeferredItem<Item> ALUMINIUM_FILE = ITEMS.register("aluminium_file", () -> new FileItem(new Item.Properties().durability(768)));
     public static final DeferredItem<Item> BRONZE_FILE = ITEMS.register("bronze_file", () -> new FileItem(new Item.Properties().durability(192)));

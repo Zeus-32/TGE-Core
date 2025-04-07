@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aluminium_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:ingots/aluminium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "tge_core:crafting/metal/dust/aluminium_dust_from_ingot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_aluminium_ingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "tge_core:crafting/metal/dust/aluminium_dust_from_ingot"
+    ]
+  }
+}

@@ -1,4 +1,4 @@
-// 1.21.1	2025-04-04T17:28:47.9116917	Item Models: tge_core
+// 1.21.1	2025-04-06T02:24:21.4444256	Item Models: tge_core
 4ca0707ba40b8070803bd54c1d26cbf1578e47b9 assets/tge_core/models/item/advanced_tool_handle.json
 498ffa275e67beefc3f425ac7f87884da707feaa assets/tge_core/models/item/aluminium_bolt.json
 11ac207e9b4ac581c0cbb3ab49dba3e334690861 assets/tge_core/models/item/aluminium_dust.json
@@ -79,6 +79,7 @@ fbb9f186645ae4fcbcd9e1cc2f33ae6d74e30764 assets/tge_core/models/item/diamond_kni
 46d0fc273fb6e1e8c963bbef43a0caf04fb5154c assets/tge_core/models/item/diamond_screwdriver.json
 fe111496802efbf970ae06cd6c7239ecc0f6e68f assets/tge_core/models/item/diamond_wire_cutters.json
 df88e73091b1e28c6f616bd8c421b5084b8ce08f assets/tge_core/models/item/diamond_wrench.json
+9da4a675ba2dbb341ee1efabc953ada279f5d3e5 assets/tge_core/models/item/drill_head.json
 678d34159cb89e027ec303eea64a709ea144fbe6 assets/tge_core/models/item/electrum_bolt.json
 c692bd534aa81917ab9d57ea38cebacbca677636 assets/tge_core/models/item/electrum_dust.json
 5d0161dfd7a0c88a9179376f585916676c0693dc assets/tge_core/models/item/electrum_gear.json
@@ -185,6 +186,7 @@ dc2bcc9f16b9a1a56809a94f9895a2ae2baaf6e1 assets/tge_core/models/item/osmium_gear
 c09dcf608380a0a2d3ef24648ec09a7eb61ff206 assets/tge_core/models/item/osmium_plate.json
 93256c4943e60962d909fb9e4037e4d61a371126 assets/tge_core/models/item/osmium_rod.json
 6de2b15f215233d43ccdd15b979e0342105d0786 assets/tge_core/models/item/osmium_screw.json
+d11498255acd08188b057d857d689d5106cb5e1f assets/tge_core/models/item/plant_goo.json
 ff4b6319a30a898000d0008b759d285ce16d5393 assets/tge_core/models/item/platinum_bolt.json
 07130e65700d0889ffdbfdd05d8d5c9f58797bad assets/tge_core/models/item/platinum_dust.json
 6378a8d8d1ffc95e1e3d23db1234c8d1e7098dca assets/tge_core/models/item/platinum_gear.json
@@ -193,9 +195,14 @@ ff4b6319a30a898000d0008b759d285ce16d5393 assets/tge_core/models/item/platinum_bo
 b3e2fed2084424eb7b875809e9198fb7f2fc6aaf assets/tge_core/models/item/platinum_plate.json
 5dfc4079591e6837da27a8c0f4eec896c4796c74 assets/tge_core/models/item/platinum_rod.json
 4d865c4545e4665591755810267fea7a6cf02168 assets/tge_core/models/item/platinum_screw.json
-93c039229ffc344cba59f16126cb4ea2b8c90bc4 assets/tge_core/models/item/plutonium_ingot.json
-54baaceee99bb6804689b3b69c49329d99c92528 assets/tge_core/models/item/polonium_ingot.json
 a48fe4e2862e71fb6c4647628f955fe3e913b79d assets/tge_core/models/item/quartz_sand_dust.json
+1de2e91d78cf9ad05cf9e50256078f1f9a458795 assets/tge_core/models/item/raw_aluminium.json
+3926a5254b25757725471700be496f6772f3a2eb assets/tge_core/models/item/raw_lead.json
+6d2716a5ce13549f8d95dc7dbf6fa686f3b4a1e3 assets/tge_core/models/item/raw_nickel.json
+22a8def0d3ed9cb9e5cd6a29a127712fb73c6c74 assets/tge_core/models/item/raw_osmium.json
+1951b710d439c54001ec49787729d4fb87bdbb8c assets/tge_core/models/item/raw_silver.json
+226e43509cb38332f7f438e1d48c560ec30f362d assets/tge_core/models/item/raw_tin.json
+1505001cb3755e1961eb081afa9daf98fd72110a assets/tge_core/models/item/raw_zinc.json
 6e11c906048a3c8e9567b36b11eb14e6930f3cc4 assets/tge_core/models/item/red_alloy_bolt.json
 e9c918b9afd8e594cfc66099833ed15d019615d2 assets/tge_core/models/item/red_alloy_dust.json
 9ef223d8119d99993ff7c986dfcbbdf687a316d6 assets/tge_core/models/item/red_alloy_gear.json
@@ -204,6 +211,8 @@ e9c918b9afd8e594cfc66099833ed15d019615d2 assets/tge_core/models/item/red_alloy_d
 3f0cdf883a484197604b0a8ebe540828fff07872 assets/tge_core/models/item/red_alloy_plate.json
 a43e433c6de1bf5433a821571378e0b0562c5614 assets/tge_core/models/item/red_alloy_rod.json
 07490fe664a282122f90122bcbd07e42c2a35458 assets/tge_core/models/item/red_alloy_screw.json
+888b6e520cda5f540698965a873be5bd87754401 assets/tge_core/models/item/rubber_sapling.json
+bc3d77c90485191f144540764499409ded33b616 assets/tge_core/models/item/saw_blade.json
 9181b71cca5536765fdb64217ebc458e0c4b8f1b assets/tge_core/models/item/silver_bolt.json
 6a95559e36abc25916b211848bc45ba23e332a82 assets/tge_core/models/item/silver_dust.json
 276070565de33b4c40f145358ddcb636860cdf6a assets/tge_core/models/item/silver_gear.json
@@ -254,6 +263,7 @@ c72677ce38c78df47ff1b4e88b017b2d4f892e77 assets/tge_core/models/item/steel_screw
 19f2c111231646a77b10dd8ab63fa46631a68066 assets/tge_core/models/item/steel_screwdriver.json
 71abf173e1b5e7c73b093b07391d4470c7d26362 assets/tge_core/models/item/steel_wire_cutters.json
 59ea7c0961827e86783879109485cad9dfb8dab9 assets/tge_core/models/item/steel_wrench.json
+94cfaa78c7a2117de6b98c601d145d3764f2d941 assets/tge_core/models/item/sticky_resin.json
 dec0d93e9deec28624134fdc063b8e5dd5ef009a assets/tge_core/models/item/tin_bolt.json
 b0985f1d41b19281e8b4a2ee67abdb2916c7a66e assets/tge_core/models/item/tin_dust.json
 e7dbda3054293ed879c156c0607bce8200de6966 assets/tge_core/models/item/tin_gear.json
@@ -279,8 +289,9 @@ cd53c0eebb55a3b72104d3468f8b79948635097d assets/tge_core/models/item/titanium_ro
 5c9f3998716bc021475a4f6b6b13bebd147d1b61 assets/tge_core/models/item/titanium_screwdriver.json
 43879fa472912769f4a7413d469d21521f6fb34b assets/tge_core/models/item/titanium_wire_cutters.json
 faf0de313eefd58128f2d76a9433daea9d81592a assets/tge_core/models/item/titanium_wrench.json
-c798cdfc4bf130186d1deb57eba9df85713c3e37 assets/tge_core/models/item/uranium_ingot.json
+9a3ce2e98178021511f866655fc020a9f8f75d9d assets/tge_core/models/item/water_wheel_paddle.json
 032affd2f0a2fcfd7d6c00338e39d4d923f06bad assets/tge_core/models/item/wet_coke_brick.json
+c27448ad818340fc392bf155a2aef2b9c69d8081 assets/tge_core/models/item/wooden_gear.json
 d616b7d2105c3757d3937298b66b35d7dd76f530 assets/tge_core/models/item/wrought_iron_bolt.json
 cf464a3d66803e32ecef49005937458c77a0b95b assets/tge_core/models/item/wrought_iron_dust.json
 f2c884fc23c4e03b513bf3408665c603dfa2430f assets/tge_core/models/item/wrought_iron_file.json

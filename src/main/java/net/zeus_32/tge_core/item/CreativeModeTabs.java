@@ -18,6 +18,21 @@ public class CreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.BRASS_INGOT.get()))
                     .title(Component.translatable("creativetab.tge_core.tge_metals_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModBlocks.ALUMINIUM_ORE.get());
+                        output.accept(ModBlocks.DEEPSLATE_ALUMINIUM_ORE.get());
+                        output.accept(ModBlocks.LEAD_ORE.get());
+                        output.accept(ModBlocks.DEEPSLATE_LEAD_ORE.get());
+                        output.accept(ModBlocks.NICKEL_ORE.get());
+                        output.accept(ModBlocks.DEEPSLATE_NICKEL_ORE.get());
+                        output.accept(ModBlocks.SILVER_ORE.get());
+                        output.accept(ModBlocks.DEEPSLATE_SILVER_ORE.get());
+                        output.accept(ModBlocks.OSMIUM_ORE.get());
+                        output.accept(ModBlocks.DEEPSLATE_OSMIUM_ORE.get());
+                        output.accept(ModBlocks.TIN_ORE.get());
+                        output.accept(ModBlocks.DEEPSLATE_TIN_ORE.get());
+                        output.accept(ModBlocks.ZINC_ORE.get());
+                        output.accept(ModBlocks.DEEPSLATE_ZINC_ORE.get());
+
                         output.accept(ModItems.ALUMINIUM_INGOT);
                         output.accept(ModItems.ALUMINIUM_NUGGET);
                         output.accept(ModItems.ALUMINIUM_PLATE);
@@ -262,6 +277,20 @@ public class CreativeModeTabs {
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModNonMetalItems.GLASS_DUST.get()))
                     .title(Component.translatable("creativetab.tge_core.tge_non_metals_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
+
+                        output.accept(ModBlocks.RUBBER_LOG);
+                        output.accept(ModBlocks.RUBBER_WOOD);
+                        output.accept(ModBlocks.STRIPPED_RUBBER_LOG);
+                        output.accept(ModBlocks.STRIPPED_RUBBER_WOOD);
+                        output.accept(ModBlocks.RUBBER_PLANKS);
+                        output.accept(ModBlocks.RUBBER_SAPLING);
+                        output.accept(ModBlocks.RUBBER_LEAVES);
+                        output.accept(ModNonMetalItems.STICKY_RESIN);
+
+                        output.accept(ModNonMetalItems.WOODEN_GEAR);
+                        output.accept(ModNonMetalItems.WATER_WHEEL_PADDLE);
+                        output.accept(ModNonMetalItems.PLANT_GOO);
+
                         output.accept(ModNonMetalItems.FLINT_DUST);
                         output.accept(ModNonMetalItems.QUARTZ_SAND_DUST);
                         output.accept(ModNonMetalItems.GLASS_DUST);
@@ -278,6 +307,8 @@ public class CreativeModeTabs {
                         output.accept(ModItems.ANDESITE_COMPOUND);
                         output.accept(ModItems.ADVANCED_TOOL_HANDLE);
 
+                        output.accept(ModNonMetalItems.DRILL_HEAD);
+                        output.accept(ModNonMetalItems.SAW_BLADE);
                         output.accept(ModNonMetalItems.KINTETIC_MECHANISM);
 
                         output.accept(ModBlocks.STEEL_MACHINE_CASING);

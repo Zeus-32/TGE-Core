@@ -1,6 +1,20 @@
 {
   "values": [
     "tge_core:fire_bricks",
-    "tge_core:steel_machine_casing"
+    "tge_core:steel_machine_casing",
+    "tge_core:aluminium_ore",
+    "tge_core:deepslate_aluminium_ore",
+    "tge_core:lead_ore",
+    "tge_core:deepslate_lead_ore",
+    "tge_core:nickel_ore",
+    "tge_core:deepslate_nickel_ore",
+    "tge_core:silver_ore",
+    "tge_core:deepslate_silver_ore",
+    "tge_core:osmium_ore",
+    "tge_core:deepslate_osmium_ore",
+    "tge_core:tin_ore",
+    "tge_core:deepslate_tin_ore",
+    "tge_core:zinc_ore",
+    "tge_core:deepslate_zinc_ore"
   ]
 }

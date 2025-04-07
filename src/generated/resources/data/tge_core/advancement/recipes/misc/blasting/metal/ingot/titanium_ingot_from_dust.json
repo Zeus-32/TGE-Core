@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "tge_core:blasting/metal/ingot/titanium_ingot_from_dust"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_titanium_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#c:dusts/titanium"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_titanium_dust"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "tge_core:blasting/metal/ingot/titanium_ingot_from_dust"
+    ]
+  }
+}

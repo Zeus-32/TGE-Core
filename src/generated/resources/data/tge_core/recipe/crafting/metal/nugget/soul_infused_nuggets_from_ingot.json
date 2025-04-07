@@ -3,7 +3,7 @@
   "category": "misc",
   "ingredients": [
     {
-      "item": "tge_core:soul_infused_ingot"
+      "tag": "c:ingots/soul_infused"
     }
   ],
   "result": {

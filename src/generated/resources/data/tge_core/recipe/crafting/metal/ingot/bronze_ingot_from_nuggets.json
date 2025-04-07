@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "I": {
-      "item": "tge_core:bronze_nugget"
+      "tag": "c:nuggets/bronze"
     }
   },
   "pattern": [

@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "I": {
-      "item": "tge_core:brass_nugget"
+      "tag": "c:nuggets/brass"
     }
   },
   "pattern": [

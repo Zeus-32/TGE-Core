@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "I": {
-      "item": "tge_core:zinc_nugget"
+      "tag": "c:nuggets/zinc"
     }
   },
   "pattern": [

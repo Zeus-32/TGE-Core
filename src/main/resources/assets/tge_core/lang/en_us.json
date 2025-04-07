@@ -1,6 +1,29 @@
 {
   "item.tge_core.andesite_compound": "Andesite Compound",
 
+  "block.tge_core.aluminium_ore": "Aluminium Ore",
+  "block.tge_core.deepslate_aluminium_ore": "Deepslate Aluminium Ore",
+  "block.tge_core.lead_ore": "Lead Ore",
+  "block.tge_core.deepslate_lead_ore": "Deepslate Lead Ore",
+  "block.tge_core.nickel_ore": "Nickel Ore",
+  "block.tge_core.deepslate_nickel_ore": "Deepslate Nickel Ore",
+  "block.tge_core.silver_ore": "Silver Ore",
+  "block.tge_core.deepslate_silver_ore": "Deepslate Silver Ore",
+  "block.tge_core.osmium_ore": "Osmium Ore",
+  "block.tge_core.deepslate_osmium_ore": "Deepslate Osmium Ore",
+  "block.tge_core.tin_ore": "Tin Ore",
+  "block.tge_core.deepslate_tin_ore": "Deepslate Tin Ore",
+  "block.tge_core.zinc_ore": "Zinc Ore",
+  "block.tge_core.deepslate_zinc_ore": "Deepslate Zinc Ore",
+
+  "item.tge_core.raw_aluminium": "Raw Aluminium",
+  "item.tge_core.raw_lead": "Raw Lead",
+  "item.tge_core.raw_nickel": "Raw Nickel",
+  "item.tge_core.raw_silver": "Raw Silver",
+  "item.tge_core.raw_osmium": "Raw Osmium",
+  "item.tge_core.raw_tin": "Raw Tin",
+  "item.tge_core.raw_zinc": "Raw Zinc",
+
   "item.tge_core.aluminium_ingot": "Aluminium Ingot",
   "item.tge_core.brass_ingot": "Brass Ingot",
   "item.tge_core.bronze_ingot": "Bronze Ingot",
@@ -336,6 +359,19 @@
   "item.tge_core.titanium_mining_hammer": "Titanium Mining Hammer",
   "item.tge_core.wrought_iron_mining_hammer": "Wrought Iron Mining Hammer",
 
+  "block.tge_core.rubber_log": "Rubber Log",
+  "block.tge_core.stripped_rubber_log": "Stripped Rubber Log",
+  "block.tge_core.rubber_wood": "Rubber Wood",
+  "block.tge_core.stripped_rubber_wood": "Stripped Rubber Wood",
+  "block.tge_core.rubber_planks": "Rubber Planks",
+  "block.tge_core.rubber_sapling": "Rubber Sapling",
+  "block.tge_core.rubber_leaves": "Rubber Leaves",
+  "item.tge_core.sticky_resin": "Sticky Resin",
+
+  "item.tge_core.wooden_gear": "Wooden Gear",
+  "item.tge_core.water_wheel_paddle": "Water Wheel Paddle",
+  "item.tge_core.plant_goo": "Plant Goo",
+
   "item.tge_core.flint_dust": "Flint Dust",
   "item.tge_core.quartz_sand_dust": "Quartz Sand Dust",
   "item.tge_core.glass_dust": "Glass Dust",
@@ -352,6 +388,8 @@
 
   "item.tge_core.advanced_tool_handle": "Advanced Tool Handle",
 
+  "item.tge_core.drill_head": "Drill Head",
+  "item.tge_core.saw_blade": "Saw Blade",
   "item.tge_core.kinetic_mechanism": "Kinetic Mechanism",
 
   "block.tge_core.steel_machine_casing": "Steel Machine Casing",

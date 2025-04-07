@@ -3,7 +3,7 @@
   "category": "misc",
   "key": {
     "I": {
-      "item": "tge_core:stainless_steel_nugget"
+      "tag": "c:nuggets/stainless_steel"
     }
   },
   "pattern": [
