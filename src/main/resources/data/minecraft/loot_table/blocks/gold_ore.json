@@ -28,7 +28,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tge_core:raw_gold",
+              "name": "tge:raw_gold",
               "functions": [
                 {
                   "function": "minecraft:apply_bonus",
@@ -46,3 +46,4 @@
     }
   ]
 }
+

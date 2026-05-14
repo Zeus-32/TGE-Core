@@ -18,11 +18,15 @@ public class TGEOreGenerationEvents {
         if (!(event.getLevel() instanceof ServerLevel level)) {
             return;
         }
-        if (!event.isNewChunk()) {
-            return;
-        }
 
         ChunkAccess chunk = event.getChunk();
+        TGEOreGenerator.scrubForeignOres(level, chunk);
+
+        // Generate veins for any chunk that does not have recorded generated vein data yet.
+        // This also allows retroactive generation in already existing worlds.
+        if (OreChunkMetadata.get(level).getVeinInfo(chunk.getPos()) != null) {
+            return;
+        }
         TGEOreGenerator.generateChunkSliceForSector(level, chunk);
     }
 

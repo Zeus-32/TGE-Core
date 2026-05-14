@@ -22,4 +22,5 @@ public class TGECoreClient {
         TGECore.LOGGER.info("HELLO FROM CLIENT SETUP");
         TGECore.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
     }
+
 }

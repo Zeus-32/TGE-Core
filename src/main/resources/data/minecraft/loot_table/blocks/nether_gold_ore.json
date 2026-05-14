@@ -1,4 +1,4 @@
-{
+﻿{
   "type": "minecraft:block",
   "pools": [
     {
@@ -28,7 +28,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tge_core:gold_nugget",
+              "name": "tge:gold_nugget",
               "functions": [
                 {
                   "function": "minecraft:set_count",
@@ -57,3 +57,4 @@
     }
   ]
 }
+

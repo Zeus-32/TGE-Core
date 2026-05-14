@@ -1,25 +1,77 @@
+# ⚙️ TGE-Core (The Great Engineer)
 
-Installation information
-=======
+![TGE Banner](https://zunix.eu/assets/tge/banner.png)
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+![Author](https://img.shields.io/badge/Author-Zeus_32-red?style=for-the-badge)
+![Website](https://img.shields.io/badge/Official-zunix.eu-black?style=for-the-badge)
+![Minecraft](https://img.shields.io/badge/Minecraft-1.20.1-green?style=for-the-badge)
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+**TGE-Core** is the technical backbone of **The Great Engineer** modpack. This isn't just a collection of recipes—it’s a complete fundamental rewrite of the Minecraft experience, turning it into a high-stakes industrial simulation.
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+---
 
-Mapping Names:
-============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+## 👋 About the Project
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+This mod is the heart of the **Zunix Ecosystem**. I built TGE-Core for players who crave technical depth and engineering realism—elements that are often missing in modern "kitchen-sink" modpacks.
+
+* **Official Website:** [zunix.eu](https://zunix.eu)
+* **Project Lead:** Marek (Zeus_32)
+
+---
+
+## ⚙️ The Overhaul
+
+TGE-Core merges the visual automation of **Create** with the unforgiving progression logic of **GregTech**. I’ve removed the "vanilla shortcuts" to force a more rewarding, technical approach to gameplay.
+
+### 🛠️ Key Pillars
+
+* **Custom Progression**
+  You start with nothing. There are no shortcuts here—you must craft your future using a specialized suite of **Manual Tools**. Hammers, Files, and Saws will be your primary companions for a long time.
+
+* **Kinetic Stress Rework**
+  I’ve overhauled the Create Mod stress system to be material-based. Every component, from Andesite to Titanium, has physical limits. If you push your machines too hard, the infrastructure *will* fail.
+
+* **Grid-Based Ore Generation**
+  No more random branch mining. Ores generate in massive vertical veins following a strict 3x3 chunk grid. This transforms mining from a tedious chore into a large-scale logistical operation.
+
+---
+
+## 🔍 Prospecting & Discovery
+
+My implementation of the **Prospector** tool relies on player intuition rather than raw data.
+
+> "Something is hidden nearby..."
+
+No coordinates. No "cheat" overlays. You get a signal that you're standing on a fortune, but it’s up to you to locate the core of the vein and set up your rig.
+
+![Prospector Preview](https://zunix.eu/assets/tge/prospector_gui.png)
+
+---
+
+## 🎨 Design Philosophy
+
+* **Clean Industrial UI**
+  Clarity is everything. Tooltips show exactly what you need to know: Durability, Damage, Speed, and Tier. No clutter, just the facts.
+
+* **The Integrity Bar**
+  Every tool features a vailid durability bar from the second it's crafted. It serves as a constant reminder of your equipment's lifespan and the scale of the task at hand.
+
+---
+
+## 📋 Technical Requirements
+
+* **Version:** Minecraft 1.21.1 (NeoForge)
+* **Hard Dependency:** [Create Mod](https://www.curseforge.com/minecraft/mc-mods/create)
+
+---
+
+## 🔗 Connect
+
+Stay updated on **The Great Engineer** and my other technical projects at the official hub:
+
+👉 Visit [**ZUNIX.EU/TGE**](https://zunix.eu/tge)
+
+---
+
+*Engineering is the art of directed friction.*
+**Designed and Developed by Player for Players**

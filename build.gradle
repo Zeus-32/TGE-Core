@@ -16,9 +16,25 @@ tasks.named('wrapper', Wrapper).configure {
 
 version = mod_version
 group = mod_group_id
+def withJeiRuntime = providers.gradleProperty("with_jei_runtime").map { it.toBoolean() }.orElse(false).get()
+def withTmrvRuntime = providers.gradleProperty("with_tmrv_runtime").map { it.toBoolean() }.orElse(false).get()
+def enableJeiRuntime = withJeiRuntime && !withTmrvRuntime
+
+if (withJeiRuntime && withTmrvRuntime) {
+    logger.lifecycle("[TGE] with_jei_runtime=true is ignored because with_tmrv_runtime=true (TMRV already bridges EMI/JEI).")
+}
 
 repositories {
     // Add here additional repositories if required by some of the dependencies below.
+    maven { url = "https://maven.createmod.net" } // Create, Ponder, Flywheel
+    maven { url = "https://maven.ithundxr.dev/snapshots" } // Registrate
+    maven { url = "https://maven.blamejared.com/" } // JEI
+    maven { url = "https://modmaven.dev" } // JEI mirror
+    maven { url = "https://maven.terraformersmc.com/releases/" } // EMI
+    maven {
+        url = "https://www.cursemaven.com"
+        content { includeGroup "curse.maven" }
+    } // TMRV
 }
 
 base {
@@ -112,12 +128,23 @@ configurations {
 }
 
 dependencies {
-    // Example optional mod dependency with JEI
-    // The JEI API is declared for compile time use, while the full JEI artifact is used at runtime
-    // compileOnly "mezz.jei:jei-${mc_version}-common-api:${jei_version}"
-    // compileOnly "mezz.jei:jei-${mc_version}-neoforge-api:${jei_version}"
-    // We add the full version to localRuntime, not runtimeOnly, so that we do not publish a dependency on it
-    // localRuntime "mezz.jei:jei-${mc_version}-neoforge:${jei_version}"
+    implementation("com.simibubi.create:create-${minecraft_version}:${create_version}:slim") { transitive = false }
+    implementation("net.createmod.ponder:ponder-neoforge:${ponder_version}+mc${minecraft_version}")
+    compileOnly("dev.engine-room.flywheel:flywheel-neoforge-api-${minecraft_version}:${flywheel_version}")
+    runtimeOnly("dev.engine-room.flywheel:flywheel-neoforge-${minecraft_version}:${flywheel_version}")
+    implementation("com.tterrag.registrate:Registrate:${registrate_version}")
+
+    // JEI + EMI (recipe viewer integrations)
+    compileOnly("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
+    compileOnly("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
+    if (enableJeiRuntime) {
+        localRuntime("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
+    }
+    compileOnly("dev.emi:emi-neoforge:${emi_version}")
+    localRuntime("dev.emi:emi-neoforge:${emi_version}")
+    if (withTmrvRuntime) {
+        localRuntime("curse.maven:tmrv-1194921:${tmrv_curse_file_id}")
+    }
 
     // Example mod dependency using a mod jar from ./libs with a flat dir repository
     // This maps to ./libs/coolmod-${mc_version}-${coolmod_version}.jar
@@ -142,9 +169,12 @@ var generateModMetadata = tasks.register("generateModMetadata", ProcessResources
             minecraft_version      : minecraft_version,
             minecraft_version_range: minecraft_version_range,
             neo_version            : neo_version,
+            create_version_range   : create_version_range,
             loader_version_range   : loader_version_range,
             mod_id                 : mod_id,
             mod_name               : mod_name,
+            mod_authors            : mod_authors,
+            mod_description        : mod_description,
             mod_license            : mod_license,
             mod_version            : mod_version,
     ]
@@ -175,6 +205,15 @@ publishing {
 
 tasks.withType(JavaCompile).configureEach {
     options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
+    if (project.hasProperty('lintWarnings')) {
+        options.compilerArgs.addAll(['-Xlint:deprecation', '-Xlint:unchecked'])
+    }
+}
+
+tasks.withType(ProcessResources).configureEach {
+    // Datagen and main resources can overlap (same logical asset path).
+    // Keep the first encountered entry and avoid hard-failing on duplicates.
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
 
 // IDEA no longer automatically downloads sources/javadoc jars for dependencies, so we need to explicitly enable the behavior.

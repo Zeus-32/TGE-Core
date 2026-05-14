@@ -30,19 +30,19 @@ public record OreVein(
         }
     }
 
-    public OreComponent top() {
+    public OreComponent primary() {
         return layers.get(0);
     }
 
-    public OreComponent between() {
+    public OreComponent secondary() {
         return layers.get(1);
     }
 
-    public OreComponent main() {
+    public OreComponent inBetween() {
         return layers.get(2);
     }
 
-    public OreComponent bottom() {
+    public OreComponent sporadic() {
         return layers.get(3);
     }
 

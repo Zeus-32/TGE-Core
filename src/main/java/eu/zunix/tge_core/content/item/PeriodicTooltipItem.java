@@ -20,6 +20,8 @@ public class PeriodicTooltipItem extends Item {
     @Override
     public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
-        tooltipComponents.add(Component.translatable("tooltip.tge_core.formula", formula).withStyle(ChatFormatting.YELLOW));
+        if (!formula.isBlank()) {
+            tooltipComponents.add(Component.translatable("tooltip.tge.formula", formula).withStyle(ChatFormatting.YELLOW));
+        }
     }
 }

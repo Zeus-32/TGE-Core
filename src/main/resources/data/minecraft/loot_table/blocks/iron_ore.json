@@ -28,7 +28,7 @@
             },
             {
               "type": "minecraft:item",
-              "name": "tge_core:raw_iron",
+              "name": "tge:raw_iron",
               "functions": [
                 {
                   "function": "minecraft:apply_bonus",
@@ -46,3 +46,4 @@
     }
   ]
 }
+
