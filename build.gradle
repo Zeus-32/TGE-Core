@@ -19,6 +19,7 @@ group = mod_group_id
 
 repositories {
     maven { url = "https://maven.blamejared.com/" }
+    maven { url = "https://jitpack.io" }
 }
 
 base {
@@ -154,7 +155,7 @@ dependencies {
     compileOnly("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
     compileOnly("mezz.jei:jei-${minecraft_version}-neoforge-api:${jei_version}")
     localRuntime("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}")
-    localRuntime("eu.zunix.ore_and_alloy:ore_and_alloy:1.0.4")
+    localRuntime("com.github.Zeus-32:Ore-Alloy:5e086397dd")
 }
 
 // IDEA no longer automatically downloads sources/javadoc jars for dependencies, so we need to explicitly enable the behavior.

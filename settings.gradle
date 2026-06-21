@@ -8,8 +8,11 @@ plugins {
     id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
 }
 
-includeBuild('external/Ore-Alloy') {
-    dependencySubstitution {
-        substitute module('eu.zunix.ore_and_alloy:ore_and_alloy') using project(':')
+def oreAndAlloyBuild = file('external/Ore-Alloy')
+if (oreAndAlloyBuild.isDirectory()) {
+    includeBuild(oreAndAlloyBuild) {
+        dependencySubstitution {
+            substitute module('com.github.Zeus-32:Ore-Alloy') using project(':')
+        }
     }
 }
