@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:bricks"
+    },
+    "M": {
+      "tag": "tge:tools/mortars"
+    }
+  },
+  "pattern": [
+    "B",
+    "M"
+  ],
+  "result": {
+    "id": "tge:brick_dust"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "tag": "tge:tools/mortars"
+    },
+    "S": {
+      "item": "minecraft:sand"
+    }
+  },
+  "pattern": [
+    "S",
+    "M"
+  ],
+  "result": {
+    "id": "tge:quartz_dust"
+  }
+}

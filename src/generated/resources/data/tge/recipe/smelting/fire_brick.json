@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 400,
+  "experience": 0.2,
+  "ingredient": {
+    "item": "tge:compressed_fire_brick"
+  },
+  "result": {
+    "id": "tge:fire_brick"
+  }
+}

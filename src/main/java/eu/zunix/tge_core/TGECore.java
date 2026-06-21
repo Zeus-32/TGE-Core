@@ -1,8 +1,8 @@
 package eu.zunix.tge_core;
 
-import eu.zunix.tge_core.datagen.TGEDataGenerators;
-import eu.zunix.tge_core.registry.TGEItems;
-import eu.zunix.tge_core.registry.TGERegistries;
+import eu.zunix.tge_core.datagen.DataGenerators;
+import eu.zunix.tge_core.registry.Items;
+import eu.zunix.tge_core.registry.Registries;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.common.Mod;
 
@@ -11,8 +11,8 @@ public final class TGECore {
     public static final String MOD_ID = "tge";
 
     public TGECore(IEventBus modEventBus) {
-        TGERegistries.register(modEventBus);
-        modEventBus.addListener(TGEDataGenerators::gatherData);
-        modEventBus.addListener(TGEItems::setupCraftingRemainders);
+        Registries.register(modEventBus);
+        modEventBus.addListener(DataGenerators::gatherData);
+        modEventBus.addListener(Items::setupCraftingRemainders);
     }
 }

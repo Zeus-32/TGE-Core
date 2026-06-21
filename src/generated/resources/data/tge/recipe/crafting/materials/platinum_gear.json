@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "ore_and_alloy:platinum_gear"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "tag": "tge:tools/hammers"
+    },
+    "P": {
+      "tag": "c:plates/platinum"
+    },
+    "R": {
+      "tag": "c:rods/platinum"
+    }
+  },
+  "pattern": [
+    "RPR",
+    "PHP",
+    "RPR"
+  ],
+  "result": {
+    "id": "ore_and_alloy:platinum_gear"
+  }
+}

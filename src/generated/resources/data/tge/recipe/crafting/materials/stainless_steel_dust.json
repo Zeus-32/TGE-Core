@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "ore_and_alloy:stainless_steel_dust"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "tag": "c:ingots/stainless_steel"
+    },
+    "M": {
+      "tag": "tge:tools/mortars"
+    }
+  },
+  "pattern": [
+    "I",
+    "M"
+  ],
+  "result": {
+    "id": "ore_and_alloy:stainless_steel_dust"
+  }
+}

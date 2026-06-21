@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "ore_and_alloy:red_alloy_dust"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "tag": "c:ingots/red_alloy"
+    },
+    "M": {
+      "tag": "tge:tools/mortars"
+    }
+  },
+  "pattern": [
+    "I",
+    "M"
+  ],
+  "result": {
+    "id": "ore_and_alloy:red_alloy_dust"
+  }
+}

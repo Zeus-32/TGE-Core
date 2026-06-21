@@ -1,77 +1,67 @@
-# ⚙️ TGE-Core (The Great Engineer)
+# The Great Engineer Core
 
-![TGE Banner](https://zunix.eu/assets/tge/banner.png)
+[![Minecraft](https://img.shields.io/badge/Minecraft-1.21.1-62B47A?style=flat-square)](https://www.minecraft.net/)
+[![NeoForge](https://img.shields.io/badge/NeoForge-21.1.229+-E68A2E?style=flat-square)](https://neoforged.net/)
+[![Version](https://img.shields.io/badge/version-0.0.2-4C8BF5?style=flat-square)](CHANGELOG.md)
+[![License](https://img.shields.io/badge/code-MIT-blue?style=flat-square)](LICENCE.md)
 
-![Author](https://img.shields.io/badge/Author-Zeus_32-red?style=for-the-badge)
-![Website](https://img.shields.io/badge/Official-zunix.eu-black?style=for-the-badge)
-![Minecraft](https://img.shields.io/badge/Minecraft-1.20.1-green?style=for-the-badge)
+The Great Engineer Core is the gameplay foundation for The Great Engineer modpack.
 
-**TGE-Core** is the technical backbone of **The Great Engineer** modpack. This isn't just a collection of recipes—it’s a complete fundamental rewrite of the Minecraft experience, turning it into a high-stakes industrial simulation.
+It defines the early manual crafting layer, the first TGE-specific resources, and the tool framework used by later progression systems. The core mod is intentionally strict: recipes should use TGE tools and Ore & Alloy material outputs instead of loose cross-mod substitutions.
 
----
+## Core behavior
 
-## 👋 About the Project
+- Adds the first TGE resource items: glass dust, flint dust, clay dust, brick dust, fire clay dust, fire brick, unfired clay brick, and brick mold.
+- Adds a reusable brick mold item for crafting recipes that should not consume the mold.
+- Replaces the vanilla clay-to-brick flow with an unfired clay brick flow.
+- Adds a dedicated TGE tools creative tab.
+- Adds iron manual tools: hammer, wrench, saw, file, mortar, wire cutters, and screwdriver.
+- Adds iron vanilla-style tools managed through the same TGE tool system: pickaxe, axe, shovel, hoe, and sword.
+- Adds shared tooltips for tool durability, remaining durability, crafting uses, and tier.
+- Adds strict `tge:tools/<tool>` item tags for recipes that must require TGE tools specifically.
+- Generates basic TGE crafting recipes through datagen.
 
-This mod is the heart of the **Zunix Ecosystem**. I built TGE-Core for players who crave technical depth and engineering realism—elements that are often missing in modern "kitchen-sink" modpacks.
+TGE Core currently depends on Ore & Alloy for canonical material outputs used by plate and rod recipes.
 
-* **Official Website:** [zunix.eu](https://zunix.eu)
-* **Project Lead:** Marek (Zeus_32)
+## Tool System
 
----
+The tool registry is material-driven. Each tool type can receive its own supported materials independently, so future progression can add material tiers without rewriting every tool.
 
-## ⚙️ The Overhaul
+Current material coverage:
 
-TGE-Core merges the visual automation of **Create** with the unforgiving progression logic of **GregTech**. I’ve removed the "vanilla shortcuts" to force a more rewarding, technical approach to gameplay.
+| Material | Tools |
+|---|---|
+| Iron | Hammer, wrench, saw, file, mortar, wire cutters, screwdriver, pickaxe, axe, shovel, hoe, sword |
 
-### 🛠️ Key Pillars
+Tool recipes use common material tags for inputs and TGE-specific tool tags for tool requirements. This keeps ingot, plate, screw, and rod inputs compatible while preventing recipes from accepting unrelated tools from other mods.
 
-* **Custom Progression**
-  You start with nothing. There are no shortcuts here—you must craft your future using a specialized suite of **Manual Tools**. Hammers, Files, and Saws will be your primary companions for a long time.
+## Ore & Alloy Dependency
 
-* **Kinetic Stress Rework**
-  I’ve overhauled the Create Mod stress system to be material-based. Every component, from Andesite to Titanium, has physical limits. If you push your machines too hard, the infrastructure *will* fail.
+Ore & Alloy is a required dependency.
 
-* **Grid-Based Ore Generation**
-  No more random branch mining. Ores generate in massive vertical veins following a strict 3x3 chunk grid. This transforms mining from a tedious chore into a large-scale logistical operation.
+TGE Core uses Ore & Alloy as the canonical source for material outputs such as:
 
----
+- `ore_and_alloy:<material>_plate`
+- `ore_and_alloy:<material>_rod`
 
-## 🔍 Prospecting & Discovery
+The current required Ore & Alloy version is `1.0.5` or newer.
 
-My implementation of the **Prospector** tool relies on player intuition rather than raw data.
+## Optional Integrations
 
-> "Something is hidden nearby..."
+- [JEI](https://www.curseforge.com/minecraft/mc-mods/jei): optional recipe viewing support
 
-No coordinates. No "cheat" overlays. You get a signal that you're standing on a fortune, but it’s up to you to locate the core of the vein and set up your rig.
+JEI is not required to run TGE Core.
 
-![Prospector Preview](https://zunix.eu/assets/tge/prospector_gui.png)
+## Technical Requirements
 
----
+- Minecraft `1.21.1`
+- NeoForge `21.1.229+`
+- Ore & Alloy `1.0.5+`
+- Java `21`
 
-## 🎨 Design Philosophy
+## License
 
-* **Clean Industrial UI**
-  Clarity is everything. Tooltips show exactly what you need to know: Durability, Damage, Speed, and Tier. No clutter, just the facts.
+- Source code: MIT
+- Art and other assets: All Rights Reserved
 
-* **The Integrity Bar**
-  Every tool features a vailid durability bar from the second it's crafted. It serves as a constant reminder of your equipment's lifespan and the scale of the task at hand.
-
----
-
-## 📋 Technical Requirements
-
-* **Version:** Minecraft 1.21.1 (NeoForge)
-* **Hard Dependency:** [Create Mod](https://www.curseforge.com/minecraft/mc-mods/create)
-
----
-
-## 🔗 Connect
-
-Stay updated on **The Great Engineer** and my other technical projects at the official hub:
-
-👉 Visit [**ZUNIX.EU/TGE**](https://zunix.eu/tge)
-
----
-
-*Engineering is the art of directed friction.*
-**Designed and Developed by Player for Players**
+See [LICENCE.md](LICENCE.md).

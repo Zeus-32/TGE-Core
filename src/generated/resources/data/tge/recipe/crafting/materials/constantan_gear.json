@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "ore_and_alloy:constantan_gear"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "tag": "tge:tools/hammers"
+    },
+    "P": {
+      "tag": "c:plates/constantan"
+    },
+    "R": {
+      "tag": "c:rods/constantan"
+    }
+  },
+  "pattern": [
+    "RPR",
+    "PHP",
+    "RPR"
+  ],
+  "result": {
+    "id": "ore_and_alloy:constantan_gear"
+  }
+}

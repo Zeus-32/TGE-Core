@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "minecraft:flint"
+    },
+    "M": {
+      "tag": "tge:tools/mortars"
+    }
+  },
+  "pattern": [
+    "F",
+    "M"
+  ],
+  "result": {
+    "id": "tge:flint_dust"
+  }
+}

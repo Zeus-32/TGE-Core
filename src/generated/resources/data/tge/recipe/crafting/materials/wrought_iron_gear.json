@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "ore_and_alloy:wrought_iron_gear"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "tag": "tge:tools/hammers"
+    },
+    "P": {
+      "tag": "c:plates/wrought_iron"
+    },
+    "R": {
+      "tag": "c:rods/wrought_iron"
+    }
+  },
+  "pattern": [
+    "RPR",
+    "PHP",
+    "RPR"
+  ],
+  "result": {
+    "id": "ore_and_alloy:wrought_iron_gear"
+  }
+}

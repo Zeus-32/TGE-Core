@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "tge:fire_clay_dust"
+    },
+    "M": {
+      "item": "tge:brick_mold"
+    }
+  },
+  "pattern": [
+    "FFF",
+    "FMF",
+    "FFF"
+  ],
+  "result": {
+    "count": 8,
+    "id": "tge:compressed_fire_brick"
+  }
+}

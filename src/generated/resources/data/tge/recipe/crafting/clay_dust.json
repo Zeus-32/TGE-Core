@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:clay"
+    },
+    "M": {
+      "tag": "tge:tools/mortars"
+    }
+  },
+  "pattern": [
+    "C",
+    "M"
+  ],
+  "result": {
+    "id": "tge:clay_dust"
+  }
+}

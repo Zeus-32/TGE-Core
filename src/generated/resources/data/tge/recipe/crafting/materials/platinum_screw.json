@@ -1,0 +1,25 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "ore_and_alloy:platinum_screw"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "tag": "c:bolts/platinum"
+    },
+    "W": {
+      "tag": "tge:tools/hammers"
+    }
+  },
+  "pattern": [
+    "WB",
+    "B "
+  ],
+  "result": {
+    "id": "ore_and_alloy:platinum_screw"
+  }
+}

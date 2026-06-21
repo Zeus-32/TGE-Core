@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "ore_and_alloy:red_alloy_gear"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "tag": "tge:tools/hammers"
+    },
+    "P": {
+      "tag": "c:plates/red_alloy"
+    },
+    "R": {
+      "tag": "c:rods/red_alloy"
+    }
+  },
+  "pattern": [
+    "RPR",
+    "PHP",
+    "RPR"
+  ],
+  "result": {
+    "id": "ore_and_alloy:red_alloy_gear"
+  }
+}
