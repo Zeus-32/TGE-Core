@@ -1,18 +1,18 @@
 package eu.zunix.tge_core;
 
-import com.mojang.logging.LogUtils;
-import net.neoforged.fml.ModContainer;
-import net.neoforged.fml.common.Mod;
-import net.neoforged.bus.api.IEventBus;
-import org.slf4j.Logger;
+import eu.zunix.tge_core.datagen.TGEDataGenerators;
+import eu.zunix.tge_core.registry.TGEItems;
 import eu.zunix.tge_core.registry.TGERegistries;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.common.Mod;
 
-@Mod(TGECore.MODID)
-public class TGECore {
-    public static final String MODID = "tge";
-    public static final Logger LOGGER = LogUtils.getLogger();
+@Mod(TGECore.MOD_ID)
+public final class TGECore {
+    public static final String MOD_ID = "tge";
 
-    public TGECore(IEventBus modEventBus, ModContainer modContainer) {
-        TGERegistries.register(modEventBus, modContainer);
+    public TGECore(IEventBus modEventBus) {
+        TGERegistries.register(modEventBus);
+        modEventBus.addListener(TGEDataGenerators::gatherData);
+        modEventBus.addListener(TGEItems::setupCraftingRemainders);
     }
 }

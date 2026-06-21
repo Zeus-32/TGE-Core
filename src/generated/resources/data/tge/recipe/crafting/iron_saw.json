@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "tag": "tge:tools/files"
+    },
+    "H": {
+      "tag": "tge:tools/hammers"
+    },
+    "P": {
+      "tag": "c:plates/iron"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "PPS",
+    "FHS"
+  ],
+  "result": {
+    "id": "tge:iron_saw"
+  }
+}

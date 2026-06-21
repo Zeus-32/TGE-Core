@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:clay_ball"
+    },
+    "M": {
+      "item": "tge:brick_mold"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "CMC",
+    "CCC"
+  ],
+  "result": {
+    "count": 8,
+    "id": "tge:unfired_clay_brick"
+  }
+}

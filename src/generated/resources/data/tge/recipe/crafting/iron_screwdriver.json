@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "tag": "c:screws/iron"
+    },
+    "F": {
+      "tag": "tge:tools/files"
+    },
+    "H": {
+      "tag": "tge:tools/hammers"
+    },
+    "R": {
+      "tag": "c:rods/iron"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "  C",
+    "FR ",
+    "SH "
+  ],
+  "result": {
+    "id": "tge:iron_screwdriver"
+  }
+}

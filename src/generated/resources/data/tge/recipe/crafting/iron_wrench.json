@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "tag": "tge:tools/hammers"
+    },
+    "I": {
+      "tag": "c:ingots/iron"
+    },
+    "P": {
+      "tag": "c:plates/iron"
+    }
+  },
+  "pattern": [
+    "PHP",
+    " P ",
+    " I "
+  ],
+  "result": {
+    "id": "tge:iron_wrench"
+  }
+}

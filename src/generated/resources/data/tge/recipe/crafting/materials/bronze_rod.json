@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "tag": "tge:tools/files"
+    },
+    "I": {
+      "tag": "c:ingots/bronze"
+    }
+  },
+  "pattern": [
+    "F ",
+    " I"
+  ],
+  "result": {
+    "id": "ore_and_alloy:bronze_rod"
+  }
+}

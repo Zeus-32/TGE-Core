@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": {
+      "tag": "tge:tools/hammers"
+    },
+    "I": {
+      "tag": "c:ingots/soul_infused"
+    }
+  },
+  "pattern": [
+    "H",
+    "I",
+    "I"
+  ],
+  "result": {
+    "id": "ore_and_alloy:soul_infused_plate"
+  }
+}

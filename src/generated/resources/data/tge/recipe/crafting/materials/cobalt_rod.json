@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "tag": "tge:tools/files"
+    },
+    "I": {
+      "tag": "c:ingots/cobalt"
+    }
+  },
+  "pattern": [
+    "F ",
+    " I"
+  ],
+  "result": {
+    "id": "ore_and_alloy:cobalt_rod"
+  }
+}
