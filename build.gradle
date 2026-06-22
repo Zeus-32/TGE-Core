@@ -159,6 +159,31 @@ dependencies {
     localRuntime("com.github.Zeus-32:Ore-Alloy:${ore_and_alloy_version}")
 }
 
+tasks.register('syncLocalRuntimeMods', Copy) {
+    group = 'neoforge'
+    description = 'Copies local runtime mods needed by dev runs into run/mods.'
+
+    from(configurations.localRuntime)
+    into(layout.projectDirectory.dir('run/mods'))
+
+    include { details ->
+        def name = details.file.name.toLowerCase(Locale.ROOT)
+        name.startsWith('ore_and_alloy-') || name.startsWith('ore-alloy-')
+    }
+
+    doFirst {
+        delete fileTree(layout.projectDirectory.dir('run/mods')) {
+            include 'ore_and_alloy-*.jar'
+            include 'Ore-Alloy-*.jar'
+            include 'ore-alloy-*.jar'
+        }
+    }
+}
+
+tasks.matching { it.name in ['prepareClientRun', 'runClient'] }.configureEach {
+    dependsOn(tasks.named('syncLocalRuntimeMods'))
+}
+
 // IDEA no longer automatically downloads sources/javadoc jars for dependencies, so we need to explicitly enable the behavior.
 idea {
     module {

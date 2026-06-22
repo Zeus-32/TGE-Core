@@ -8,7 +8,7 @@ plugins {
     id 'org.gradle.toolchains.foojay-resolver-convention' version '1.0.0'
 }
 
-def oreAndAlloyBuild = file('external/Ore-Alloy')
+def oreAndAlloyBuild = file('../Ore-Alloy')
 if (oreAndAlloyBuild.isDirectory()) {
     includeBuild(oreAndAlloyBuild) {
         dependencySubstitution {
