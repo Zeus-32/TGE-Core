@@ -8,9 +8,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "F": {
-      "tag": "tge:tools/files"
-    },
+    "F": [
+      {
+        "item": "tge:iron_file"
+      },
+      {
+        "item": "tge:diamond_file"
+      }
+    ],
     "I": {
       "tag": "c:ingots/brass"
     }

@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "tag": "c:screws/diamond"
+    },
+    "F": [
+      {
+        "item": "tge:iron_file"
+      },
+      {
+        "item": "tge:diamond_file"
+      }
+    ],
+    "H": [
+      {
+        "item": "tge:iron_hammer"
+      },
+      {
+        "item": "tge:diamond_hammer"
+      }
+    ],
+    "R": {
+      "tag": "c:rods/diamond"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "  C",
+    "FR ",
+    "SH "
+  ],
+  "result": {
+    "id": "tge:diamond_screwdriver"
+  }
+}

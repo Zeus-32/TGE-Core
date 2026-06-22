@@ -1,8 +1,8 @@
 package eu.zunix.tge_core.datagen.recipe;
 
 import eu.zunix.tge_core.datagen.helper.DataPaths;
-import eu.zunix.tge_core.datagen.helper.GeneratedData;
 import eu.zunix.tge_core.datagen.helper.RecipeFile;
+import eu.zunix.tge_core.content.tool.ToolType;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 import net.minecraft.data.CachedOutput;
@@ -28,7 +28,7 @@ final class MinecraftRecipeResources {
         RecipeFile.shaped("minecraft:bucket", 1)
                 .pattern("PHP", " P ")
                 .defineTag('P', "c:plates/iron")
-                .defineTag('H', GeneratedData.HAMMER_TAG)
+                .defineTool('H', ToolType.HAMMER)
                 .save(writes, cache, DataPaths.server(output, "minecraft", "recipe/bucket.json"));
     }
 }

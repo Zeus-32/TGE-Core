@@ -5,9 +5,14 @@
     "C": {
       "item": "minecraft:clay"
     },
-    "M": {
-      "tag": "tge:tools/mortars"
-    }
+    "M": [
+      {
+        "item": "tge:iron_mortar"
+      },
+      {
+        "item": "tge:diamond_mortar"
+      }
+    ]
   },
   "pattern": [
     "C",

@@ -8,6 +8,7 @@ public final class Registries {
 
     public static void register(IEventBus modEventBus) {
         Items.bootstrap();
+        BlockRegistry.deferredRegister().register(modEventBus);
         ItemRegistry.deferredRegister().register(modEventBus);
         CreativeTabs.deferredRegister().register(modEventBus);
     }

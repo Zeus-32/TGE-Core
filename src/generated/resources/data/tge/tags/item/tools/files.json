@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "tge:iron_file"
+    "tge:iron_file",
+    "tge:diamond_file"
   ]
 }

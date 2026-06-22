@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": [
+      {
+        "item": "tge:iron_file"
+      },
+      {
+        "item": "tge:diamond_file"
+      }
+    ],
+    "H": [
+      {
+        "item": "tge:iron_hammer"
+      },
+      {
+        "item": "tge:diamond_hammer"
+      }
+    ],
+    "P": {
+      "tag": "c:plates/diamond"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "PPS",
+    "FHS"
+  ],
+  "result": {
+    "id": "tge:diamond_saw"
+  }
+}

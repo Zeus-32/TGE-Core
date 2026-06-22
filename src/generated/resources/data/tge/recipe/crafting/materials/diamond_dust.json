@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "ore_and_alloy:diamond_dust"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "tag": "c:gems/diamond"
+    },
+    "M": [
+      {
+        "item": "tge:iron_mortar"
+      },
+      {
+        "item": "tge:diamond_mortar"
+      }
+    ]
+  },
+  "pattern": [
+    "I",
+    "M"
+  ],
+  "result": {
+    "id": "ore_and_alloy:diamond_dust"
+  }
+}

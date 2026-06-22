@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": [
+      {
+        "item": "tge:iron_hammer"
+      },
+      {
+        "item": "tge:diamond_hammer"
+      }
+    ],
+    "I": {
+      "tag": "c:ingots/iron"
+    },
+    "P": {
+      "tag": "c:plates/iron"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "W": [
+      {
+        "item": "tge:iron_wrench"
+      },
+      {
+        "item": "tge:diamond_wrench"
+      }
+    ]
+  },
+  "pattern": [
+    "PIP",
+    "HSW",
+    " S "
+  ],
+  "result": {
+    "id": "tge:iron_pickaxe"
+  }
+}

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "tge:iron_mortar"
+    "tge:iron_mortar",
+    "tge:diamond_mortar"
   ]
 }

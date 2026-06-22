@@ -19,6 +19,10 @@ public class AxeToolItem extends AxeItem {
     public void appendHoverText(
             ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         ToolTooltip.append(stack, material, tooltipComponents);
+        ToolTooltip.appendAbility(
+                "tooltip.tge.ability.lumberjack",
+                "tooltip.tge.ability.lumberjack.description",
+                tooltipComponents);
     }
 
     @Override

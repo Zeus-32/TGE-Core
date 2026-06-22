@@ -1,0 +1,31 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "ore_and_alloy:diamond_plate"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": [
+      {
+        "item": "tge:iron_hammer"
+      },
+      {
+        "item": "tge:diamond_hammer"
+      }
+    ],
+    "I": {
+      "tag": "c:gems/diamond"
+    }
+  },
+  "pattern": [
+    "H",
+    "I",
+    "I"
+  ],
+  "result": {
+    "id": "ore_and_alloy:diamond_plate"
+  }
+}

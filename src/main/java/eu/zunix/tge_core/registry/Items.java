@@ -1,7 +1,6 @@
 package eu.zunix.tge_core.registry;
 
 import java.lang.reflect.Field;
-import java.util.List;
 import net.minecraft.world.item.Item;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -35,22 +34,9 @@ public final class Items {
     private Items() {
     }
 
-    public static List<DeferredItem<Item>> mainCreativeTabItems() {
-        return List.of(
-                GLASS_DUST,
-                QUARTZ_DUST,
-                FLINT_DUST,
-                CLAY_DUST,
-                BRICK_DUST,
-                FIRE_CLAY_DUST,
-                COMPRESSED_FIRE_BRICK,
-                FIRE_BRICK,
-                UNFIRED_CLAY_BRICK,
-                BRICK_MOLD);
-    }
-
     public static void bootstrap() {
         // Triggers static registration before deferred registers are attached.
+        Blocks.bootstrap();
         Tools.bootstrap();
     }
 

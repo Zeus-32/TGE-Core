@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:stone"
+    },
+    "I": {
+      "tag": "c:gems/diamond"
+    }
+  },
+  "pattern": [
+    " I ",
+    "GIG",
+    "GGG"
+  ],
+  "result": {
+    "id": "tge:diamond_mortar"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "c:plates/diamond"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "P",
+    "P",
+    "S"
+  ],
+  "result": {
+    "id": "tge:diamond_file"
+  }
+}

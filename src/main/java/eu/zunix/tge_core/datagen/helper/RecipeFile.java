@@ -1,6 +1,8 @@
 package eu.zunix.tge_core.datagen.helper;
 
 import com.google.gson.JsonObject;
+import eu.zunix.tge_core.content.tool.ToolType;
+import eu.zunix.tge_core.registry.Tools;
 import java.nio.file.Path;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -51,6 +53,15 @@ public final class RecipeFile {
 
     public RecipeFile defineTag(char symbol, String tag) {
         json.getAsJsonObject("key").add(String.valueOf(symbol), tagIngredientJson(tag));
+        return this;
+    }
+
+    public RecipeFile defineTool(char symbol, ToolType type) {
+        var alternatives = new com.google.gson.JsonArray();
+        for (var material : Tools.MATERIALS) {
+            alternatives.add(ingredientJson("tge:" + material.id() + "_" + type.id()));
+        }
+        json.getAsJsonObject("key").add(String.valueOf(symbol), alternatives);
         return this;
     }
 

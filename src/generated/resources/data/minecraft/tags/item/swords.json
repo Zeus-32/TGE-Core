@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "tge:iron_sword"
+    "tge:iron_sword",
+    "tge:diamond_sword"
   ]
 }

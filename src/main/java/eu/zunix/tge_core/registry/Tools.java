@@ -13,6 +13,11 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.function.Function;
+import net.minecraft.ChatFormatting;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.EquipmentSlotGroup;
+import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.item.HoeItem;
 import net.minecraft.world.item.Item;
@@ -20,11 +25,15 @@ import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ShovelItem;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tiers;
+import net.minecraft.world.item.component.ItemAttributeModifiers;
 import net.neoforged.neoforge.registries.DeferredItem;
 
 public final class Tools {
     public static final ToolMaterial IRON =
-            new ToolMaterial("iron", "Iron", "iron", 256, new ToolTier(Tiers.IRON, 256));
+            new ToolMaterial("iron", "Iron", "Iron", "2", ChatFormatting.GRAY, 256, new ToolTier(Tiers.IRON, 256));
+    public static final ToolMaterial DIAMOND =
+            new ToolMaterial("diamond", "Diamond", "Diamond", "3", ChatFormatting.AQUA, 1024, new ToolTier(Tiers.DIAMOND, 1024));
+    public static final List<ToolMaterial> MATERIALS = List.of(IRON, DIAMOND);
 
     private static final List<Entry> ENTRIES = new ArrayList<>();
     private static boolean bootstrapped;
@@ -38,23 +47,16 @@ public final class Tools {
         }
         bootstrapped = true;
 
-        addMaterial(ToolType.HAMMER, IRON);
-        addMaterial(ToolType.WRENCH, IRON);
-        addMaterial(ToolType.SAW, IRON);
-        addMaterial(ToolType.FILE, IRON);
-        addMaterial(ToolType.MORTAR, IRON);
-        addMaterial(ToolType.WIRE_CUTTERS, IRON);
-        addMaterial(ToolType.SCREWDRIVER, IRON);
-        addMaterial(ToolType.PICKAXE, IRON);
-        addMaterial(ToolType.AXE, IRON);
-        addMaterial(ToolType.SHOVEL, IRON);
-        addMaterial(ToolType.HOE, IRON);
-        addMaterial(ToolType.SWORD, IRON);
+        for (ToolType type : ToolType.values()) {
+            for (ToolMaterial material : MATERIALS) {
+                addMaterial(type, material);
+            }
+        }
     }
 
     public static Entry addMaterial(ToolType type, ToolMaterial material) {
         String id = material.id() + "_" + type.id();
-        DeferredItem<? extends Item> item = ItemRegistry.register(id, factory(type, material), properties(type, material));
+        DeferredItem<? extends Item> item = ItemRegistry.register(id, factory(type, material), properties(type, material), false);
         Entry entry = new Entry(id, type, material, item);
         ENTRIES.add(entry);
         return entry;
@@ -78,12 +80,27 @@ public final class Tools {
             case AXE -> properties.attributes(AxeItem.createAttributes(material.tier(), 6.0F, -3.1F));
             case SHOVEL -> properties.attributes(ShovelItem.createAttributes(material.tier(), 1.5F, -3.0F));
             case HOE -> properties.attributes(HoeItem.createAttributes(material.tier(), -2.0F, -1.0F));
-            case SWORD -> properties.attributes(SwordItem.createAttributes(material.tier(), 3, -2.4F));
+            case SWORD -> properties.attributes(swordAttributes(material));
             default -> properties.durability(material.durability());
         };
     }
 
+    private static ItemAttributeModifiers swordAttributes(ToolMaterial material) {
+        return SwordItem.createAttributes(material.tier(), 3, -2.4F)
+                .withModifierAdded(
+                        Attributes.ENTITY_INTERACTION_RANGE,
+                        new AttributeModifier(
+                                ResourceLocation.fromNamespaceAndPath("tge", "duelist_range"),
+                                2.0D,
+                                AttributeModifier.Operation.ADD_VALUE),
+                        EquipmentSlotGroup.MAINHAND);
+    }
+
     public static List<Entry> entries() {
+        if (ENTRIES.isEmpty()) {
+            bootstrapped = false;
+            bootstrap();
+        }
         return Collections.unmodifiableList(ENTRIES);
     }
 

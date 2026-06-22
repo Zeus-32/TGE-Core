@@ -2,12 +2,22 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "F": {
-      "tag": "tge:tools/files"
-    },
-    "H": {
-      "tag": "tge:tools/hammers"
-    },
+    "F": [
+      {
+        "item": "tge:iron_file"
+      },
+      {
+        "item": "tge:diamond_file"
+      }
+    ],
+    "H": [
+      {
+        "item": "tge:iron_hammer"
+      },
+      {
+        "item": "tge:diamond_hammer"
+      }
+    ],
     "P": {
       "tag": "c:plates/iron"
     },

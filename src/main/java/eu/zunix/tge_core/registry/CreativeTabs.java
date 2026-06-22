@@ -15,8 +15,10 @@ public final class CreativeTabs {
             () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.tge.main"))
                     .icon(() -> Items.FIRE_BRICK.get().getDefaultInstance())
-                    .displayItems((parameters, output) -> Items.mainCreativeTabItems()
-                            .forEach(item -> output.accept(item.get())))
+                    .displayItems((parameters, output) -> {
+                        ItemRegistry.creativeTabItems().forEach(item -> output.accept(item.get()));
+                        Blocks.creativeTabItems().forEach(item -> output.accept(item.get()));
+                    })
                     .build());
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TOOLS = TABS.register(

@@ -8,9 +8,14 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "H": {
-      "tag": "tge:tools/hammers"
-    },
+    "H": [
+      {
+        "item": "tge:iron_hammer"
+      },
+      {
+        "item": "tge:diamond_hammer"
+      }
+    ],
     "I": {
       "tag": "c:ingots/titanium"
     }

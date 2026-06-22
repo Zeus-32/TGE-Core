@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "tge:iron_hoe"
+    "tge:iron_hoe",
+    "tge:diamond_hoe"
   ]
 }

@@ -19,6 +19,10 @@ public class ShovelToolItem extends ShovelItem {
     public void appendHoverText(
             ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         ToolTooltip.append(stack, material, tooltipComponents);
+        ToolTooltip.appendAbility(
+                "tooltip.tge.ability.excavator",
+                "tooltip.tge.ability.excavator.description",
+                tooltipComponents);
     }
 
     @Override

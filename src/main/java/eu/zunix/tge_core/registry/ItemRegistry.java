@@ -18,8 +18,15 @@ public final class ItemRegistry {
 
     public static <T extends Item> DeferredItem<T> register(
             String name, Function<Item.Properties, T> factory, Item.Properties properties) {
+        return register(name, factory, properties, true);
+    }
+
+    public static <T extends Item> DeferredItem<T> register(
+            String name, Function<Item.Properties, T> factory, Item.Properties properties, boolean creativeTabItem) {
         DeferredItem<T> item = ITEMS.registerItem(name, factory, properties);
-        CREATIVE_TAB_ITEMS.add(item);
+        if (creativeTabItem) {
+            CREATIVE_TAB_ITEMS.add(item);
+        }
         return item;
     }
 

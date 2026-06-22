@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "tge:iron_pickaxe"
+    "tge:iron_pickaxe",
+    "tge:diamond_pickaxe"
   ]
 }

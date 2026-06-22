@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "tge:iron_wrench"
+    "tge:iron_wrench",
+    "tge:diamond_wrench"
   ]
 }

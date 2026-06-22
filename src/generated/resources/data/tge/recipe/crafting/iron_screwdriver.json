@@ -5,12 +5,22 @@
     "C": {
       "tag": "c:screws/iron"
     },
-    "F": {
-      "tag": "tge:tools/files"
-    },
-    "H": {
-      "tag": "tge:tools/hammers"
-    },
+    "F": [
+      {
+        "item": "tge:iron_file"
+      },
+      {
+        "item": "tge:diamond_file"
+      }
+    ],
+    "H": [
+      {
+        "item": "tge:iron_hammer"
+      },
+      {
+        "item": "tge:diamond_hammer"
+      }
+    ],
     "R": {
       "tag": "c:rods/iron"
     },

@@ -11,9 +11,14 @@
     "R": {
       "tag": "c:rods/cupronickel"
     },
-    "S": {
-      "tag": "tge:tools/saws"
-    }
+    "S": [
+      {
+        "item": "tge:iron_saw"
+      },
+      {
+        "item": "tge:diamond_saw"
+      }
+    ]
   },
   "pattern": [
     "S ",

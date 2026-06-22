@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "tge:iron_wire_cutters"
+    "tge:iron_wire_cutters",
+    "tge:diamond_wire_cutters"
   ]
 }

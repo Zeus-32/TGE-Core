@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "minecraft:planks"
+    },
+    "S": [
+      {
+        "item": "tge:iron_saw"
+      },
+      {
+        "item": "tge:diamond_saw"
+      }
+    ]
+  },
+  "pattern": [
+    "S ",
+    " P"
+  ],
+  "result": {
+    "id": "tge:brick_mold"
+  }
+}

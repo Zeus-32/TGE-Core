@@ -1,0 +1,30 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "ore_and_alloy:diamond_rod"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": [
+      {
+        "item": "tge:iron_file"
+      },
+      {
+        "item": "tge:diamond_file"
+      }
+    ],
+    "I": {
+      "tag": "c:gems/diamond"
+    }
+  },
+  "pattern": [
+    "F ",
+    " I"
+  ],
+  "result": {
+    "id": "ore_and_alloy:diamond_rod"
+  }
+}

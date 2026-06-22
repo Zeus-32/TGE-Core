@@ -26,6 +26,7 @@ public final class GeneratedData {
             "constantan",
             "copper",
             "cupronickel",
+            "diamond",
             "electrum",
             "enderium",
             "gold",
@@ -56,6 +57,9 @@ public final class GeneratedData {
     public static final String FILE_TAG = "tge:tools/files";
     public static final String SAW_TAG = "tge:tools/saws";
     public static final String MORTAR_TAG = "tge:tools/mortars";
+    public static final String WRENCH_TAG = "tge:tools/wrenches";
+    public static final String WIRE_CUTTERS_TAG = "tge:tools/wire_cutters";
+    public static final String SCREWDRIVER_TAG = "tge:tools/screwdrivers";
     public static final String[] MINECRAFT_TOOL_TAGS = {
             "pickaxes",
             "axes",

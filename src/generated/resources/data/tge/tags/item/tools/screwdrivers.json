@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "tge:iron_screwdriver"
+    "tge:iron_screwdriver",
+    "tge:diamond_screwdriver"
   ]
 }

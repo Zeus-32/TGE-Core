@@ -19,6 +19,10 @@ public class SwordToolItem extends SwordItem {
     public void appendHoverText(
             ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         ToolTooltip.append(stack, material, tooltipComponents);
+        ToolTooltip.appendAbility(
+                "tooltip.tge.ability.duelist",
+                "tooltip.tge.ability.duelist.description",
+                tooltipComponents);
     }
 
     @Override

@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "H": [
+      {
+        "item": "tge:iron_hammer"
+      },
+      {
+        "item": "tge:diamond_hammer"
+      }
+    ],
+    "P": {
+      "tag": "c:plates/diamond"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "W": [
+      {
+        "item": "tge:iron_wrench"
+      },
+      {
+        "item": "tge:diamond_wrench"
+      }
+    ]
+  },
+  "pattern": [
+    "HPW",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "id": "tge:diamond_shovel"
+  }
+}

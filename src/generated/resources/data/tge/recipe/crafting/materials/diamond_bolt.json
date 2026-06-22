@@ -1,0 +1,31 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "ore_and_alloy:diamond_bolt"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "tag": "c:rods/diamond"
+    },
+    "S": [
+      {
+        "item": "tge:iron_saw"
+      },
+      {
+        "item": "tge:diamond_saw"
+      }
+    ]
+  },
+  "pattern": [
+    "S ",
+    " R"
+  ],
+  "result": {
+    "count": 2,
+    "id": "ore_and_alloy:diamond_bolt"
+  }
+}
